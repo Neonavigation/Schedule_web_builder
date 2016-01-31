@@ -1,8 +1,10 @@
 # Schedule_web_builder
 
 Должен стоять compass
+
 Должна стоять java
-Для старта в консоли: java -jar builder.jar
+
+Для старта, в консоли: java -jar builder.jar
 
 После этого можно зайти на localhost:8092/schedule.html
 
