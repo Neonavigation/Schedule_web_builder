@@ -17,6 +17,25 @@ function TemplatesHelper($) {
   var crossLoad;
 
   function addUrlParameters(url, params) {
+    var li = url.lastIndexOf("?")
+    if (li > 0) {
+      var splits = url.substring(li + 1).split('&')
+      for (s in splits) {
+        var new_p = splits[s].split('=')
+        if (params[new_p[0]] === undefined) {
+          params[new_p[0]] = new_p[1]
+        }
+      }
+      url = url.substring(0, li) + '?'
+    }
+    var first = true
+    for (p in params) {
+      var p_add = p + '=' + params[p]
+      if (!first) p_add = '&' + p_add;
+      url += p_add
+      first = false
+    }
+    console.log(url)
     return url;
   }
 
