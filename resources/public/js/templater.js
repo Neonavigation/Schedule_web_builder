@@ -27,7 +27,8 @@ function TemplatesHelper($) {
         }
       }
       url = url.substring(0, li) + '?'
-    }
+    } else url += '?'
+    console.log(url)
     var first = true
     for (p in params) {
       var p_add = p + '=' + params[p]
@@ -52,7 +53,9 @@ function TemplatesHelper($) {
             }
           }
           crossLoadJson(addUrlParameters(url, params), function(json) {
-            console.log(json)
+            json['obj_r'] = function() {
+              return JSON.stringify(this)
+            }
             var html = Mustache.render(template, json, partials);
             callBack(html)
           });
