@@ -1,0 +1,106 @@
+.content{
+  min-width: $min-width;
+}
+.content .head .wrap{
+  position: relative;
+  max-width: $max-width;
+  box-sizing: padding-box;
+  margin: 0 auto;
+  padding: 40px 3% 0;
+}
+.content .head{
+  margin: 0 0 15px;
+  background: #fbfcfd;
+  border-bottom: solid 4px #55585f;
+}
+.content .head .view{
+  position: absolute;
+  right: 3%;
+  top: 36px;
+}
+.content .tabs .items{
+  overflow: hidden;
+  margin-right: 400px;
+}
+
+.content .tabs .item{
+  float: left;
+  padding: 14px 20px 9px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #646464;
+  cursor: pointer;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+.content .tabs .item:hover{
+  opacity: 0.7;
+}
+.content .tabs .item.current{
+  background: #55585f;
+  color: white;
+  opacity: 1;
+  cursor: default;
+}
+.scheme-button{
+  display: inline-block;
+  vertical-align: middle;
+  background: #bcd46a;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 -1px rgba(0,0,0,0.3);
+  cursor: pointer;
+  padding: 0 15px 0 12px;
+  line-height: 40px;
+  border-radius: 4px;
+  margin-right: 7px;
+}
+.scheme-button:hover{
+  background: #b5ce60;
+}
+.scheme-button .icon-scheme{
+  display: inline-block;
+  vertical-align: middle;
+  margin: -2px 5px 0 0;
+}
+.scheme-view{
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 40px;
+  box-sizing: border-box;
+  border: solid 2px #63666d;
+  border-radius: 4px;
+  background: #63666d;
+}
+
+.scheme-view .item{
+  float: left;
+  width: 43px;
+  height: 40px;
+  cursor: pointer;
+  background: white;
+  text-align: center;
+}
+.scheme-view .item:hover{
+  background: #63666d;
+}
+.scheme-view .item.current{
+  background: #63666d;
+  cursor: default;
+
+}
+.scheme-view .icon-sprite{
+  margin-top: 10px;
+}
+
+.scheme-view .item.current .icon-view-table,
+.scheme-view .item:hover .icon-view-table{
+  background-position: -11px -47px;
+}
+
+.scheme-view .item.current .icon-view-list,
+.scheme-view .item:hover .icon-view-list{
+  background-position: -57px -47px;
+}

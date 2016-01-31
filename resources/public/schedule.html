@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Деловая программа на выставку</title>
+
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'> <!--100,300,-->
+
+  <link href="css/app.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.js"></script>
+<script src="//nexpo.me/stat/modulescript/nexpo.loader.js"></script>
+<script src="js/templlist.js"></script>
+<script src="js/templater.js"></script>
+
+
+<script>
+
+nexpo.apiURL = nexpo.prot + '//nexpo.me';
+window.devMode = true;
+window.ModuleLoader([],[], function() {
+  (function($) {
+    function Application() {
+      var th = new TemplatesHelper($)
+
+      var self = this;
+
+      self.config = {
+        url_templates: 'templates.mustache',
+        templates_container: $('body'),
+        render_container: $('body'),
+
+        page_template_id: 'mainTemplate',
+        table_template_id: 'tableTemplate',
+
+        url_api_init: 'http://nexpo.me/location/1XPNP1WZVQ/rest/schedulehtmlpub/ru?init=true',
+        url_api_table: 'http://nexpo.me/location/1XPNP1WZVQ/rest/schedulehtmlpub/ru'
+      };
+
+      self.data = {
+        page: {},
+        table: {},
+        themes: []
+      };
+
+      /*
+      //структуризация данных под шаблоны если необходимо
+      self.parseData = function (){
+        for(var i in self.data.page.with_events.themes){
+          self.data.themes.push(self.data.page.with_events.themes[i].strings.ru.str);
+        }
+      };
+
+      self.loadTemplates = function () {
+        self.config.templates_container.load(self.config.url_templates, function(){
+            self.loadData();
+        });
+      };
+
+      self.loadData = function () {
+        $.get(self.config.url_api_init, function(response){
+          self.data.page = JSON.parse(response);
+          $.get(self.config.url_api_table, function(response){
+            self.data.table = JSON.parse(response);
+            self.parseData();
+            self.renderPage();
+          });
+        });
+      };
+
+      self.renderPage = function () {
+        var template = document.getElementById(self.config.page_template_id).innerHTML;
+        var partials = {table: document.getElementById(self.config.table_template_id).innerHTML};
+        var html = Mustache.render(template, self.data, partials);
+        self.config.render_container.html(html);
+      };
+      */
+
+      th.getHtml('/location/1XPNP1WZVQ/rest/schedulehtmlpub/ru?init=true', {'init': true}, 'schedulewrap', function(html) {
+        self.config.render_container.html(html);
+      })
+
+      self.th = th;
+    }
+
+    var app = new Application();
+    //app.loadTemplates();
+
+  })(window.mweb_jq)
+});
+</script>
+
+</body>
+</html>
