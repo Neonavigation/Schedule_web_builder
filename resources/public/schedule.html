@@ -25,7 +25,7 @@ window.devMode = true;
 window.ModuleLoader([],[], function() {
   (function($) {
     function Application() {
-      var th = new TemplatesHelper($)
+      var th = new TemplatesHelper($);
 
       var self = this;
 
@@ -80,12 +80,49 @@ window.ModuleLoader([],[], function() {
       };
       */
 
+
       th.getHtml('/location/1XPNP1WZVQ/rest/schedulehtmlpub/ru', {'init': true}, 'schedulewrap', function(html) {
+
         self.config.render_container.html(html);
-      })
+
+
+        /*
+          Запрос для примера внутри коллбека, не отправляется, network  в консоли не обнаружил
+        */
+        th.getHtml('/location/1XPNP1WZVQ/rest/schedulehtmlpub/ru', {'day': '1454803200000'}, 'table', function(html) {
+          console.log(html);
+        });
+
+
+        /*
+          Обработчик представления, в котором например необходимо будет дергать похожий запрос при клике по табам
+        */
+        $('.tabs').on('click', '.item', function(){
+          $('.tabs .item').removeClass('current');
+          $(this).addClass('current');
+
+          th.getHtml('/location/1XPNP1WZVQ/rest/schedulehtmlpub/ru', {'day': '1454803200000'}, 'table', function(html) {
+            console.log(html);
+          });
+
+        });
+        $('.tabs .item:first').trigger('click');
+
+      });
+
+      /*
+        Запрос для примера, он отправляется, но коллбек не отрабатывает, в консоль вывода нет, network в консоли показывает ошибки - https://yadi.sk/i/-DT0d-geo98dj
+        Наличие или отсутствие halls ничего не меняет, в то время как в браузере ответ сервера корректен даже без halls, просто он не содержит нужных данных
+       */
+      th.getHtml('/location/1XPNP1WZVQ/rest/schedulehtmlpub/ru', {'day': '1454803200000', halls: JSON.stringify([{"hall_name":"Конференц-зал \"A\""}])}, 'table', function(html) {
+        console.log(html);
+      });
 
       self.th = th;
     }
+
+
+
 
     var app = new Application();
     //app.loadTemplates();
@@ -93,6 +130,7 @@ window.ModuleLoader([],[], function() {
   })(window.mweb_jq)
 });
 </script>
+
 
 </body>
 </html>
