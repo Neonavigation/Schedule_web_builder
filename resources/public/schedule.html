@@ -87,36 +87,36 @@ window.ModuleLoader([],[], function() {
 
 
         /*
-          Запрос для примера внутри коллбека, не отправляется, network  в консоли не обнаружил
-        */
-        th.getHtml('/location/1XPNP1WZVQ/rest/schedulehtmlpub/ru', {'day': '1454803200000'}, 'table', function(html) {
+         Здесь запрос не отрабатывает
+         */
+        th.getHtml('/location/1XPNP1WZVQ/rest/schedulehtmlpub/ru', {'day': '1454803200000', halls: JSON.stringify([{"hall_name":"Конференц-зал \"A\""}])}, 'table', function(html) {
+          alert(html);
           console.log(html);
         });
 
-
-        /*
-          Обработчик представления, в котором например необходимо будет дергать похожий запрос при клике по табам
-        */
+        /* Обработчик в котором нужен запрос для перерисовки таблицы
         $('.tabs').on('click', '.item', function(){
           $('.tabs .item').removeClass('current');
           $(this).addClass('current');
 
-          th.getHtml('/location/1XPNP1WZVQ/rest/schedulehtmlpub/ru', {'day': '1454803200000'}, 'table', function(html) {
-            console.log(html);
-          });
+         th.getHtml('/location/1XPNP1WZVQ/rest/schedulehtmlpub/ru', {'day': '1454803200000', halls: JSON.stringify([{"hall_name":"Конференц-зал \"A\""}])}, 'table', function(html) {
+           alert(html);
+           console.log(html);
+         });
 
         });
         $('.tabs .item:first').trigger('click');
+        */
 
       });
 
       /*
-        Запрос для примера, он отправляется, но коллбек не отрабатывает, в консоль вывода нет, network в консоли показывает ошибки - https://yadi.sk/i/-DT0d-geo98dj
-        Наличие или отсутствие halls ничего не меняет, в то время как в браузере ответ сервера корректен даже без halls, просто он не содержит нужных данных
+        Здесь запрос отрабатывает
        */
       th.getHtml('/location/1XPNP1WZVQ/rest/schedulehtmlpub/ru', {'day': '1454803200000', halls: JSON.stringify([{"hall_name":"Конференц-зал \"A\""}])}, 'table', function(html) {
         console.log(html);
       });
+
 
       self.th = th;
     }
