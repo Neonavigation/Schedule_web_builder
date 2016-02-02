@@ -28,13 +28,15 @@ function TemplatesHelper($) {
       }
       url = url.substring(0, li) + '?'
     } else url += '?'
-    console.log(url)
     var first = true
     for (p in params) {
       var p_add = p + '=' + params[p]
       if (!first) p_add = '&' + p_add;
       url += p_add
       first = false
+    }
+    if (params.length == 0) {
+      url = url.substring(0, url.length - 1);
     }
     console.log(url)
     return url;
@@ -52,13 +54,24 @@ function TemplatesHelper($) {
               partials[window.mustache_list[t]] = loaded_templates[window.mustache_list[t]]
             }
           }
-          crossLoadJson(addUrlParameters(url, params), function(json) {
+          $.get(nexpo.apiURL + addUrlParameters(url, params), function(data){
+            var json = eval('('+data+')')
             json['obj_r'] = function() {
               return JSON.stringify(this)
             }
             var html = Mustache.render(template, json, partials);
             callBack(html)
           });
+          /*
+          crossLoadJson(addUrlParameters(url, params), function(json) {
+            console.log('aaa')
+            json['obj_r'] = function() {
+              return JSON.stringify(this)
+            }
+            var html = Mustache.render(template, json, partials);
+            callBack(html)
+          });
+*/
         }
       }
       var toFunc = function() {
