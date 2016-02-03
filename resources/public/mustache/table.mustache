@@ -1,11 +1,22 @@
 
 <div class="schedule">
+
     <table>
         <col class="col-first">
         <col span="4" class="cols4">
         <col class="col-last">
         <tr>
             <th class="empty">&nbsp;</th>
+
+            {{obj_r}}
+
+            {{#halls_splits}}
+                {{#selected}}
+                    {{days}}
+                {{/selected}}
+                <br>
+            {{/halls_splits}}
+
             <th colspan="2" class="current">
                 <div class="title">
                     Залы: Красный, Синий, Фиолетовый

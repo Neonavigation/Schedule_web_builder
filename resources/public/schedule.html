@@ -80,52 +80,26 @@ window.ModuleLoader([],[], function() {
       };
       */
 
-      $('body').on('click', '.tabs .item', function(){
-        $('.tabs .item').removeClass('current');
-        $(this).addClass('current');
 
-        
-        th.getHtml('/location/1XPNP1WZVQ/rest/schedulehtmlpub/ru', {'day': '1454803200000', halls: JSON.stringify([{"hall_name":"Конференц-зал \"A\""}])}, 'table', function(html) {
-          alert(html);
-          console.log(html);
-        });
-      });
 
 
       th.getHtml('/location/1XPNP1WZVQ/rest/schedulehtmlpub/ru', {'init': true}, 'schedulewrap', function(html) {
 
         self.config.render_container.html(html);
 
-
-        /*
-         Здесь запрос не отрабатывает
-         */
-
-        /* Обработчик в котором нужен запрос для перерисовки таблицы
-        $('.tabs').on('click', '.item', function(){
+        $('body').on('click', '.tabs .item', function(){
           $('.tabs .item').removeClass('current');
           $(this).addClass('current');
 
-         th.getHtml('/location/1XPNP1WZVQ/rest/schedulehtmlpub/ru', {'day': '1454803200000', halls: JSON.stringify([{"hall_name":"Конференц-зал \"A\""}])}, 'table', function(html) {
-           alert(html);
-           console.log(html);
-         });
+          //alert($(this).data('id'));
 
+          th.getHtml('/location/1XPNP1WZVQ/rest/schedulehtmlpub/ru', {'day': '1454803200000', halls: JSON.stringify([{"hall_name":"Конференц-зал \"A\""}])}, 'table', function(html) {
+            $('.schedule').replaceWith(html);
+          });
         });
         $('.tabs .item:first').trigger('click');
-        */
 
       });
-
-      /*
-        Здесь запрос отрабатывает
-       */
-       /*
-      th.getHtml('/location/1XPNP1WZVQ/rest/schedulehtmlpub/ru', {'day': '1454803200000', halls: JSON.stringify([{"hall_name":"Конференц-зал \"A\""}])}, 'table', function(html) {
-        console.log(html);
-      });
-*/
-
 
       self.th = th;
     }
