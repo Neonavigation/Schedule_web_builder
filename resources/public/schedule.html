@@ -135,6 +135,9 @@ window.ModuleLoader([],[], function() {
             }
           });
 
+          $('body').on('click', '.schedule-tabs .item', function(){
+            return false;
+          });
           $('body').on('click', '.schedule-tabs .enabled', function(){
             var day = $(".tabs .selected").data('day').toString();
             var fr_names = $(".schedule-tabs .selected").data('fr_name');
@@ -146,6 +149,7 @@ window.ModuleLoader([],[], function() {
             self.tabs_halls.removeClass('important selected');
             $(this).addClass('important selected');
 
+            return false;
           });
 
         };
