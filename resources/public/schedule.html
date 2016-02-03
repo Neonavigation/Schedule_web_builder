@@ -110,6 +110,18 @@ window.ModuleLoader([],[], function() {
           });
         };
 
+        self.renderTable = function(halls){
+          var day = $(".tabs .selected").data('day').toString();
+          var fr_names = $(".schedule-tabs .selected").data('fr_name').split(";");
+          var halls = [];
+          for(var i in fr_names){
+            halls.push({"hall_name": fr_names[i]});
+          }
+          th.getHtml('/location/1XPNP1WZVQ/rest/schedulehtmlpub/ru', {'day': day, halls: JSON.stringify(halls)}, 'table', function(html) {
+            $('.schedule-table').replaceWith(html);
+          });
+        };
+
         self.events = function(){
 
           $('body').on('click', '.tabs .item', function(){
@@ -133,25 +145,18 @@ window.ModuleLoader([],[], function() {
               //Выделение первой доступной группы
               $('.schedule-tabs .enabled:first').addClass('selected');
             }
+            self.renderTable();
           });
 
           $('body').on('click', '.schedule-tabs .item', function(){
             return false;
           });
           $('body').on('click', '.schedule-tabs .enabled', function(){
-            var day = $(".tabs .selected").data('day').toString();
 
             self.tabs_halls.removeClass('important selected');
             $(this).addClass('important selected');
 
-            var fr_names = $(".schedule-tabs .selected").data('fr_name').split(",");
-            var halls = [];
-            for(var i in fr_names){
-              halls.push({"hall_name": fr_names[i]});
-            }
-            th.getHtml('/location/1XPNP1WZVQ/rest/schedulehtmlpub/ru', {'day': day, halls: JSON.stringify(halls)}, 'table', function(html) {
-              $('.schedule-table').replaceWith(html);
-            });
+            self.renderTable();
 
             return false;
           });
