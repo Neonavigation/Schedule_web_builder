@@ -140,14 +140,18 @@ window.ModuleLoader([],[], function() {
           });
           $('body').on('click', '.schedule-tabs .enabled', function(){
             var day = $(".tabs .selected").data('day').toString();
-            var fr_names = $(".schedule-tabs .selected").data('fr_name');
-
-            th.getHtml('/location/1XPNP1WZVQ/rest/schedulehtmlpub/ru', {'day': day, halls: JSON.stringify([{"hall_name": fr_names[0]}])}, 'table', function(html) {
-              $('.schedule-table').replaceWith(html);
-            });
 
             self.tabs_halls.removeClass('important selected');
             $(this).addClass('important selected');
+
+            var fr_names = $(".schedule-tabs .selected").data('fr_name').split(",");
+            var halls = [];
+            for(var i in fr_names){
+              halls.push({"hall_name": fr_names[i]});
+            }
+            th.getHtml('/location/1XPNP1WZVQ/rest/schedulehtmlpub/ru', {'day': day, halls: JSON.stringify(halls)}, 'table', function(html) {
+              $('.schedule-table').replaceWith(html);
+            });
 
             return false;
           });
