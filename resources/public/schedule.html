@@ -81,23 +81,84 @@ window.ModuleLoader([],[], function() {
       */
 
 
+      function moduleTabs(){
 
+        var self = this;
+        self.tabs = $('.tabs .item');
+        self.tabs_halls = $('.schedule-tabs .item');
+
+        self.init = function(index){
+          //берется первый таб, если иной явно не передан
+          index = index || 0;
+          self.tabs.eq(index).addClass('selected');
+          //визуализация disabled/enabled для групп
+          self.viewTabs();
+          //Выделение первой доступной
+          $('.schedule-tabs .enabled:first').addClass('selected');
+        };
+
+        self.viewTabs = function(){
+          var day = $('.tabs .selected').data('day').toString();
+          self.tabs_halls.removeClass("enabled disabled selected");
+          self.tabs_halls.each(function(j){
+            var available_days = $(this).data('available-days').toString().split(",");
+            if(available_days.indexOf(day)!==-1) {
+              self.tabs_halls.eq(j).addClass("enabled");
+            } else {
+              self.tabs_halls.eq(j).addClass("disabled");
+            }
+          });
+        };
+
+        self.events = function(){
+
+          $('body').on('click', '.tabs .item', function(){
+            //Выделение таба
+            self.tabs.removeClass('selected');
+            $(this).addClass('selected');
+            //визуализация disabled/enabled
+            self.viewTabs();
+            //Проверка на явно выбранную пользователем группу
+            var hasImportant = $('.schedule-tabs .important').length;
+            if(hasImportant){
+              var day = $(".tabs .selected").data("day").toString();
+              var available_days = $(".schedule-tabs .important").data("available-days").toString().split(",");
+              //Проверка доступности явно выбранной группы
+              if(available_days.indexOf(day)!==-1){
+                $('.schedule-tabs .important').addClass("selected");
+              } else {
+                $('.schedule-tabs .enabled:first').addClass("selected");
+              }
+            } else {
+              //Выделение первой доступной группы
+              $('.schedule-tabs .enabled:first').addClass('selected');
+            }
+          });
+
+          $('body').on('click', '.schedule-tabs .enabled', function(){
+            var day = $(".tabs .selected").data('day').toString();
+            var fr_names = $(".schedule-tabs .selected").data('fr_name');
+
+            th.getHtml('/location/1XPNP1WZVQ/rest/schedulehtmlpub/ru', {'day': day, halls: JSON.stringify([{"hall_name": fr_names[0]}])}, 'table', function(html) {
+              $('.schedule-table').replaceWith(html);
+            });
+
+            self.tabs_halls.removeClass('important selected');
+            $(this).addClass('important selected');
+
+          });
+
+        };
+
+      }
 
       th.getHtml('/location/1XPNP1WZVQ/rest/schedulehtmlpub/ru', {'init': true}, 'schedulewrap', function(html) {
 
         self.config.render_container.html(html);
 
-        $('body').on('click', '.tabs .item', function(){
-          $('.tabs .item').removeClass('current');
-          $(this).addClass('current');
-
-          //alert($(this).data('id'));
-
-          th.getHtml('/location/1XPNP1WZVQ/rest/schedulehtmlpub/ru', {'day': '1454803200000', halls: JSON.stringify([{"hall_name":"Конференц-зал \"A\""}])}, 'table', function(html) {
-            $('.schedule').replaceWith(html);
-          });
-        });
-        $('.tabs .item:first').trigger('click');
+        var tabs = new moduleTabs();
+        tabs.init(0);
+        tabs.events();
 
       });
 

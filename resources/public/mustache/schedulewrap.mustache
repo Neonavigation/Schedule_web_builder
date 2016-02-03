@@ -77,7 +77,7 @@
 
                     {{#days}}
                         {{#day}}
-                            <li class="item" data-id="{{id}}" data-days="">{{daym}} {{daym_pretty}}</li>
+                            <li class="item" data-day="{{id}}" data-days="">{{daym}} {{daym_pretty}}</li>
                         {{/day}}
                     {{/days}}
                 </ul>
@@ -99,8 +99,29 @@
         </div>
     </div>
 
+    <div class="schedule-container">
 
-    {{> table}}
+        <div class="schedule-tabs">
+            <div class="schedule-tabs-wrap">
+                <ul class="items">
+                    {{#halls_splits}}
+                        <li class="item" data-available-days="{{days}}" data-fr_name="{{fr_name}}"> <!--{{#selected}}selected{{/selected}} disabled {{^selected}}disabled{{/selected}}-->
+                            <a href="#" title="{{#hall_fr_names}}{{.}}&#013;{{/hall_fr_names}}">
+                                {{#hall_fr_names}}
+                                    <span class="name nobr">{{.}}</span>
+                                {{/hall_fr_names}}
+                            </a>
+                        </li>
+                    {{/halls_splits}}
+                </ul>
+            </div>
+        </div>
+
+        {{> table}}
+
+
+
+    </div>
 
 </div>
 {{/with_events}}

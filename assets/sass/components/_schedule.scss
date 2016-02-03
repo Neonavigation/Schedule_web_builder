@@ -1,86 +1,118 @@
-.schedule{
+
+.schedule-container{
   padding: 1px 3% 7px;
   max-width: $max-width;
   box-sizing: padding-box;
   margin: 0 auto;
 }
-.schedule table{
+
+.schedule-tabs{
+  margin: 10px 0;
+  padding: 0 15px;
+  background: #f5f5f5;
+}
+.schedule-tabs-wrap{
+  display: table;
   width: 100%;
   table-layout: fixed;
 }
-.schedule td{
-
+.schedule-tabs .items{
+  display: table-row;
 }
-.col-first{
-  width: 5%;
-}
-.cols4{
-  width:15%;
-}
-.col-last{
-  width: 35%;
-}
-.schedule .data td{
-  height: 100px;
-}
-.schedule th{
+.schedule-tabs .item{
+  display: table-cell;
+  vertical-align: middle;
   background: #f5f5f5;
   height: 34px;
   padding: 5px 0;
   overflow: hidden;
 }
-.schedule th .title{
-  font-size: 18px;
-  line-height: 18px;
-  font-weight: 700;
-  color: #646464;
-  padding: 100px 30px;
-  margin: -100px 16px;
-  background: #f5f5f5;
-  box-sizing: padding-box;
+.schedule-tabs .item a{
+   display: block;
+   text-align: center;
+   font-size: 17px;
+   line-height: 18px;
+   font-weight: 700;
+   color: #646464;
+   padding: 100px 15px;
+   margin: -100px 0;
+   background: #f5f5f5;
+   box-sizing: padding-box;
+ }
+.schedule-tabs .item.disabled a{
+  color: #ccc;
+  cursor: default;
 }
-.schedule th.empty{
-  background: none;
-}
-.schedule th.current .title{
+.schedule-tabs .item.selected a{
   background: #bcd46a;
   color: white;
+}
+.schedule-tabs .name{
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.schedule-tabs .name:after{
+  content: ",";
+}
+.schedule-tabs .name:last-child:after{
+  content: "";
+}
+
+.schedule-table{
+  width: 100%;
+  table-layout: fixed;
+}
+.schedule-table td{
 
 }
-.schedule .data td{
+.schedule-table .col-first{
+  width: 5%;
+}
+.schedule-table .cols4{
+  width:15%;
+}
+.schedule-table .col-last{
+  width: 35%;
+}
+.schedule-table .data td{
+  height: 100px;
+}
+.schedule-table .data td{
   border-left: solid 1px #e1e1e1;
 }
-.schedule .data td:first-child{
+.schedule-table .data td:first-child{
   border: none;
 }
-.schedule .titles td{
+.schedule-table .titles td{
   padding-top: 11px;
   font-size: 16px;
   font-weight: 700;
   text-align: center;
   color: #646464;
 }
-.schedule .titles td{
+.schedule-table .titles td{
   padding: 13px;
   border-left: solid 1px #e1e1e1;
 }
-.schedule .titles td:first-child{
+.schedule-table .titles td:first-child{
   border: none;
 }
-.schedule .time{
+.schedule-table .time{
   font-size: 14px;
   font-weight: 700;
   color: #646464;
   vertical-align: top;
   padding-top: 20px;
 }
-.schedule .data-block{
+.schedule-table .data-block{
   margin: 0 15px;
   padding: 5px;
   font-size: 12px;
   background: #d9e9ff;
 }
-.schedule .hr td{
+.schedule-table .hr td{
   height: 10px;
   padding: 0;
   margin: 0;
