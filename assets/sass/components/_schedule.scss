@@ -39,6 +39,9 @@
    background: #f5f5f5;
    box-sizing: padding-box;
  }
+.schedule-tabs .item.disabled{
+  display: none;
+}
 .schedule-tabs .item.disabled a{
   color: #ccc;
   cursor: default;

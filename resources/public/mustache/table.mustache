@@ -12,6 +12,13 @@
             <td><div class="label">Зал 4</div></td>
             <td><div class="label">Презентации на стендах</div></td>
         </tr>
+
+        {{#events_halls}}
+            {{hall_name}}
+            {{.}}
+        {{/events_halls}}
+        <!--{{events_booths}}-->
+
         <tr class="data">
             <td class="time">10:00</td>
             <td>
@@ -20,7 +27,6 @@
                 10:00 - 11:00
             </span>
                     <p>
-                        {{obj_r}}
                         Проблемы пищеварительного тракта у больших детей и маленьких взрослых.
                     </p>
                 </div>
