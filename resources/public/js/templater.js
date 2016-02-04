@@ -1,3 +1,20 @@
+var entityMap = {
+  '&': '&amp;',
+  '<': '&lt;',
+  '>': '&gt;',
+  '"': '&quot;',
+  "'": '&#39;',
+  '/': '&#x2F;',
+  '`': '&#x60;',
+  '=': '&#x3D;'
+};
+
+Mustache.escape = function escapeHtml (string) {
+  return JSON.stringify(string).replace(/[&<>"'`=\/]/g, function fromEntityMap (s) {
+    return entityMap[s];
+  });
+}
+
 function TemplatesHelper($) {
   var self = this
   var loading_templ = 0;
@@ -56,9 +73,6 @@ function TemplatesHelper($) {
           }
           $.get(nexpo.apiURL + addUrlParameters(url, params), function(data){
             var json = eval('('+data+')')
-            json['obj_r'] = function() {
-              return JSON.stringify(this)
-            }
             var html = Mustache.render(template, json, partials);
             callBack(html)
           });
