@@ -52,6 +52,7 @@ window.ModuleLoader([],[], function() {
             return $('.schedule-tabs .important').length;
           },
           fr_names: function(){
+
             fr_names = eval('(' + $(".schedule-tabs .selected").data('hall_fr_names') + ')');
             alert(fr_names);
             return $(".schedule-tabs .selected").data('hall_fr_names').split(";").slice(0,-1);
