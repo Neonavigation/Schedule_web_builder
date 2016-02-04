@@ -25,158 +25,115 @@ window.devMode = true;
 window.ModuleLoader([],[], function() {
   (function($) {
     function Application() {
+
       var th = new TemplatesHelper($);
-
-      var self = this;
-
-      self.config = {
-        url_templates: 'templates.mustache',
-        templates_container: $('body'),
-        render_container: $('body'),
-
-        page_template_id: 'mainTemplate',
-        table_template_id: 'tableTemplate',
-
-        url_api_init: 'http://nexpo.me/location/1XPNP1WZVQ/rest/schedulehtmlpub/ru?init=true',
-        url_api_table: 'http://nexpo.me/location/1XPNP1WZVQ/rest/schedulehtmlpub/ru'
-      };
-
-      self.data = {
-        page: {},
-        table: {},
-        themes: []
-      };
-
-      /*
-      //структуризация данных под шаблоны если необходимо
-      self.parseData = function (){
-        for(var i in self.data.page.with_events.themes){
-          self.data.themes.push(self.data.page.with_events.themes[i].strings.ru.str);
-        }
-      };
-
-      self.loadTemplates = function () {
-        self.config.templates_container.load(self.config.url_templates, function(){
-            self.loadData();
-        });
-      };
-
-      self.loadData = function () {
-        $.get(self.config.url_api_init, function(response){
-          self.data.page = JSON.parse(response);
-          $.get(self.config.url_api_table, function(response){
-            self.data.table = JSON.parse(response);
-            self.parseData();
-            self.renderPage();
-          });
-        });
-      };
-
-      self.renderPage = function () {
-        var template = document.getElementById(self.config.page_template_id).innerHTML;
-        var partials = {table: document.getElementById(self.config.table_template_id).innerHTML};
-        var html = Mustache.render(template, self.data, partials);
-        self.config.render_container.html(html);
-      };
-      */
-
+      th.getHtml('/location/1XPNP1WZVQ/rest/schedulehtmlpub/ru', {'init': true}, 'schedulewrap', function(html) {
+        $('body').html(html);
+        var tabs = new moduleTabs();
+        tabs.init(0);
+      });
 
       function moduleTabs(){
 
         var self = this;
-        self.tabs = $('.tabs .item');
-        self.tabs_halls = $('.schedule-tabs .item');
+
+        self.config = {
+          tabs: $('.tabs .item'),
+          tabs_halls: $('.schedule-tabs .item'),
+
+          day: function(){
+            return $('.tabs .selected').data('day').toString();
+          },
+          available_days: function(obj){
+            var obj = obj || $(".schedule-tabs .important");
+            return $(obj).data("available-days").toString().split(",");
+          },
+          hasImportant: function(){
+            return $('.schedule-tabs .important').length;
+          },
+          fr_names: function(){
+            return $(".schedule-tabs .selected").data('fr_name').split(";");
+          }
+        };
 
         self.init = function(index){
           //берется первый таб, если иной явно не передан
           index = index || 0;
-          self.tabs.eq(index).addClass('selected');
+          self.config.tabs.eq(index).addClass('selected');
           //визуализация disabled/enabled для групп
           self.viewTabs();
-          //Выделение первой доступной
+          //Выделение первой доступной группы залов
           $('.schedule-tabs .enabled:first').addClass('selected');
+          //Обработчики событий
+          self.events();
         };
 
         self.viewTabs = function(){
-          var day = $('.tabs .selected').data('day').toString();
-          self.tabs_halls.removeClass("enabled disabled selected");
-          self.tabs_halls.each(function(j){
-            var available_days = $(this).data('available-days').toString().split(",");
-            if(available_days.indexOf(day)!==-1) {
-              self.tabs_halls.eq(j).addClass("enabled");
+          self.config.tabs_halls.removeClass("enabled disabled selected");
+          self.config.tabs_halls.each(function(j){
+            if(self.config.available_days(this).indexOf(self.config.day())!==-1) {
+              self.config.tabs_halls.eq(j).addClass("enabled");
             } else {
-              self.tabs_halls.eq(j).addClass("disabled");
+              self.config.tabs_halls.eq(j).addClass("disabled");
             }
           });
         };
 
-        self.renderTable = function(halls){
-          var day = $(".tabs .selected").data('day').toString();
-          var fr_names = $(".schedule-tabs .selected").data('fr_name').split(";");
+        self.getTable = function(){
+          var fr_names = self.config.fr_names;
           var halls = [];
           for(var i in fr_names){
             halls.push({"hall_name": fr_names[i]});
           }
-          th.getHtml('/location/1XPNP1WZVQ/rest/schedulehtmlpub/ru', {'day': day, halls: JSON.stringify(halls)}, 'table', function(html) {
+          th.getHtml('/location/1XPNP1WZVQ/rest/schedulehtmlpub/ru', {'day': self.config.day(), halls: JSON.stringify(halls)}, 'table', function(html) {
             $('.schedule-table').replaceWith(html);
           });
         };
 
         self.events = function(){
-
           $('body').on('click', '.tabs .item', function(){
-            //Выделение таба
-            self.tabs.removeClass('selected');
+            //отображение выделения основного таба
+            self.config.tabs.removeClass('selected');
             $(this).addClass('selected');
-            //визуализация disabled/enabled
+            //отображение групп залов disabled/enabled
             self.viewTabs();
-            //Проверка на явно выбранную пользователем группу
-            var hasImportant = $('.schedule-tabs .important').length;
-            if(hasImportant){
-              var day = $(".tabs .selected").data("day").toString();
-              var available_days = $(".schedule-tabs .important").data("available-days").toString().split(",");
-              //Проверка доступности явно выбранной группы
-              if(available_days.indexOf(day)!==-1){
+            //проверка, если пользователь выбрал группу залов явно
+            if(self.config.hasImportant()){
+              //Проверка существования выставки в выбранный день в выбранной группе залов
+              if(self.config.available_days().indexOf(self.config.day())!==-1){
+                //если явная группа залов доступна, отображаем выделение
                 $('.schedule-tabs .important').addClass("selected");
               } else {
+                //если явная группа залов не доступна в этот день, отображаем выделение первой доступной
                 $('.schedule-tabs .enabled:first').addClass("selected");
               }
             } else {
-              //Выделение первой доступной группы
+              //Если явно группа залов не выбрана, выделяем первую доступную
               $('.schedule-tabs .enabled:first').addClass('selected');
             }
-            self.renderTable();
+            //отображаем таблицу с новыми данными
+            self.getTable();
           });
-
           $('body').on('click', '.schedule-tabs .item', function(){
+            //обрабатываем клики только на доступных группах
             if($(this).hasClass('enabled')){
-              self.tabs_halls.removeClass('important selected');
+              self.config.tabs_halls.removeClass('important selected');
               $(this).addClass('important selected');
-              self.renderTable();
+              self.getTable();
             }
             return false;
           });
-
-
         };
 
       }
 
-      th.getHtml('/location/1XPNP1WZVQ/rest/schedulehtmlpub/ru', {'init': true}, 'schedulewrap', function(html) {
-        self.config.render_container.html(html);
-        var tabs = new moduleTabs();
-        tabs.init(0);
-        tabs.events();
-      });
 
-      self.th = th;
+
     }
 
 
-
-
     var app = new Application();
-    //app.loadTemplates();
+
 
   })(window.mweb_jq)
 });
