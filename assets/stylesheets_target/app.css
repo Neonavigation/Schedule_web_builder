@@ -739,7 +739,7 @@ input:-moz-placeholder {
 }
 
 /* line 72, ../sass/components/_schedule.scss */
-.schedule-table {
+.schedule-table table {
   width: 100%;
   table-layout: fixed;
 }

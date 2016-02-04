@@ -1,237 +1,289 @@
 
-    <table class="schedule-table">
-        <col class="col-first">
-        <col span="4" class="cols4">
-        <col class="col-last">
+    <style>
+        .schedule-table{
+            position: relative;
+            padding-left: 50px;
+        }
+        .times{
+            position: absolute;
+            left: 0;
+        }
+        .times .item{
+            font-size: 14px;
+            font-weight: 700;
+            color: #646464;
+            height: 80px;
+            padding-top: 10px;
+        }
+    </style>
 
-        <tr class="titles">
-            <td><div class="label empty">&nbsp;</div></td>
-            <td><div class="label">Зал 1</div></td>
-            <td><div class="label">Зал 2</div></td>
-            <td><div class="label">Зал 3</div></td>
-            <td><div class="label">Зал 4</div></td>
-            <td><div class="label">Презентации на стендах</div></td>
-        </tr>
+    <div class="schedule-table">
+        <table>
 
-        {{#events_halls}}
-            {{hall_name}}<br>
-            {{#events}}
-                <div class="time">
-                    {{#time}}
-                        {{start_time_str}} –
-                        {{end_time_str}}
-                    {{/time}}
-                </div>
-                <div class="name">
-                    {{#name}}
-                        {{#ru}}
-                            {{str}}
-                        {{/ru}}
-                    {{/name}}
-                </div>
-                <div class="themes">
-                    {{#themes}}
-                        {{#strings}}
-                            {{#ru}}
-                                {{str}}
-                            {{/ru}}
-                        {{/strings}}
-                    {{/themes}}
-                </div>
-            {{/events}}
-        {{/events_halls}}
+            <style>
+                .schedule-table .title{
+                    font-size: 16px;
+                    font-weight: 700;
+                    text-align: center;
+                    color: #646464;
+                    margin: 0 0 10px;
+                }
+            </style>
 
-        {{events_halls}}
+            <tr>
+                {{#events_halls}}
+                    <td>
+                        <div class="title">
+                            {{hall_name}}
+                        </div>
+                    </td>
+                {{/events_halls}}
+            </tr>
+            <tr>
+                <td>
+                    <ul class="times">
+                        <li class="item">10:00</li>
+                        <li class="item">11:00</li>
+                        <li class="item">12:00</li>
+                        <li class="item">13:00</li>
+                        <li class="item">14:00</li>
+                        <li class="item">15:00</li>
+                        <li class="item">16:00</li>
+                        <li class="item">17:00</li>
+                        <li class="item">18:00</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                {{#events_halls}}
+                <td>
 
-        <!--{{.}}-->
-        <!--{{events_booths}}-->
 
-        <tr class="data">
-            <td class="time">10:00</td>
-            <td>
-                <div class="data-block">
-            <span class="time-interval">
-                10:00 - 11:00
-            </span>
-                    <p>
-                        Проблемы пищеварительного тракта у больших детей и маленьких взрослых.
-                    </p>
-                </div>
-            </td>
-            <td>
-                &nbsp;
-            </td>
-            <td>
-                <div class="data-block">
-            <span class="time-interval">
-                10:00 - 11:00
-            </span>
-                    <p>
-                        Проблемы пищеварительного тракта у больших детей и маленьких взрослых.
-                    </p>
-                </div>
-            </td>
-            <td>
-                <div class="data-block">
-            <span class="time-interval">
-                10:00 - 11:00
-            </span>
-                    <p>
-                        Проблемы пищеварительного тракта у больших детей и маленьких взрослых.
-                    </p>
-                </div>
-            </td>
-            <td>
-                &nbsp;
-            </td>
-        </tr>
-        <tr class="data">
-            <td class="time">11:00</td>
-            <td>
-                <div class="data-block">
-            <span class="time-interval">
-                11:00 - 12:00
-            </span>
-                    <p>
-                        Проблемы пищеварительного тракта у больших детей и маленьких взрослых.
-                    </p>
-                </div>
-            </td>
-            <td>
-                &nbsp;
-            </td>
-            <td>
-                &nbsp;
-            </td>
-            <td>
-                &nbsp;
-            </td>
-            <td>
-                &nbsp;
-            </td>
-        </tr>
-        <tr class="data">
-            <td class="time">12:00</td>
-            <td>
-                <div class="data-block">
-            <span class="time-interval">
-                12:00 - 13:00
-            </span>
-                    <p>
-                        Проблемы пищеварительного тракта у больших детей и маленьких взрослых.
-                    </p>
-                </div>
-            </td>
-            <td>
-                &nbsp;
-            </td>
-            <td>
-                &nbsp;
-            </td>
-            <td>
-                &nbsp;
-            </td>
-            <td>
-                &nbsp;
-            </td>
-        </tr>
-        <tr class="data">
-            <td class="time">13:00</td>
-            <td>
-                &nbsp;
-            </td>
-            <td>
-                &nbsp;
-            </td>
-            <td>
-                &nbsp;
-            </td>
-            <td>
-                &nbsp;
-            </td>
-            <td>
-                &nbsp;
-            </td>
-        </tr>
-        <tr class="data">
-            <td class="time">14:00</td>
-            <td>
-                &nbsp;
-            </td>
-            <td>
-                &nbsp;
-            </td>
-            <td>
-                &nbsp;
-            </td>
-            <td>
-                &nbsp;
-            </td>
-            <td>
-                &nbsp;
-            </td>
-        </tr>
-        <tr class="data">
-            <td class="time">15:00</td>
-            <td>
-                &nbsp;
-            </td>
-            <td>
-                &nbsp;
-            </td>
-            <td>
-                &nbsp;
-            </td>
-            <td>
-                &nbsp;
-            </td>
-            <td>
-                &nbsp;
-            </td>
-        </tr>
-        <tr class="data">
-            <td class="time">16:00</td>
-            <td>
-                &nbsp;
-            </td>
-            <td>
-                &nbsp;
-            </td>
-            <td>
-                &nbsp;
-            </td>
-            <td>
-                &nbsp;
-            </td>
-            <td>
-                &nbsp;
-            </td>
-        </tr>
-        <tr class="data">
-            <td class="time">17:00</td>
-            <td>
-                &nbsp;
-            </td>
-            <td>
-                &nbsp;
-            </td>
-            <td>
-                &nbsp;
-            </td>
-            <td>
-                &nbsp;
-            </td>
-            <td>
-                &nbsp;
-            </td>
-        </tr>
-        <tr class="data">
-            <td class="time">18:00</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
+                    {{#events}}
+                        <div class="data-block">
+                            <div class="time-interval">
+                                {{#time}}
+                                    {{start_time_str}} –
+                                    {{end_time_str}}
+                                {{/time}}
+                            </div>
+                            <div class="name">
+                                <p>
+                                    {{#name}}
+                                        {{#ru}}
+                                            {{str}}
+                                        {{/ru}}
+                                    {{/name}}
+                                </p>
+                            </div>
+                            <div class="themes">
+                                {{#themes}}
+                                    {{#strings}}
+                                        {{#ru}}
+                                            {{str}}
+                                        {{/ru}}
+                                    {{/strings}}
+                                {{/themes}}
+                            </div>
+                        </div>
+                    {{/events}}
+                </td>
+            {{/events_halls}}
 
-    </table>
+            <!--{{events_halls}}-->
+
+            <!--{{.}}-->
+            <!--{{events_booths}}-->
+
+            <!--
+            <tr class="data">
+                <td class="time">10:00</td>
+                <td>
+                    <div class="data-block">
+                <span class="time-interval">
+                    10:00 - 11:00
+                </span>
+                        <p>
+                            Проблемы пищеварительного тракта у больших детей и маленьких взрослых.
+                        </p>
+                    </div>
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    <div class="data-block">
+                <span class="time-interval">
+                    10:00 - 11:00
+                </span>
+                        <p>
+                            Проблемы пищеварительного тракта у больших детей и маленьких взрослых.
+                        </p>
+                    </div>
+                </td>
+                <td>
+                    <div class="data-block">
+                <span class="time-interval">
+                    10:00 - 11:00
+                </span>
+                        <p>
+                            Проблемы пищеварительного тракта у больших детей и маленьких взрослых.
+                        </p>
+                    </div>
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+            </tr>
+            <tr class="data">
+                <td class="time">11:00</td>
+                <td>
+                    <div class="data-block">
+                <span class="time-interval">
+                    11:00 - 12:00
+                </span>
+                        <p>
+                            Проблемы пищеварительного тракта у больших детей и маленьких взрослых.
+                        </p>
+                    </div>
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+            </tr>
+            <tr class="data">
+                <td class="time">12:00</td>
+                <td>
+                    <div class="data-block">
+                <span class="time-interval">
+                    12:00 - 13:00
+                </span>
+                        <p>
+                            Проблемы пищеварительного тракта у больших детей и маленьких взрослых.
+                        </p>
+                    </div>
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+            </tr>
+            <tr class="data">
+                <td class="time">13:00</td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+            </tr>
+            <tr class="data">
+                <td class="time">14:00</td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+            </tr>
+            <tr class="data">
+                <td class="time">15:00</td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+            </tr>
+            <tr class="data">
+                <td class="time">16:00</td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+            </tr>
+            <tr class="data">
+                <td class="time">17:00</td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+            </tr>
+            <tr class="data">
+                <td class="time">18:00</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            -->
+        </table>
+
+    </div>
