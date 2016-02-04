@@ -14,9 +14,36 @@
         </tr>
 
         {{#events_halls}}
-            {{hall_name}}
-            {{.}}
+            {{hall_name}}<br>
+            {{#events}}
+                <div class="time">
+                    {{#time}}
+                        {{start_time_str}} –
+                        {{end_time_str}}
+                    {{/time}}
+                </div>
+                <div class="name">
+                    {{#name}}
+                        {{#ru}}
+                            {{str}}
+                        {{/ru}}
+                    {{/name}}
+                </div>
+                <div class="themes">
+                    {{#themes}}
+                        {{#strings}}
+                            {{#ru}}
+                                {{str}}
+                            {{/ru}}
+                        {{/strings}}
+                    {{/themes}}
+                </div>
+            {{/events}}
         {{/events_halls}}
+
+        {{events_halls}}
+
+        <!--{{.}}-->
         <!--{{events_booths}}-->
 
         <tr class="data">

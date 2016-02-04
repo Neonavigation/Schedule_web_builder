@@ -52,7 +52,7 @@ window.ModuleLoader([],[], function() {
             return $('.schedule-tabs .important').length;
           },
           fr_names: function(){
-            return $(".schedule-tabs .selected").data('fr_name').split(";");
+            return $(".schedule-tabs .selected").data('hall_fr_names').split(";").slice(0,-1);
           }
         };
 
@@ -68,6 +68,7 @@ window.ModuleLoader([],[], function() {
           self.events();
         };
 
+
         self.viewTabs = function(){
           self.config.tabs_halls.removeClass("enabled disabled selected");
           self.config.tabs_halls.each(function(j){
@@ -77,14 +78,20 @@ window.ModuleLoader([],[], function() {
               self.config.tabs_halls.eq(j).addClass("disabled");
             }
           });
+          if($('.schedule-tabs .enabled').length==1){
+            $('.schedule-tabs').hide();
+          } else {
+            $('.schedule-tabs').show();
+          }
         };
 
         self.getTable = function(){
-          var fr_names = self.config.fr_names;
+          var hall_fr_names = self.config.fr_names();
           var halls = [];
-          for(var i in fr_names){
-            halls.push({"hall_name": fr_names[i]});
+          for(var i in hall_fr_names){
+            halls.push({hall_name: hall_fr_names[i], pav_id: ""});
           }
+          console.log(hall_fr_names.length);
           th.getHtml('/location/1XPNP1WZVQ/rest/schedulehtmlpub/ru', {'day': self.config.day(), halls: JSON.stringify(halls)}, 'table', function(html) {
             $('.schedule-table').replaceWith(html);
           });
