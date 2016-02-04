@@ -46,11 +46,16 @@
   color: #ccc;
   cursor: default;
 }
+.schedule-tabs .item.enabled a:hover{
+  background: #dedede;
+}
+.schedule-tabs .item.selected.enabled a:hover,
 .schedule-tabs .item.selected a{
   background: #bcd46a;
   color: white;
   cursor: default;
 }
+
 .schedule-tabs .name{
   display: inline-block;
   width: 100%;
