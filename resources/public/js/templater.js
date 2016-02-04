@@ -10,7 +10,8 @@ var entityMap = {
 };
 
 Mustache.escape = function escapeHtml (string) {
-  return JSON.stringify(string).replace(/[&<>"'`=\/]/g, function fromEntityMap (s) {
+  if (typeof string !== 'string') string = JSON.stringify(string);
+  return string.replace(/[&<>"'`=\/]/g, function fromEntityMap (s) {
     return entityMap[s];
   });
 }
