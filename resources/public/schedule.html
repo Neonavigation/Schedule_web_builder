@@ -92,7 +92,7 @@ window.ModuleLoader([],[], function() {
             halls.push({hall_name: hall_fr_names[i], pav_id: ""});
           }
           console.log(hall_fr_names.length);
-          th.getHtml('/location/1XPNP1WZVQ/rest/schedulehtmlpub/ru', {'day': self.config.day(), halls: JSON.stringify(halls)}, 'table', function(html) {
+          th.getHtml('/location/1XPNP1WZVQ/rest/schedulehtmlpub/ru', {'pph': 100, 'day': self.config.day(), halls: JSON.stringify(halls)}, 'table', function(html) {
             $('.schedule-table').replaceWith(html);
           });
         };

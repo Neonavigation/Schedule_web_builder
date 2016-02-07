@@ -12,7 +12,7 @@
             font-size: 14px;
             font-weight: 700;
             color: #646464;
-            height: 80px;
+            height: 100px;
             padding-top: 10px;
         }
     </style>
@@ -33,7 +33,7 @@
             <tr>
                 {{#events_halls}}
                     <td>
-                        <div class="title">
+                        <div class="title" style="max-width: 250px; margin-left: 15px; margin-right: 15px;">
                             {{hall_name}}
                         </div>
                     </td>
@@ -60,30 +60,35 @@
 
 
                     {{#events}}
-                        <div class="data-block">
-                            <div class="time-interval">
-                                {{#time}}
-                                    {{start_time_str}} –
-                                    {{end_time_str}}
-                                {{/time}}
-                            </div>
-                            <div class="name">
-                                <p>
-                                    {{#name}}
-                                        {{#ru}}
-                                            {{str}}
-                                        {{/ru}}
-                                    {{/name}}
-                                </p>
-                            </div>
-                            <div class="themes">
-                                {{#themes}}
-                                    {{#strings}}
-                                        {{#ru}}
-                                            {{str}}
-                                        {{/ru}}
-                                    {{/strings}}
-                                {{/themes}}
+
+                        <div style="position: relative;">
+                            <div style="position: absolute; width: 100%; height: 800px;  border-left: solid 1px #e1e1e1;">
+                                <div class="data-block"  style="margin: 0 15px; padding: 5px; position: relative; top: {{#time}}{{top}}{{/time}}px; height: {{#time}}{{height}}{{/time}}px;">
+                                    <div class="time-interval">
+                                        {{#time}}
+                                            {{start_time_str}} –
+                                            {{end_time_str}}
+                                        {{/time}}
+                                    </div>
+                                    <div class="name">
+                                        <p>
+                                            {{#name}}
+                                                {{#ru}}
+                                                    {{str}}
+                                                {{/ru}}
+                                            {{/name}}
+                                        </p>
+                                    </div>
+                                    <div class="themes">
+                                        {{#themes}}
+                                            {{#strings}}
+                                                {{#ru}}
+                                                    {{str}}
+                                                {{/ru}}
+                                            {{/strings}}
+                                        {{/themes}}
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     {{/events}}

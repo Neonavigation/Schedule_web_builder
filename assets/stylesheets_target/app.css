@@ -740,41 +740,15 @@ input:-moz-placeholder {
 
 /* line 72, ../sass/components/_schedule.scss */
 .schedule-table table {
-  width: 100%;
   table-layout: fixed;
 }
 
+/* line 75, ../sass/components/_schedule.scss */
+.schedule-table td {
+  min-width: 200px;
+}
+
 /* line 79, ../sass/components/_schedule.scss */
-.schedule-table .col-first {
-  width: 5%;
-}
-
-/* line 82, ../sass/components/_schedule.scss */
-.schedule-table .cols4 {
-  width: 15%;
-}
-
-/* line 85, ../sass/components/_schedule.scss */
-.schedule-table .col-last {
-  width: 35%;
-}
-
-/* line 88, ../sass/components/_schedule.scss */
-.schedule-table .data td {
-  height: 100px;
-}
-
-/* line 91, ../sass/components/_schedule.scss */
-.schedule-table .data td {
-  border-left: solid 1px #e1e1e1;
-}
-
-/* line 94, ../sass/components/_schedule.scss */
-.schedule-table .data td:first-child {
-  border: none;
-}
-
-/* line 97, ../sass/components/_schedule.scss */
 .schedule-table .titles td {
   padding-top: 11px;
   font-size: 16px;
@@ -783,18 +757,19 @@ input:-moz-placeholder {
   color: #646464;
 }
 
-/* line 104, ../sass/components/_schedule.scss */
+/* line 86, ../sass/components/_schedule.scss */
 .schedule-table .titles td {
   padding: 13px;
   border-left: solid 1px #e1e1e1;
+  min-width: 200px;
 }
 
-/* line 108, ../sass/components/_schedule.scss */
+/* line 91, ../sass/components/_schedule.scss */
 .schedule-table .titles td:first-child {
   border: none;
 }
 
-/* line 111, ../sass/components/_schedule.scss */
+/* line 94, ../sass/components/_schedule.scss */
 .schedule-table .time {
   font-size: 14px;
   font-weight: 700;
@@ -803,15 +778,13 @@ input:-moz-placeholder {
   padding-top: 20px;
 }
 
-/* line 118, ../sass/components/_schedule.scss */
+/* line 101, ../sass/components/_schedule.scss */
 .schedule-table .data-block {
-  margin: 0 15px;
-  padding: 5px;
   font-size: 12px;
   background: #d9e9ff;
 }
 
-/* line 124, ../sass/components/_schedule.scss */
+/* line 105, ../sass/components/_schedule.scss */
 .schedule-table .hr td {
   height: 10px;
   padding: 0;

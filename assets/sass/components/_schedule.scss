@@ -70,30 +70,12 @@
 }
 
 .schedule-table table{
-  width: 100%;
   table-layout: fixed;
 }
 .schedule-table td{
+  min-width: 200px;
+}
 
-}
-.schedule-table .col-first{
-  width: 5%;
-}
-.schedule-table .cols4{
-  width:15%;
-}
-.schedule-table .col-last{
-  width: 35%;
-}
-.schedule-table .data td{
-  height: 100px;
-}
-.schedule-table .data td{
-  border-left: solid 1px #e1e1e1;
-}
-.schedule-table .data td:first-child{
-  border: none;
-}
 .schedule-table .titles td{
   padding-top: 11px;
   font-size: 16px;
@@ -104,6 +86,7 @@
 .schedule-table .titles td{
   padding: 13px;
   border-left: solid 1px #e1e1e1;
+  min-width: 200px;
 }
 .schedule-table .titles td:first-child{
   border: none;
@@ -116,8 +99,6 @@
   padding-top: 20px;
 }
 .schedule-table .data-block{
-  margin: 0 15px;
-  padding: 5px;
   font-size: 12px;
   background: #d9e9ff;
 }
