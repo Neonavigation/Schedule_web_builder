@@ -23,6 +23,26 @@
             color: #646464;
             margin: 0 0 10px;
         }
+        .data-block .themes{
+            position: absolute;
+            width: 100%;
+            padding: 0 5px;
+            box-sizing: padding-box;
+            bottom: 5px;
+            right: 0;
+            text-align: right;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .data-block .name{
+            overflow: hidden;
+            position: absolute;
+            box-sizing: border-box;
+            border-bottom: solid 38px rgba(0,0,0,0);
+            border-top: solid 20px rgba(0,0,0,0);
+            height: 100%;
+        }
     </style>
 
     <div class="schedule-table">
@@ -68,20 +88,27 @@
 
                             <div style="position: relative;">
                                 <div style="position: absolute; width: 100%; height: 900px;  border-right: solid 1px #e1e1e1;">
-                                    <div class="data-block"  style="margin: 0 15px; padding: 5px; position: relative; top: {{#time}}{{top}}{{/time}}px; height: {{#time}}{{height}}{{/time}}px;">
-                                        <div class="time-interval">
+                                    <div class="data-block"  style="text-overflow: ellipsis; margin: 0 15px; padding: 5px; position: relative; top: {{#time}}{{top}}{{/time}}px; height: {{#time}}{{height}}{{/time}}px;">
+                                        <div class="time-interval" style="position: absolute;">
                                             {{#time}}
                                                 {{start_time_str}} –
                                                 {{end_time_str}}
                                             {{/time}}
                                         </div>
                                         <div class="name">
-                                            <p>
+                                            <p style="margin-bottom: 10px;">
                                                 {{#name}}
                                                     {{#ru}}
                                                         {{str}}
                                                     {{/ru}}
                                                 {{/name}}
+                                            </p>
+                                            <p style="color: #999;">
+                                                {{#description}}
+                                                    {{#ru}}
+                                                        {{{str}}}
+                                                    {{/ru}}
+                                                {{/description}}
                                             </p>
                                         </div>
                                         <div class="themes">
@@ -119,12 +146,19 @@
                                                         {{/time}}
                                                     </div>
                                                     <div class="name">
-                                                        <p>
+                                                        <p style="margin-bottom: 10px;">
                                                             {{#name}}
                                                             {{#ru}}
                                                             {{str}}
                                                             {{/ru}}
                                                             {{/name}}
+                                                        </p>
+                                                        <p style="color: #999;">
+                                                            {{#description}}
+                                                            {{#ru}}
+                                                            {{{str}}}
+                                                            {{/ru}}
+                                                            {{/description}}
                                                         </p>
                                                     </div>
                                                     <div class="themes">
