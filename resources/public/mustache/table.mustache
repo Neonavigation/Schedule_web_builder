@@ -15,20 +15,18 @@
             height: 100px;
             padding-top: 10px;
         }
+
+        .schedule-table .title{
+            font-size: 16px;
+            font-weight: 700;
+            text-align: center;
+            color: #646464;
+            margin: 0 0 10px;
+        }
     </style>
 
     <div class="schedule-table">
         <table>
-
-            <style>
-                .schedule-table .title{
-                    font-size: 16px;
-                    font-weight: 700;
-                    text-align: center;
-                    color: #646464;
-                    margin: 0 0 10px;
-                }
-            </style>
 
             <tr>
                 {{#events_halls}}
@@ -38,10 +36,17 @@
                         </div>
                     </td>
                 {{/events_halls}}
+
+                <td>
+                    <div class="title" style="margin-left: 15px; margin-right: 15px; text-align: center;">
+                        Презентации на стендах
+                    </div>
+                </td>
+
             </tr>
             <tr>
                 <td>
-                    <ul class="times">
+                    <ul class="times" style="border-right: solid 1px #e1e1e1;">
                         <li class="item">10:00</li>
                         <li class="item">11:00</li>
                         <li class="item">12:00</li>
@@ -56,44 +61,93 @@
             </tr>
             <tr>
                 {{#events_halls}}
-                <td>
+                    <td class="col">
 
 
-                    {{#events}}
+                        {{#events}}
 
-                        <div style="position: relative;">
-                            <div style="position: absolute; width: 100%; height: 800px;  border-left: solid 1px #e1e1e1;">
-                                <div class="data-block"  style="margin: 0 15px; padding: 5px; position: relative; top: {{#time}}{{top}}{{/time}}px; height: {{#time}}{{height}}{{/time}}px;">
-                                    <div class="time-interval">
-                                        {{#time}}
-                                            {{start_time_str}} –
-                                            {{end_time_str}}
-                                        {{/time}}
-                                    </div>
-                                    <div class="name">
-                                        <p>
-                                            {{#name}}
-                                                {{#ru}}
-                                                    {{str}}
-                                                {{/ru}}
-                                            {{/name}}
-                                        </p>
-                                    </div>
-                                    <div class="themes">
-                                        {{#themes}}
-                                            {{#strings}}
-                                                {{#ru}}
-                                                    {{str}}
-                                                {{/ru}}
-                                            {{/strings}}
-                                        {{/themes}}
+                            <div style="position: relative;">
+                                <div style="position: absolute; width: 100%; height: 800px;  border-right: solid 1px #e1e1e1;">
+                                    <div class="data-block"  style="margin: 0 15px; padding: 5px; position: relative; top: {{#time}}{{top}}{{/time}}px; height: {{#time}}{{height}}{{/time}}px;">
+                                        <div class="time-interval">
+                                            {{#time}}
+                                                {{start_time_str}} –
+                                                {{end_time_str}}
+                                            {{/time}}
+                                        </div>
+                                        <div class="name">
+                                            <p>
+                                                {{#name}}
+                                                    {{#ru}}
+                                                        {{str}}
+                                                    {{/ru}}
+                                                {{/name}}
+                                            </p>
+                                        </div>
+                                        <div class="themes">
+                                            {{#themes}}
+                                                {{#strings}}
+                                                    {{#ru}}
+                                                        {{str}}
+                                                    {{/ru}}
+                                                {{/strings}}
+                                            {{/themes}}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    {{/events}}
-                </td>
-            {{/events_halls}}
+                        {{/events}}
+                    </td>
+                {{/events_halls}}
+
+                    <td>
+
+
+                        <table>
+                            <tr>
+                            {{#events_booths}}
+                                <td style="min-width: 200px;">
+                                    {{#.}}
+
+                                    <div style="position: relative;">
+                                        <div style="position: absolute; width: 100%; height: 800px;">
+                                            <div class="data-block"  style="margin: 0 15px; padding: 5px; position: relative; top: {{#time}}{{top}}{{/time}}px; height: {{#time}}{{height}}{{/time}}px;">
+                                                <div class="time-interval">
+                                                    {{#time}}
+                                                    {{start_time_str}} –
+                                                    {{end_time_str}}
+                                                    {{/time}}
+                                                </div>
+                                                <div class="name">
+                                                    <p>
+                                                        {{#name}}
+                                                        {{#ru}}
+                                                        {{str}}
+                                                        {{/ru}}
+                                                        {{/name}}
+                                                    </p>
+                                                </div>
+                                                <div class="themes">
+                                                    {{#themes}}
+                                                    {{#strings}}
+                                                    {{#ru}}
+                                                    {{str}}
+                                                    {{/ru}}
+                                                    {{/strings}}
+                                                    {{/themes}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {{/.}}
+                                </td>
+                            {{/events_booths}}
+                            </tr>
+                        </table>
+
+
+                    </td>
 
             <!--{{events_halls}}-->
 

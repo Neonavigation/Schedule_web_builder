@@ -72,7 +72,7 @@
 .schedule-table table{
   table-layout: fixed;
 }
-.schedule-table td{
+.schedule-table .col{
   min-width: 200px;
 }
 
@@ -101,10 +101,4 @@
 .schedule-table .data-block{
   font-size: 12px;
   background: #d9e9ff;
-}
-.schedule-table .hr td{
-  height: 10px;
-  padding: 0;
-  margin: 0;
-  font-size: 0;
 }

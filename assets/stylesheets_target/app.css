@@ -744,7 +744,7 @@ input:-moz-placeholder {
 }
 
 /* line 75, ../sass/components/_schedule.scss */
-.schedule-table td {
+.schedule-table .col {
   min-width: 200px;
 }
 
@@ -782,12 +782,4 @@ input:-moz-placeholder {
 .schedule-table .data-block {
   font-size: 12px;
   background: #d9e9ff;
-}
-
-/* line 105, ../sass/components/_schedule.scss */
-.schedule-table .hr td {
-  height: 10px;
-  padding: 0;
-  margin: 0;
-  font-size: 0;
 }
