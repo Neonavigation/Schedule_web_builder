@@ -131,13 +131,9 @@
   background: #d9e9ff;
   border: solid 1px #d9e9ff;
   box-sizing: border-box;
-  transition: border 0.2s ease;
-  -webkit-transition: border 0.2s ease;
 }
 .maintable .data-block:hover .data-wrap{
   border: solid 1px #89bbff;
-  transition: border 0s ease;
-  -webkit-transition: border 0 ease;
 }
 .maintable .stands{
   position: relative;
