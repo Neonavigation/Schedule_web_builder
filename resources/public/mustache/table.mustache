@@ -3,11 +3,14 @@
         .schedule-table{
             height: 950px;
             position: relative;
-            padding-left: 50px;
+            padding-left: 76px;
         }
         .times{
             position: absolute;
             left: 0;
+            border-right: solid 1px #e1e1e1;
+            width: 76px;
+            text-align: center;
         }
         .times .item{
             font-size: 14px;
@@ -22,7 +25,10 @@
             font-weight: 700;
             text-align: center;
             color: #646464;
-            margin: 0 0 10px;
+        }
+        .data-block{
+            margin: 0 15px;
+            position: relative;
         }
         .data-block .themes{
             position: absolute;
@@ -43,40 +49,49 @@
             border-bottom: solid 38px rgba(0,0,0,0);
             border-top: solid 20px rgba(0,0,0,0);
             height: 100%;
+            padding: 5px;
         }
         .col{
             vertical-align: top;
             height: 950px;
         }
-        .dots{
-            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAN5CAYAAAASN/uaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjU4MURENDZCQ0RCRTExRTU5MDdERDk0MDE0RTAzOUQ1IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjU4MURENDZDQ0RCRTExRTU5MDdERDk0MDE0RTAzOUQ1Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NTgxREQ0NjlDREJFMTFFNTkwN0REOTQwMTRFMDM5RDUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NTgxREQ0NkFDREJFMTFFNTkwN0REOTQwMTRFMDM5RDUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5ACMH5AAABYUlEQVR42uzaQQ3AMAwEQZc/SiNpGxAr5TErJfJvCNzs7vs35xX3c74yAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHA3MFbLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABl1poAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGXWmgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAZdaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABl1poAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGXWmgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAZdaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABl9VrzE2AAp7f9tf8EFVYAAAAASUVORK5CYII=');
-            background-repeat: repeat-x;
-            background-position: 0 13px;
+
+        .maintable .col1{
+            max-width: 250px;
+            padding: 15px;
+            margin-right: -1px;
+            border-left: solid 1px #e1e1e1;
+            border-right: solid 1px #e1e1e1;
+            padding-bottom: 10015px;
+            margin-bottom: -10000px;
+        }
+        .maintable .col2{
+            padding: 15px;
+            text-align: center;
         }
     </style>
 
-    <div class="schedule-table">
+    <div class="schedule-table" style="overflow: hidden;">
         <table class="maintable">
-
             <tr>
                 {{#events_halls}}
-                    <td>
-                        <div class="title" style="max-width: 250px; margin-left: 15px; margin-right: 15px;">
-                            {{hall_name}}
-                        </div>
-                    </td>
+                <td>
+                    <div class="title col1">
+                        {{hall_name}}
+                    </div>
+                </td>
                 {{/events_halls}}
 
                 <td>
-                    <div class="title" style="margin-left: 15px; margin-right: 15px; text-align: center;">
+                    <div class="title col2">
                         Презентации на стендах
                     </div>
                 </td>
 
             </tr>
             <tr>
-                <td>
-                    <ul class="times" style="border-right: solid 1px #e1e1e1;">
+                <td colspan="2">
+                    <ul class="times">
                         <li class="item">10:00</li>
                         <li class="item">11:00</li>
                         <li class="item">12:00</li>
@@ -90,303 +105,109 @@
                 </td>
             </tr>
             <tr>
+
                 {{#events_halls}}
-                    <td class="col dots">
+                <td class="col">
 
+                    {{#events}}
 
-                        {{#events}}
-
-                            <div style="position: relative;">
-                                <div style="position: absolute; width: 100%; height: 900px;  border-right: solid 1px #e1e1e1;">
-                                    <div class="data-block"  style="text-overflow: ellipsis; margin: 0 15px; padding: 5px; position: relative; top: {{#time}}{{top}}{{/time}}px; height: {{#time}}{{height}}{{/time}}px;">
-                                        <div class="time-interval" style="position: absolute;">
-                                            {{#time}}
-                                                {{start_time_str}} –
-                                                {{end_time_str}}
-                                            {{/time}}
-                                        </div>
-                                        <div class="name">
-                                            <p style="margin-bottom: 10px;">
-                                                {{#name}}
-                                                    {{#ru}}
-                                                        {{str}}
-                                                    {{/ru}}
-                                                {{/name}}
-                                            </p>
-                                            <p style="color: #999;">
-                                                {{#description}}
-                                                    {{#ru}}
-                                                        {{{str}}}
-                                                    {{/ru}}
-                                                {{/description}}
-                                            </p>
-                                        </div>
-                                        <div class="themes">
-                                            {{#themes}}
-                                                {{#strings}}
-                                                    {{#ru}}
-                                                        {{str}}
-                                                    {{/ru}}
-                                                {{/strings}}
-                                            {{/themes}}
-                                        </div>
+                        <div style="position: relative;">
+                            <div style="position: absolute; width: 100%; height: 900px;">
+                                <div class="data-block"  style="top: {{#time}}{{top}}{{/time}}px; height: {{#time}}{{height}}{{/time}}px;">
+                                    <div class="time-interval" style="position: absolute;">
+                                        {{#time}}
+                                            {{start_time_str}} –
+                                            {{end_time_str}}
+                                        {{/time}}
+                                    </div>
+                                    <div class="name">
+                                        <p style="margin-bottom: 10px;">
+                                            {{#name}}
+                                                {{#ru}}
+                                                    {{str}}
+                                                {{/ru}}
+                                            {{/name}}
+                                        </p>
+                                        <p style="color: #999;">
+                                            {{#description}}
+                                                {{#ru}}
+                                                    {{{str}}}
+                                                {{/ru}}
+                                            {{/description}}
+                                        </p>
+                                    </div>
+                                    <div class="themes">
+                                        {{#themes}}
+                                            {{#strings}}
+                                                {{#ru}}
+                                                    {{str}}
+                                                {{/ru}}
+                                            {{/strings}}
+                                        {{/themes}}
                                     </div>
                                 </div>
                             </div>
-                        {{/events}}
-                    </td>
+                        </div>
+                    {{/events}}
+                </td>
                 {{/events_halls}}
 
-                    <td style="position: relative; width: 100%; vertical-align: top;">
+                <td style="position: relative; width: 100%; vertical-align: top;">
 
-                        <div style="position: absolute; width: 100%; height: 950px; overflow: auto;">
-                            <table style="table-layout: fixed;">
-                                <tr>
-                                {{#events_booths}}
-                                    <td class="dots" style="vertical-align: top; height: 920px;">
-                                        {{#.}}
+                    <div style="position: absolute; width: 100%; height: 950px; overflow: auto;">
+                        <table style="table-layout: fixed;">
+                            <tr>
+                            {{#events_booths}}
+                                <td style="vertical-align: top; height: 920px;">
+                                    {{#.}}
 
-                                        <div style="position: relative;width: 200px;">
-                                            <div style="position: absolute; width: 100%; height: 800px;">
-                                                <div class="data-block"  style="margin: 0 15px; padding: 5px; position: relative; top: {{#time}}{{top}}{{/time}}px; height: {{#time}}{{height}}{{/time}}px;">
-                                                    <div class="time-interval">
-                                                        {{#time}}
-                                                        {{start_time_str}} –
-                                                        {{end_time_str}}
-                                                        {{/time}}
-                                                    </div>
-                                                    <div class="name">
-                                                        <p style="margin-bottom: 10px;">
-                                                            {{#name}}
-                                                            {{#ru}}
-                                                            {{str}}
-                                                            {{/ru}}
-                                                            {{/name}}
-                                                        </p>
-                                                        <p style="color: #999;">
-                                                            {{#description}}
-                                                            {{#ru}}
-                                                            {{{str}}}
-                                                            {{/ru}}
-                                                            {{/description}}
-                                                        </p>
-                                                    </div>
-                                                    <div class="themes">
-                                                        {{#themes}}
-                                                        {{#strings}}
+                                    <div style="position: relative;width: 200px;">
+                                        <div style="position: absolute; width: 100%; height: 800px;">
+                                            <div class="data-block"  style="top: {{#time}}{{top}}{{/time}}px; height: {{#time}}{{height}}{{/time}}px;">
+                                                <div class="time-interval">
+                                                    {{#time}}
+                                                    {{start_time_str}} –
+                                                    {{end_time_str}}
+                                                    {{/time}}
+                                                </div>
+                                                <div class="name">
+                                                    <p style="margin-bottom: 10px;">
+                                                        {{#name}}
                                                         {{#ru}}
                                                         {{str}}
                                                         {{/ru}}
-                                                        {{/strings}}
-                                                        {{/themes}}
-                                                    </div>
+                                                        {{/name}}
+                                                    </p>
+                                                    <p style="color: #999;">
+                                                        {{#description}}
+                                                        {{#ru}}
+                                                        {{{str}}}
+                                                        {{/ru}}
+                                                        {{/description}}
+                                                    </p>
+                                                </div>
+                                                <div class="themes">
+                                                    {{#themes}}
+                                                    {{#strings}}
+                                                    {{#ru}}
+                                                    {{str}}
+                                                    {{/ru}}
+                                                    {{/strings}}
+                                                    {{/themes}}
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
 
-                                        {{/.}}
-                                    </td>
-                                {{/events_booths}}
-                                </tr>
-                            </table>
-                        </div>
+                                    {{/.}}
+                                </td>
+                            {{/events_booths}}
+                            </tr>
+                        </table>
+                    </div>
 
-                    </td>
-
-            <!--{{events_halls}}-->
-
-            <!--{{.}}-->
-            <!--{{events_booths}}-->
-
-            <!--
-            <tr class="data">
-                <td class="time">10:00</td>
-                <td>
-                    <div class="data-block">
-                <span class="time-interval">
-                    10:00 - 11:00
-                </span>
-                        <p>
-                            Проблемы пищеварительного тракта у больших детей и маленьких взрослых.
-                        </p>
-                    </div>
-                </td>
-                <td>
-                    &nbsp;
-                </td>
-                <td>
-                    <div class="data-block">
-                <span class="time-interval">
-                    10:00 - 11:00
-                </span>
-                        <p>
-                            Проблемы пищеварительного тракта у больших детей и маленьких взрослых.
-                        </p>
-                    </div>
-                </td>
-                <td>
-                    <div class="data-block">
-                <span class="time-interval">
-                    10:00 - 11:00
-                </span>
-                        <p>
-                            Проблемы пищеварительного тракта у больших детей и маленьких взрослых.
-                        </p>
-                    </div>
-                </td>
-                <td>
-                    &nbsp;
                 </td>
             </tr>
-            <tr class="data">
-                <td class="time">11:00</td>
-                <td>
-                    <div class="data-block">
-                <span class="time-interval">
-                    11:00 - 12:00
-                </span>
-                        <p>
-                            Проблемы пищеварительного тракта у больших детей и маленьких взрослых.
-                        </p>
-                    </div>
-                </td>
-                <td>
-                    &nbsp;
-                </td>
-                <td>
-                    &nbsp;
-                </td>
-                <td>
-                    &nbsp;
-                </td>
-                <td>
-                    &nbsp;
-                </td>
-            </tr>
-            <tr class="data">
-                <td class="time">12:00</td>
-                <td>
-                    <div class="data-block">
-                <span class="time-interval">
-                    12:00 - 13:00
-                </span>
-                        <p>
-                            Проблемы пищеварительного тракта у больших детей и маленьких взрослых.
-                        </p>
-                    </div>
-                </td>
-                <td>
-                    &nbsp;
-                </td>
-                <td>
-                    &nbsp;
-                </td>
-                <td>
-                    &nbsp;
-                </td>
-                <td>
-                    &nbsp;
-                </td>
-            </tr>
-            <tr class="data">
-                <td class="time">13:00</td>
-                <td>
-                    &nbsp;
-                </td>
-                <td>
-                    &nbsp;
-                </td>
-                <td>
-                    &nbsp;
-                </td>
-                <td>
-                    &nbsp;
-                </td>
-                <td>
-                    &nbsp;
-                </td>
-            </tr>
-            <tr class="data">
-                <td class="time">14:00</td>
-                <td>
-                    &nbsp;
-                </td>
-                <td>
-                    &nbsp;
-                </td>
-                <td>
-                    &nbsp;
-                </td>
-                <td>
-                    &nbsp;
-                </td>
-                <td>
-                    &nbsp;
-                </td>
-            </tr>
-            <tr class="data">
-                <td class="time">15:00</td>
-                <td>
-                    &nbsp;
-                </td>
-                <td>
-                    &nbsp;
-                </td>
-                <td>
-                    &nbsp;
-                </td>
-                <td>
-                    &nbsp;
-                </td>
-                <td>
-                    &nbsp;
-                </td>
-            </tr>
-            <tr class="data">
-                <td class="time">16:00</td>
-                <td>
-                    &nbsp;
-                </td>
-                <td>
-                    &nbsp;
-                </td>
-                <td>
-                    &nbsp;
-                </td>
-                <td>
-                    &nbsp;
-                </td>
-                <td>
-                    &nbsp;
-                </td>
-            </tr>
-            <tr class="data">
-                <td class="time">17:00</td>
-                <td>
-                    &nbsp;
-                </td>
-                <td>
-                    &nbsp;
-                </td>
-                <td>
-                    &nbsp;
-                </td>
-                <td>
-                    &nbsp;
-                </td>
-                <td>
-                    &nbsp;
-                </td>
-            </tr>
-            <tr class="data">
-                <td class="time">18:00</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            -->
         </table>
 
     </div>
