@@ -1,77 +1,6 @@
 
-    <style>
-        .schedule-table{
-            height: 950px;
-            position: relative;
-            padding-left: 76px;
-        }
-        .times{
-            position: absolute;
-            left: 0;
-            border-right: solid 1px #e1e1e1;
-            width: 76px;
-            text-align: center;
-        }
-        .times .item{
-            font-size: 14px;
-            font-weight: 700;
-            color: #646464;
-            height: 100px;
-            padding-top: 10px;
-        }
 
-        .schedule-table .title{
-            font-size: 16px;
-            font-weight: 700;
-            text-align: center;
-            color: #646464;
-        }
-        .data-block{
-            margin: 0 15px;
-            position: relative;
-        }
-        .data-block .themes{
-            position: absolute;
-            width: 100%;
-            padding: 0 5px;
-            box-sizing: padding-box;
-            bottom: 5px;
-            right: 0;
-            text-align: right;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        .data-block .name{
-            overflow: hidden;
-            position: absolute;
-            box-sizing: border-box;
-            border-bottom: solid 38px rgba(0,0,0,0);
-            border-top: solid 20px rgba(0,0,0,0);
-            height: 100%;
-            padding: 5px;
-        }
-        .col{
-            vertical-align: top;
-            height: 950px;
-        }
-
-        .maintable .col1{
-            max-width: 250px;
-            padding: 15px;
-            margin-right: -1px;
-            border-left: solid 1px #e1e1e1;
-            border-right: solid 1px #e1e1e1;
-            padding-bottom: 10015px;
-            margin-bottom: -10000px;
-        }
-        .maintable .col2{
-            padding: 15px;
-            text-align: center;
-        }
-    </style>
-
-    <div class="schedule-table" style="overflow: hidden;">
+    <div class="schedule-table">
         <table class="maintable">
             <tr>
                 {{#events_halls}}
@@ -107,43 +36,45 @@
             <tr>
 
                 {{#events_halls}}
-                <td class="col">
+                <td class="halls">
 
                     {{#events}}
 
                         <div style="position: relative;">
                             <div style="position: absolute; width: 100%; height: 900px;">
                                 <div class="data-block"  style="top: {{#time}}{{top}}{{/time}}px; height: {{#time}}{{height}}{{/time}}px;">
-                                    <div class="time-interval" style="position: absolute;">
-                                        {{#time}}
-                                            {{start_time_str}} –
-                                            {{end_time_str}}
-                                        {{/time}}
-                                    </div>
-                                    <div class="name">
-                                        <p style="margin-bottom: 10px;">
-                                            {{#name}}
-                                                {{#ru}}
-                                                    {{str}}
-                                                {{/ru}}
-                                            {{/name}}
-                                        </p>
-                                        <p style="color: #999;">
-                                            {{#description}}
-                                                {{#ru}}
-                                                    {{{str}}}
-                                                {{/ru}}
-                                            {{/description}}
-                                        </p>
-                                    </div>
-                                    <div class="themes">
-                                        {{#themes}}
-                                            {{#strings}}
-                                                {{#ru}}
-                                                    {{str}}
-                                                {{/ru}}
-                                            {{/strings}}
-                                        {{/themes}}
+                                    <div class="data-wrap">
+                                        <div class="time-interval">
+                                            {{#time}}
+                                                {{start_time_str}} –
+                                                {{end_time_str}}
+                                            {{/time}}
+                                        </div>
+                                        <div class="text">
+                                            <p style="margin-bottom: 10px;">
+                                                {{#name}}
+                                                    {{#ru}}
+                                                        {{str}}
+                                                    {{/ru}}
+                                                {{/name}}
+                                            </p>
+                                            <p style="color: #999;">
+                                                {{#description}}
+                                                    {{#ru}}
+                                                        {{{str}}}
+                                                    {{/ru}}
+                                                {{/description}}
+                                            </p>
+                                        </div>
+                                        <div class="themes">
+                                            {{#themes}}
+                                                {{#strings}}
+                                                    {{#ru}}
+                                                        {{str}}
+                                                    {{/ru}}
+                                                {{/strings}}
+                                            {{/themes}}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -152,48 +83,50 @@
                 </td>
                 {{/events_halls}}
 
-                <td style="position: relative; width: 100%; vertical-align: top;">
+                <td class="stands">
 
-                    <div style="position: absolute; width: 100%; height: 950px; overflow: auto;">
+                    <div style="position: absolute; width: 99%; height: 960px; overflow: auto;">
                         <table style="table-layout: fixed;">
                             <tr>
                             {{#events_booths}}
-                                <td style="vertical-align: top; height: 920px;">
+                                <td style="vertical-align: top; height: 900px;">
                                     {{#.}}
 
                                     <div style="position: relative;width: 200px;">
                                         <div style="position: absolute; width: 100%; height: 800px;">
                                             <div class="data-block"  style="top: {{#time}}{{top}}{{/time}}px; height: {{#time}}{{height}}{{/time}}px;">
-                                                <div class="time-interval">
-                                                    {{#time}}
-                                                    {{start_time_str}} –
-                                                    {{end_time_str}}
-                                                    {{/time}}
-                                                </div>
-                                                <div class="name">
-                                                    <p style="margin-bottom: 10px;">
-                                                        {{#name}}
+                                                <div class="data-wrap">
+                                                    <div class="time-interval">
+                                                        {{#time}}
+                                                        {{start_time_str}} –
+                                                        {{end_time_str}}
+                                                        {{/time}}
+                                                    </div>
+                                                    <div class="text">
+                                                        <p style="margin-bottom: 10px;">
+                                                            {{#name}}
+                                                            {{#ru}}
+                                                            {{str}}
+                                                            {{/ru}}
+                                                            {{/name}}
+                                                        </p>
+                                                        <p style="color: #999;">
+                                                            {{#description}}
+                                                            {{#ru}}
+                                                            {{{str}}}
+                                                            {{/ru}}
+                                                            {{/description}}
+                                                        </p>
+                                                    </div>
+                                                    <div class="themes">
+                                                        {{#themes}}
+                                                        {{#strings}}
                                                         {{#ru}}
                                                         {{str}}
                                                         {{/ru}}
-                                                        {{/name}}
-                                                    </p>
-                                                    <p style="color: #999;">
-                                                        {{#description}}
-                                                        {{#ru}}
-                                                        {{{str}}}
-                                                        {{/ru}}
-                                                        {{/description}}
-                                                    </p>
-                                                </div>
-                                                <div class="themes">
-                                                    {{#themes}}
-                                                    {{#strings}}
-                                                    {{#ru}}
-                                                    {{str}}
-                                                    {{/ru}}
-                                                    {{/strings}}
-                                                    {{/themes}}
+                                                        {{/strings}}
+                                                        {{/themes}}
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

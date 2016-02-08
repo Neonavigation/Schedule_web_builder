@@ -69,36 +69,112 @@
   content: "";
 }
 
-.schedule-table .maintable{
-  width: 100%;
-}
-.schedule-table .col{
-  min-width: 200px;
+
+.schedule-table{
+  overflow: hidden;
+  position: relative;
+  padding-left: 76px;
+  padding-bottom: 20px;
+  margin: 0 0 10px;
 }
 
-.schedule-table .titles td{
-  padding-top: 11px;
+.maintable{
+  width: 100%;
+}
+
+
+.data-block .time-interval{
+  font-weight: 700;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+}
+
+
+.maintable .times{
+  position: absolute;
+  left: 0;
+  border-right: solid 1px #e1e1e1;
+  width: 76px;
+  text-align: center;
+}
+.maintable .times .item{
+  font-size: 14px;
+  font-weight: 700;
+  color: #646464;
+  height: 90px;
+  padding-top: 10px;
+}
+
+.maintable .title{
   font-size: 16px;
   font-weight: 700;
   text-align: center;
   color: #646464;
 }
-.schedule-table .titles td{
-  padding: 13px;
-  border-left: solid 1px #e1e1e1;
+.maintable .data-block{
+  margin: 0 15px;
+  position: relative;
+  border-top: solid 5px rgba(255,255,255,0);
+  border-bottom: solid 5px rgba(255,255,255,0);
+  box-sizing: border-box;
+  font-size: 12px;
+  line-height: 16px;
+  color: #646464;
+}
+.maintable .data-wrap{
+  width: 100%;
+  height: 100%;
+  background: #d9e9ff;
+}
+
+.maintable .stands{
+  position: relative;
+  width: 100%;
+  padding-left: 10px;
+  vertical-align: top;
+}
+.maintable .stands .data-block{
+  margin: 5px;
+}
+.maintable .data-block .themes{
+  position: absolute;
+  width: 100%;
+  box-sizing: padding-box;
+  bottom: 5px;
+  right: 0;
+  padding: 0 7px;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-style: italic;
+}
+.maintable .data-block .text{
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+  border-bottom: solid 38px rgba(0,0,0,0);
+  border-top: solid 18px rgba(0,0,0,0);
+  height: 100%;
+  padding: 5px;
+}
+.maintable .halls{
+  vertical-align: top;
+  height: 950px;
   min-width: 200px;
 }
-.schedule-table .titles td:first-child{
-  border: none;
+
+.maintable .col1{
+  max-width: 250px;
+  padding: 15px;
+  margin-right: -1px;
+  border-left: solid 1px #e1e1e1;
+  border-right: solid 1px #e1e1e1;
+  padding-bottom: 10015px;
+  margin-bottom: -10000px;
 }
-.schedule-table .time{
-  font-size: 14px;
-  font-weight: 700;
-  color: #646464;
-  vertical-align: top;
-  padding-top: 20px;
-}
-.schedule-table .data-block{
-  font-size: 12px;
-  background: #d9e9ff;
+.maintable .col2{
+  padding: 15px;
+  text-align: center;
 }

@@ -118,6 +118,21 @@
 
         {{> table}}
 
+        <div class="schedule-tabs">
+            <div class="schedule-tabs-wrap">
+                <ul class="items">
+                    {{#halls_splits}}
+                    <li class="item" data-available-days="{{days}}" data-hall_fr_names='{{hall_fr_names}}'>
+                        <a href="#" title="{{#hall_fr_names}}{{.}}&#013;{{/hall_fr_names}}">
+                            {{#hall_fr_names}}
+                            <span class="name nobr">{{.}}</span>
+                            {{/hall_fr_names}}
+                        </a>
+                    </li>
+                    {{/halls_splits}}
+                </ul>
+            </div>
+        </div>
 
 
     </div>

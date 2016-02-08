@@ -738,48 +738,132 @@ input:-moz-placeholder {
   content: "";
 }
 
-/* line 72, ../sass/components/_schedule.scss */
-.schedule-table .maintable {
+/* line 73, ../sass/components/_schedule.scss */
+.schedule-table {
+  overflow: hidden;
+  position: relative;
+  padding-left: 76px;
+  padding-bottom: 20px;
+  margin: 0 0 10px;
+}
+
+/* line 81, ../sass/components/_schedule.scss */
+.maintable {
   width: 100%;
 }
 
-/* line 75, ../sass/components/_schedule.scss */
-.schedule-table .col {
-  min-width: 200px;
+/* line 86, ../sass/components/_schedule.scss */
+.data-block .time-interval {
+  font-weight: 700;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
 }
 
-/* line 79, ../sass/components/_schedule.scss */
-.schedule-table .titles td {
-  padding-top: 11px;
+/* line 94, ../sass/components/_schedule.scss */
+.maintable .times {
+  position: absolute;
+  left: 0;
+  border-right: solid 1px #e1e1e1;
+  width: 76px;
+  text-align: center;
+}
+
+/* line 101, ../sass/components/_schedule.scss */
+.maintable .times .item {
+  font-size: 14px;
+  font-weight: 700;
+  color: #646464;
+  height: 90px;
+  padding-top: 10px;
+}
+
+/* line 109, ../sass/components/_schedule.scss */
+.maintable .title {
   font-size: 16px;
   font-weight: 700;
   text-align: center;
   color: #646464;
 }
 
-/* line 86, ../sass/components/_schedule.scss */
-.schedule-table .titles td {
-  padding: 13px;
-  border-left: solid 1px #e1e1e1;
+/* line 115, ../sass/components/_schedule.scss */
+.maintable .data-block {
+  margin: 0 15px;
+  position: relative;
+  border-top: solid 5px rgba(255, 255, 255, 0);
+  border-bottom: solid 5px rgba(255, 255, 255, 0);
+  box-sizing: border-box;
+  font-size: 12px;
+  line-height: 16px;
+  color: #646464;
+}
+
+/* line 125, ../sass/components/_schedule.scss */
+.maintable .data-wrap {
+  width: 100%;
+  height: 100%;
+  background: #d9e9ff;
+}
+
+/* line 131, ../sass/components/_schedule.scss */
+.maintable .stands {
+  position: relative;
+  width: 100%;
+  padding-left: 10px;
+  vertical-align: top;
+}
+
+/* line 137, ../sass/components/_schedule.scss */
+.maintable .stands .data-block {
+  margin: 5px;
+}
+
+/* line 140, ../sass/components/_schedule.scss */
+.maintable .data-block .themes {
+  position: absolute;
+  width: 100%;
+  box-sizing: padding-box;
+  bottom: 5px;
+  right: 0;
+  padding: 0 7px;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-style: italic;
+}
+
+/* line 153, ../sass/components/_schedule.scss */
+.maintable .data-block .text {
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+  border-bottom: solid 38px transparent;
+  border-top: solid 18px transparent;
+  height: 100%;
+  padding: 5px;
+}
+
+/* line 162, ../sass/components/_schedule.scss */
+.maintable .halls {
+  vertical-align: top;
+  height: 950px;
   min-width: 200px;
 }
 
-/* line 91, ../sass/components/_schedule.scss */
-.schedule-table .titles td:first-child {
-  border: none;
+/* line 168, ../sass/components/_schedule.scss */
+.maintable .col1 {
+  max-width: 250px;
+  padding: 15px;
+  margin-right: -1px;
+  border-left: solid 1px #e1e1e1;
+  border-right: solid 1px #e1e1e1;
+  padding-bottom: 10015px;
+  margin-bottom: -10000px;
 }
 
-/* line 94, ../sass/components/_schedule.scss */
-.schedule-table .time {
-  font-size: 14px;
-  font-weight: 700;
-  color: #646464;
-  vertical-align: top;
-  padding-top: 20px;
-}
-
-/* line 101, ../sass/components/_schedule.scss */
-.schedule-table .data-block {
-  font-size: 12px;
-  background: #d9e9ff;
+/* line 177, ../sass/components/_schedule.scss */
+.maintable .col2 {
+  padding: 15px;
+  text-align: center;
 }
