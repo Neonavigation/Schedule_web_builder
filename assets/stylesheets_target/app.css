@@ -790,6 +790,7 @@ input:-moz-placeholder {
 .maintable .data-block {
   margin: 0 15px;
   position: relative;
+  z-index: 2;
   border-top: solid 5px rgba(255, 255, 255, 0);
   border-bottom: solid 5px rgba(255, 255, 255, 0);
   box-sizing: border-box;
@@ -799,7 +800,7 @@ input:-moz-placeholder {
   cursor: pointer;
 }
 
-/* line 127, ../sass/components/_schedule.scss */
+/* line 128, ../sass/components/_schedule.scss */
 .maintable .data-wrap {
   width: 100%;
   height: 100%;
@@ -810,12 +811,14 @@ input:-moz-placeholder {
   -webkit-transition: border 0.2s ease;
 }
 
-/* line 136, ../sass/components/_schedule.scss */
+/* line 137, ../sass/components/_schedule.scss */
 .maintable .data-block:hover .data-wrap {
   border: solid 1px #89bbff;
+  transition: border 0s ease;
+  -webkit-transition: border 0 ease;
 }
 
-/* line 139, ../sass/components/_schedule.scss */
+/* line 142, ../sass/components/_schedule.scss */
 .maintable .stands {
   position: relative;
   width: 100%;
@@ -823,12 +826,12 @@ input:-moz-placeholder {
   vertical-align: top;
 }
 
-/* line 145, ../sass/components/_schedule.scss */
+/* line 148, ../sass/components/_schedule.scss */
 .maintable .stands .data-block {
   margin: 5px;
 }
 
-/* line 148, ../sass/components/_schedule.scss */
+/* line 151, ../sass/components/_schedule.scss */
 .maintable .data-block .themes {
   position: absolute;
   width: 100%;
@@ -843,7 +846,7 @@ input:-moz-placeholder {
   font-style: italic;
 }
 
-/* line 161, ../sass/components/_schedule.scss */
+/* line 164, ../sass/components/_schedule.scss */
 .maintable .data-block .text {
   overflow: hidden;
   position: absolute;
@@ -854,14 +857,14 @@ input:-moz-placeholder {
   padding: 5px;
 }
 
-/* line 170, ../sass/components/_schedule.scss */
+/* line 173, ../sass/components/_schedule.scss */
 .maintable .halls {
   vertical-align: top;
   height: 950px;
   min-width: 200px;
 }
 
-/* line 176, ../sass/components/_schedule.scss */
+/* line 179, ../sass/components/_schedule.scss */
 .maintable .col1 {
   max-width: 250px;
   padding: 15px;
@@ -872,7 +875,7 @@ input:-moz-placeholder {
   margin-bottom: -10000px;
 }
 
-/* line 185, ../sass/components/_schedule.scss */
+/* line 188, ../sass/components/_schedule.scss */
 .maintable .col2 {
   padding: 15px;
   text-align: center;
