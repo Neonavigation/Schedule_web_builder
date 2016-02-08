@@ -824,7 +824,7 @@ input:-moz-placeholder {
 
 /* line 144, ../sass/components/_schedule.scss */
 .maintable .stands .data-block {
-  margin: 5px;
+  margin: 0 5px;
 }
 
 /* line 147, ../sass/components/_schedule.scss */
