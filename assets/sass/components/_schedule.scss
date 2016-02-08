@@ -167,6 +167,22 @@
 .maintable .data-block:hover .data-wrap{
   border: solid 1px #89bbff;
 }
+.maintable .data-block .fa{
+  position: absolute;
+  z-index: 2;
+  font-size: 14px;
+}
+.maintable .data-block .fa-thumbs-o-up{
+  left: 6px;
+  bottom: 4px;
+  color: #89bbff;
+  font-size: 16px;
+}
+.maintable .data-block .fa-star{
+  right: 8px;
+  top: 5px;
+  color: #89bbff;
+}
 
 .maintable .data-block .time-interval{
   font-weight: 700;
@@ -191,13 +207,14 @@
 }
 .maintable .data-block .themes{
   position: absolute;
-  width: 95%;
+  width: 82%;
   bottom: 5px;
   right: 6px;
   text-align: right;
   font-style: italic;
   line-height: 14px;
 }
+
 
 .stands-container{
   position: absolute;
