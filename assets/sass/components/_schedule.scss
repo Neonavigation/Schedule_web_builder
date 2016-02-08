@@ -112,6 +112,7 @@
   text-align: center;
   color: #646464;
 }
+
 .maintable .data-block{
   margin: 0 15px;
   position: relative;
@@ -121,13 +122,20 @@
   font-size: 12px;
   line-height: 16px;
   color: #646464;
+  cursor: pointer;
 }
 .maintable .data-wrap{
   width: 100%;
   height: 100%;
   background: #d9e9ff;
+  border: solid 1px #d9e9ff;
+  box-sizing: border-box;
+  transition: border 0.2s ease;
+  -webkit-transition: border 0.2s ease;
 }
-
+.maintable .data-block:hover .data-wrap{
+  border: solid 1px #89bbff;
+}
 .maintable .stands{
   position: relative;
   width: 100%;
