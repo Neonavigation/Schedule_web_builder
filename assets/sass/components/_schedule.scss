@@ -116,6 +116,7 @@
 .maintable .data-block{
   margin: 0 15px;
   position: relative;
+  z-index: 2;
   border-top: solid 5px rgba(255,255,255,0);
   border-bottom: solid 5px rgba(255,255,255,0);
   box-sizing: border-box;
