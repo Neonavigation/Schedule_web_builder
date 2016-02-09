@@ -1,0 +1,1281 @@
+/* line 1, ../sass/components/_reset.scss */
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Roboto", "Arial", sans-serif;
+  color: #191919;
+  font-size: 14px;
+  background: #fff;
+}
+
+/* line 11, ../sass/components/_reset.scss */
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+}
+
+/* line 16, ../sass/components/_reset.scss */
+table, td {
+  padding: 0;
+  margin: 0;
+  border-collapse: collapse;
+}
+
+/* line 21, ../sass/components/_reset.scss */
+ul, li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* line 26, ../sass/components/_reset.scss */
+img {
+  border: none;
+}
+
+/* line 29, ../sass/components/_reset.scss */
+input, textarea {
+  outline: none;
+  font-size: 14px;
+  font-family: "Roboto", "Arial", sans-serif;
+}
+
+/* line 34, ../sass/components/_reset.scss */
+a {
+  outline: none;
+  color: #555;
+  text-decoration: none;
+}
+
+/* line 39, ../sass/components/_reset.scss */
+a:active {
+  background-color: transparent;
+}
+
+/* line 42, ../sass/components/_reset.scss */
+p {
+  padding: 0;
+  margin: 0;
+  color: #666;
+}
+
+/* line 48, ../sass/components/_reset.scss */
+.nobr {
+  white-space: nowrap;
+}
+
+/* line 1, ../sass/components/_icons.scss */
+.icon-sprite {
+  display: block;
+  background: url("../images/sprite.png") no-repeat;
+}
+
+/* line 5, ../sass/components/_icons.scss */
+.icon-help {
+  width: 32px;
+  height: 32px;
+  background-position: -4px -4px;
+}
+
+/* line 10, ../sass/components/_icons.scss */
+.icon-print {
+  width: 25px;
+  height: 25px;
+  background-position: -46px -8px;
+}
+
+/* line 15, ../sass/components/_icons.scss */
+.icon-lang-en {
+  width: 24px;
+  height: 16px;
+  background-position: -80px -12px;
+}
+
+/* line 20, ../sass/components/_icons.scss */
+.icon-lang-ru {
+  width: 24px;
+  height: 16px;
+  background-position: -112px -12px;
+}
+
+/* line 25, ../sass/components/_icons.scss */
+.icon-scheme {
+  width: 26px;
+  height: 26px;
+  background-position: -144px -7px;
+}
+
+/* line 30, ../sass/components/_icons.scss */
+.icon-view-table {
+  display: inline-block;
+  width: 17px;
+  height: 15px;
+  background-position: -35px -47px;
+}
+
+/* line 36, ../sass/components/_icons.scss */
+.icon-view-list {
+  display: inline-block;
+  width: 18px;
+  height: 15px;
+  background-position: -82px -47px;
+}
+
+/* line 43, ../sass/components/_icons.scss */
+.icon-schedule,
+.icon-reader {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  top: -2px;
+  margin-right: 4px;
+}
+
+/* line 53, ../sass/components/_icons.scss */
+.icon-schedule {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAPCAYAAAA/I0V3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjgzNzIyQjhGQzE1NzExRTU5QTMyOEM0RjE5Mjk0NTY3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjgzNzIyQjkwQzE1NzExRTU5QTMyOEM0RjE5Mjk0NTY3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6ODM3MjJCOERDMTU3MTFFNTlBMzI4QzRGMTkyOTQ1NjciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6ODM3MjJCOEVDMTU3MTFFNTlBMzI4QzRGMTkyOTQ1NjciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6OPhmmAAAAd0lEQVR42mL8//8/A6mApW22LYy9HogDgHgDEAciqcEQZ0GSBEkwAjG61RjiTEB8HovC/0gYXfw8SJMBkqADDm8gixswoUnux6EJRRymiRGKG4hgMzAxkAFgoVePxe242HBNjUhihNgNw9V5F9CSSwMB9gWAAAMAvaUhSwlH9kYAAAAASUVORK5CYII=");
+  background-repeat: no-repeat;
+  background-position: 0 1px;
+}
+
+/* line 58, ../sass/components/_icons.scss */
+.icon-reader {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAQCAYAAADESFVDAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjFEOEI5OUMxQzE1ODExRTVBQ0U2RjQwMjEyQUUyQUQ2IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjFEOEI5OUMyQzE1ODExRTVBQ0U2RjQwMjEyQUUyQUQ2Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MUQ4Qjk5QkZDMTU4MTFFNUFDRTZGNDAyMTJBRTJBRDYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MUQ4Qjk5QzBDMTU4MTFFNUFDRTZGNDAyMTJBRTJBRDYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4n+0S8AAAAq0lEQVR42mL8//8/AyHACGO0zrIxAFL9QOwAxAeAuLA67cgFkBwTkgaYAgYo3Q+TQFbkgGaLAzZFOAFxioAOvo9PAUgeZJICAYMUQIoeAFUrQL2NDA5AxR+AFC2EercQSeEBKB8kvhCkaALUynogTgQGICiAE6F8BSC/gQlIfAByHIH4IhDvB1oBiqf9UL4jLt/8xxp3QIkEIDUfix6Q9QsYiUkFRIU4QIABAI51NCUNPBxsAAAAAElFTkSuQmCC");
+  background-repeat: no-repeat;
+  background-position: 5px 1px;
+}
+
+/* line 2, ../sass/components/_header.scss */
+.header {
+  background: #fbfcfd;
+  min-width: 1100px;
+}
+
+/* line 6, ../sass/components/_header.scss */
+.header .head {
+  background: #55585f;
+  border-bottom: solid 1px #c8c8c8;
+  color: white;
+}
+
+/* line 11, ../sass/components/_header.scss */
+.header .head .wrap {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 10px 3%;
+  overflow: hidden;
+  box-sizing: padding-box;
+}
+
+/* line 18, ../sass/components/_header.scss */
+.header .title {
+  float: left;
+  padding: 18px 0 23px 0;
+}
+
+/* line 22, ../sass/components/_header.scss */
+.header .logo {
+  float: right;
+}
+
+/* line 25, ../sass/components/_header.scss */
+.header .logo img {
+  display: block;
+  border-radius: 3px;
+}
+
+/* line 29, ../sass/components/_header.scss */
+.header .title .text {
+  display: block;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+/* line 34, ../sass/components/_header.scss */
+.header .title .name {
+  font-size: 30px;
+  line-height: 32px;
+  font-weight: 700;
+  display: block;
+}
+
+/* line 41, ../sass/components/_header.scss */
+.toolbar {
+  padding: 17px 3%;
+  max-width: 1440px;
+  margin: 0 auto 20px;
+  box-sizing: padding-box;
+}
+
+/* line 47, ../sass/components/_header.scss */
+.toolbar .wrap {
+  position: relative;
+  width: 100%;
+}
+
+/* line 51, ../sass/components/_header.scss */
+.toolbar .event-list {
+  width: 50%;
+  box-sizing: padding-box;
+  position: absolute;
+  top: 7px;
+  left: 0;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* line 61, ../sass/components/_header.scss */
+.toolbar .event-list .items {
+  position: absolute;
+  width: 100%;
+}
+
+/* line 65, ../sass/components/_header.scss */
+.toolbar .event-list .item {
+  float: left;
+  padding-right: 5%;
+  margin-right: 0;
+  margin-bottom: 25px;
+}
+
+/* line 71, ../sass/components/_header.scss */
+.toolbar .event-list .item a {
+  display: block;
+  padding-bottom: 8px;
+  color: #55585f;
+}
+
+/* line 76, ../sass/components/_header.scss */
+.toolbar .event-list .item a:hover,
+.toolbar .event-list .item.current a {
+  color: #859a3c;
+  border-bottom: solid 3px #859a3c;
+}
+
+/* line 81, ../sass/components/_header.scss */
+.toolbar .search {
+  width: 100%;
+  box-sizing: padding-box;
+  box-sizing: border-box;
+  padding-left: 5%;
+  padding-right: 5%;
+  border-left: solid 425px transparent;
+  border-right: solid 170px transparent;
+}
+
+/* line 90, ../sass/components/_header.scss */
+.toolbar .search .wrapper {
+  position: relative;
+  padding-right: 85px;
+}
+
+/* line 95, ../sass/components/_header.scss */
+.toolbar .search .input {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: solid 1px #e0e0df;
+  font-size: 14px;
+  margin: 0;
+  padding: 0 13px;
+  height: 33px;
+  line-height: 33px;
+  box-sizing: padding-box;
+  box-sizing: border-box;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+/* line 111, ../sass/components/_header.scss */
+.toolbar .search .submit {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #55585f;
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  width: 85px;
+  height: 33px;
+  margin: 0;
+  padding: 0 6px;
+  box-sizing: padding-box;
+  cursor: pointer;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/* line 128, ../sass/components/_header.scss */
+.toolbar .search .submit:hover {
+  opacity: 0.95;
+}
+
+/* line 132, ../sass/components/_header.scss */
+.toolbar .tool {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #f0f2f4;
+  border: solid 1px #bebebe;
+  border-radius: 4px;
+}
+
+/* line 141, ../sass/components/_header.scss */
+.toolbar .print {
+  float: left;
+  border-right: solid 1px #c2c2c2;
+  padding: 6px 10px 3px;
+}
+
+/* line 146, ../sass/components/_header.scss */
+.toolbar .print:hover {
+  opacity: 0.8;
+}
+
+/* line 149, ../sass/components/_header.scss */
+.toolbar .tool .help:hover {
+  opacity: 0.8;
+}
+
+/* line 152, ../sass/components/_header.scss */
+.toolbar .tool .help {
+  position: absolute;
+  left: -41px;
+}
+
+/* line 156, ../sass/components/_header.scss */
+.toolbar .tool .lang {
+  float: left;
+  padding: 9px 0 9px 9px;
+}
+
+/* line 161, ../sass/components/_header.scss */
+.toolbar .tool .lang .item {
+  float: left;
+  margin-right: 9px;
+  opacity: 0.2;
+}
+
+/* line 166, ../sass/components/_header.scss */
+.toolbar .tool .lang .item:hover {
+  opacity: 1;
+}
+
+/* line 169, ../sass/components/_header.scss */
+.toolbar .tool .lang .item.current {
+  opacity: 1;
+  cursor: default;
+}
+
+/*
+@media only screen and (max-width: 1100px){
+    .toolbar .event-list{
+        width: 30%;
+    }
+    .toolbar .search{
+        border-left: solid 230px transparent;
+    }
+}
+*/
+/* line 189, ../sass/components/_header.scss */
+::-webkit-input-placeholder {
+  color: #c9c9c9;
+}
+
+/* line 190, ../sass/components/_header.scss */
+::-moz-placeholder {
+  color: #c9c9c9;
+  opacity: 1;
+}
+
+/* line 191, ../sass/components/_header.scss */
+:-ms-input-placeholder {
+  color: #c9c9c9;
+}
+
+/* line 192, ../sass/components/_header.scss */
+input:-moz-placeholder {
+  color: #c9c9c9;
+}
+
+/* line 197, ../sass/components/_header.scss */
+.filter .wrap {
+  padding: 0 3%;
+  box-sizing: padding-box;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* line 203, ../sass/components/_header.scss */
+.filter .title2 {
+  font-size: 24px;
+  margin: 0 0 5px;
+}
+
+/* line 207, ../sass/components/_header.scss */
+.categories {
+  /*max-width: 52%;*/
+  margin: 0 0 12px;
+}
+
+/* line 211, ../sass/components/_header.scss */
+.categories,
+.categories .items {
+  display: inline-block;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAABCAIAAAB2XpiaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjlFQThGOEZDQzM2QzExRTU5NzhDRUMyMjM4RTE5RUEwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjlFQThGOEZEQzM2QzExRTU5NzhDRUMyMjM4RTE5RUEwIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OUVBOEY4RkFDMzZDMTFFNTk3OENFQzIyMzhFMTlFQTAiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OUVBOEY4RkJDMzZDMTFFNTk3OENFQzIyMzhFMTlFQTAiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4kZJsoAAAAEUlEQVR42mLYtGnTfxgACDAAQ9ILDo5d4cMAAAAASUVORK5CYII=");
+  background-repeat: repeat-x;
+  background-position: bottom left;
+}
+
+/* line 218, ../sass/components/_header.scss */
+.categories .items {
+  background-position: top left;
+  padding: 13px 0 7px 0;
+}
+
+/* line 222, ../sass/components/_header.scss */
+.categories .item {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 20px;
+  background: #d9e9ff;
+  padding: 4px 12px;
+  margin: 0 5px 7px 0;
+  border-radius: 3px;
+}
+
+/* line 231, ../sass/components/_header.scss */
+.categories .item {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 20px;
+  background: #d9e9ff;
+  padding: 4px 12px;
+  margin: 0 5px 7px 0;
+  border-radius: 3px;
+}
+
+/* line 240, ../sass/components/_header.scss */
+.categories .item:hover {
+  opacity: 0.8;
+}
+
+/* line 244, ../sass/components/_header.scss */
+.categories-faves {
+  overflow: hidden;
+}
+
+/* line 247, ../sass/components/_header.scss */
+.categories-faves .title3 {
+  float: left;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-right: -100%;
+  padding-top: 6px;
+}
+
+/* line 256, ../sass/components/_header.scss */
+.categories-faves .items {
+  padding-bottom: 7px;
+  padding-left: 190px;
+}
+
+/* line 260, ../sass/components/_header.scss */
+.categories-faves .item {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 20px;
+  background: #d9e9ff;
+  padding: 4px 12px;
+  margin: 0 5px 7px 0;
+  border-radius: 3px;
+}
+
+/* line 269, ../sass/components/_header.scss */
+.categories-faves .item:hover {
+  opacity: 0.8;
+}
+
+/* line 1, ../sass/components/_content.scss */
+.content {
+  min-width: 1100px;
+}
+
+/* line 4, ../sass/components/_content.scss */
+.content .head .wrap {
+  position: relative;
+  max-width: 1440px;
+  box-sizing: padding-box;
+  margin: 0 auto;
+  padding: 40px 3% 0;
+}
+
+/* line 11, ../sass/components/_content.scss */
+.content .head {
+  margin: 0 0 15px;
+  background: #fbfcfd;
+  border-bottom: solid 4px #55585f;
+}
+
+/* line 16, ../sass/components/_content.scss */
+.content .head .view {
+  position: absolute;
+  right: 3%;
+  top: 36px;
+}
+
+/* line 21, ../sass/components/_content.scss */
+.content .tabs .items {
+  overflow: hidden;
+  margin-right: 400px;
+}
+
+/* line 26, ../sass/components/_content.scss */
+.content .tabs .item {
+  float: left;
+  padding: 14px 20px 9px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #646464;
+  cursor: pointer;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  transition: background-color 0.1s ease;
+  -webkit-transition: background-color 0.1s ease;
+}
+
+/* line 39, ../sass/components/_content.scss */
+.content .tabs .item:hover {
+  opacity: 0.7;
+}
+
+/* line 42, ../sass/components/_content.scss */
+.content .tabs .item.selected {
+  background: #55585f;
+  color: white;
+  opacity: 1;
+  cursor: default;
+  transition: background-color 0.3s ease;
+  -webkit-transition: background-color 0.3s ease;
+}
+
+/* line 50, ../sass/components/_content.scss */
+.scheme-button {
+  display: inline-block;
+  vertical-align: middle;
+  background: #bcd46a;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  padding: 0 15px 0 12px;
+  line-height: 40px;
+  border-radius: 4px;
+  margin-right: 7px;
+}
+
+/* line 64, ../sass/components/_content.scss */
+.scheme-button:hover {
+  background: #b5ce60;
+}
+
+/* line 67, ../sass/components/_content.scss */
+.scheme-button .icon-scheme {
+  display: inline-block;
+  vertical-align: middle;
+  margin: -2px 5px 0 0;
+}
+
+/* line 72, ../sass/components/_content.scss */
+.scheme-view {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 40px;
+  box-sizing: border-box;
+  border: solid 2px #63666d;
+  border-radius: 4px;
+  background: #63666d;
+}
+
+/* line 83, ../sass/components/_content.scss */
+.scheme-view .item {
+  float: left;
+  width: 43px;
+  height: 40px;
+  cursor: pointer;
+  background: white;
+  text-align: center;
+}
+
+/* line 91, ../sass/components/_content.scss */
+.scheme-view .item:hover {
+  background: #63666d;
+}
+
+/* line 94, ../sass/components/_content.scss */
+.scheme-view .item.current {
+  background: #63666d;
+  cursor: default;
+}
+
+/* line 99, ../sass/components/_content.scss */
+.scheme-view .icon-sprite {
+  margin-top: 10px;
+}
+
+/* line 103, ../sass/components/_content.scss */
+.scheme-view .item.current .icon-view-table,
+.scheme-view .item:hover .icon-view-table {
+  background-position: -11px -47px;
+}
+
+/* line 108, ../sass/components/_content.scss */
+.scheme-view .item.current .icon-view-list,
+.scheme-view .item:hover .icon-view-list {
+  background-position: -57px -47px;
+}
+
+/* line 2, ../sass/components/_schedule.scss */
+.schedule-container {
+  padding: 1px 3% 7px;
+  max-width: 1440px;
+  box-sizing: padding-box;
+  margin: 0 auto;
+}
+
+/* line 9, ../sass/components/_schedule.scss */
+.schedule-tabs {
+  margin: 0 0 10px 76px;
+  padding: 0 15px;
+  background: #f5f5f5;
+}
+
+/* line 14, ../sass/components/_schedule.scss */
+.schedule-tabs-wrap {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+/* line 19, ../sass/components/_schedule.scss */
+.schedule-tabs .items {
+  display: table-row;
+}
+
+/* line 22, ../sass/components/_schedule.scss */
+.schedule-tabs .item {
+  display: table-cell;
+  vertical-align: middle;
+  background: #f5f5f5;
+  height: 34px;
+  padding: 5px 0;
+  overflow: hidden;
+}
+
+/* line 30, ../sass/components/_schedule.scss */
+.schedule-tabs .item a {
+  display: block;
+  text-align: center;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #646464;
+  padding: 100px 15px;
+  margin: -100px 0;
+  background: #f5f5f5;
+  box-sizing: padding-box;
+}
+
+/* line 42, ../sass/components/_schedule.scss */
+.schedule-tabs .item.disabled {
+  display: none;
+}
+
+/* line 45, ../sass/components/_schedule.scss */
+.schedule-tabs .item.disabled a {
+  color: #ccc;
+  cursor: default;
+}
+
+/* line 49, ../sass/components/_schedule.scss */
+.schedule-tabs .item.enabled a:hover {
+  background: #ededed;
+}
+
+/* line 52, ../sass/components/_schedule.scss */
+.schedule-tabs .item.selected.enabled a:hover,
+.schedule-tabs .item.selected a {
+  background: #bcd46a;
+  color: white;
+  cursor: default;
+}
+
+/* line 59, ../sass/components/_schedule.scss */
+.schedule-tabs .name {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* line 65, ../sass/components/_schedule.scss */
+.schedule-tabs .name:after {
+  content: ",";
+}
+
+/* line 68, ../sass/components/_schedule.scss */
+.schedule-tabs .name:last-child:after {
+  content: "";
+}
+
+/* line 73, ../sass/components/_schedule.scss */
+.schedule-table {
+  overflow: hidden;
+  position: relative;
+  padding-left: 76px;
+  padding-bottom: 20px;
+  margin: 0 0 10px;
+}
+
+/* line 81, ../sass/components/_schedule.scss */
+.maintable {
+  width: 100%;
+}
+
+/* line 85, ../sass/components/_schedule.scss */
+.maintable .col-outer {
+  position: relative;
+}
+
+/* line 88, ../sass/components/_schedule.scss */
+.maintable .col-inner {
+  position: absolute;
+  width: 100%;
+}
+
+/* line 94, ../sass/components/_schedule.scss */
+.maintable .times {
+  position: absolute;
+  left: 0;
+  border-right: solid 1px #e1e1e1;
+  width: 76px;
+  text-align: center;
+}
+
+/* line 101, ../sass/components/_schedule.scss */
+.maintable .times .item {
+  font-size: 14px;
+  font-weight: 700;
+  color: #646464;
+  height: 90px;
+  padding-top: 10px;
+}
+
+/* line 109, ../sass/components/_schedule.scss */
+.maintable .title {
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  color: #646464;
+}
+
+/* line 116, ../sass/components/_schedule.scss */
+.maintable .col1 {
+  max-width: 250px;
+  padding: 15px;
+  margin-right: -1px;
+  border-left: solid 1px #e1e1e1;
+  border-right: solid 1px #e1e1e1;
+  padding-bottom: 10015px;
+  margin-bottom: -10000px;
+}
+
+/* line 125, ../sass/components/_schedule.scss */
+.maintable .col2 {
+  padding: 15px;
+  text-align: center;
+}
+
+/* line 129, ../sass/components/_schedule.scss */
+.maintable .halls {
+  vertical-align: top;
+  min-width: 200px;
+}
+
+/* line 133, ../sass/components/_schedule.scss */
+.maintable .stands {
+  position: relative;
+  width: 100%;
+  padding-left: 10px;
+  vertical-align: top;
+}
+
+/* line 139, ../sass/components/_schedule.scss */
+.maintable .stands .data-block {
+  margin: 0 5px;
+}
+
+/* line 142, ../sass/components/_schedule.scss */
+.maintable .stands .col-outer {
+  width: 180px;
+}
+
+/* line 146, ../sass/components/_schedule.scss */
+.maintable .data-block {
+  margin: 0 15px;
+  position: relative;
+  z-index: 2;
+  border-top: solid 5px rgba(255, 255, 255, 0);
+  border-bottom: solid 5px rgba(255, 255, 255, 0);
+  box-sizing: border-box;
+  font-size: 12px;
+  line-height: 16px;
+  color: #646464;
+  cursor: pointer;
+}
+
+/* line 158, ../sass/components/_schedule.scss */
+.maintable .data-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #d9e9ff;
+  border: solid 1px #d9e9ff;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* line 167, ../sass/components/_schedule.scss */
+.maintable .data-block:hover .data-wrap {
+  border: solid 1px #89bbff;
+}
+
+/* line 170, ../sass/components/_schedule.scss */
+.maintable .data-block .fa {
+  position: absolute;
+  z-index: 2;
+  font-size: 14px;
+}
+
+/* line 175, ../sass/components/_schedule.scss */
+.maintable .data-block .fa-thumbs-o-up {
+  left: 6px;
+  bottom: 4px;
+  color: #89bbff;
+  font-size: 16px;
+  z-index: 1;
+}
+
+/* line 182, ../sass/components/_schedule.scss */
+.maintable .data-block .fa-star {
+  right: 5px;
+  top: 4px;
+  color: #89bbff;
+}
+
+/* line 188, ../sass/components/_schedule.scss */
+.maintable .data-block .time-interval {
+  font-weight: 700;
+  padding: 4px 5px;
+  position: absolute;
+  z-index: 2;
+}
+
+/* line 194, ../sass/components/_schedule.scss */
+.maintable .data-block .text {
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+  border-bottom: solid 34px transparent;
+  border-top: solid 18px transparent;
+  height: 100%;
+  padding: 5px;
+}
+
+/* line 203, ../sass/components/_schedule.scss */
+.maintable .data-block .text p {
+  margin: 0 0 10px;
+}
+
+/* line 206, ../sass/components/_schedule.scss */
+.maintable .data-block .text .description {
+  color: #999;
+}
+
+/* line 209, ../sass/components/_schedule.scss */
+.maintable .data-block .themes {
+  position: absolute;
+  width: 82%;
+  bottom: 5px;
+  right: 6px;
+  text-align: right;
+  font-style: italic;
+  line-height: 14px;
+}
+
+/* line 220, ../sass/components/_schedule.scss */
+.stands-container {
+  position: absolute;
+  width: 98%;
+  overflow: auto;
+}
+
+/* line 225, ../sass/components/_schedule.scss */
+.stands-table {
+  table-layout: fixed;
+}
+
+/* line 228, ../sass/components/_schedule.scss */
+.stands-table .cell {
+  vertical-align: top;
+}
+
+/* line 232, ../sass/components/_schedule.scss */
+.top-gradient {
+  height: 30px;
+  width: 98%;
+  position: absolute;
+  z-index: 1;
+  background: -moz-linear-gradient(top, #d9e9ff 0%, #d9e9ff 60%, rgba(217, 233, 255, 0) 100%);
+  background: -webkit-linear-gradient(top, #d9e9ff 0%, #d9e9ff 60%, rgba(217, 233, 255, 0) 100%);
+  background: linear-gradient(to bottom, #d9e9ff 0%, #d9e9ff 60%, rgba(217, 233, 255, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9e9ff', endColorstr='#00d9e9ff',GradientType=0 );
+}
+
+/* line 242, ../sass/components/_schedule.scss */
+.bottom-gradient {
+  height: 20px;
+  width: 98%;
+  position: absolute;
+  bottom: 34px;
+  background: -moz-linear-gradient(top, rgba(217, 233, 255, 0) 0%, rgba(217, 233, 255, 0.92) 58%, #d9e9ff 98%, #d9e9ff 100%);
+  background: -webkit-linear-gradient(top, rgba(217, 233, 255, 0) 0%, rgba(217, 233, 255, 0.92) 58%, #d9e9ff 98%, #d9e9ff 100%);
+  background: linear-gradient(to bottom, rgba(217, 233, 255, 0) 0%, rgba(217, 233, 255, 0.92) 58%, #d9e9ff 98%, #d9e9ff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00d9e9ff', endColorstr='#d9e9ff',GradientType=0 );
+}
+
+/* line 255, ../sass/components/_schedule.scss */
+.height1 {
+  height: 120px;
+}
+
+/* line 256, ../sass/components/_schedule.scss */
+.height2 {
+  height: 220px;
+}
+
+/* line 257, ../sass/components/_schedule.scss */
+.height3 {
+  height: 320px;
+}
+
+/* line 258, ../sass/components/_schedule.scss */
+.height4 {
+  height: 420px;
+}
+
+/* line 259, ../sass/components/_schedule.scss */
+.height5 {
+  height: 520px;
+}
+
+/* line 260, ../sass/components/_schedule.scss */
+.height6 {
+  height: 620px;
+}
+
+/* line 261, ../sass/components/_schedule.scss */
+.height7 {
+  height: 720px;
+}
+
+/* line 262, ../sass/components/_schedule.scss */
+.height8 {
+  height: 820px;
+}
+
+/* line 263, ../sass/components/_schedule.scss */
+.height9 {
+  height: 920px;
+}
+
+/* line 264, ../sass/components/_schedule.scss */
+.height10 {
+  height: 1020px;
+}
+
+/* line 266, ../sass/components/_schedule.scss */
+.height1 .col-inner, .height1 .cell {
+  height: 100px;
+}
+
+/* line 267, ../sass/components/_schedule.scss */
+.height2 .col-inner, .height2 .cell {
+  height: 200px;
+}
+
+/* line 268, ../sass/components/_schedule.scss */
+.height3 .col-inner, .height3 .cell {
+  height: 300px;
+}
+
+/* line 269, ../sass/components/_schedule.scss */
+.height4 .col-inner, .height4 .cell {
+  height: 400px;
+}
+
+/* line 270, ../sass/components/_schedule.scss */
+.height5 .col-inner, .height5 .cell {
+  height: 500px;
+}
+
+/* line 271, ../sass/components/_schedule.scss */
+.height6 .col-inner, .height6 .cell {
+  height: 600px;
+}
+
+/* line 272, ../sass/components/_schedule.scss */
+.height7 .col-inner, .height7 .cell {
+  height: 700px;
+}
+
+/* line 273, ../sass/components/_schedule.scss */
+.height8 .col-inner, .height8 .cell {
+  height: 800px;
+}
+
+/* line 274, ../sass/components/_schedule.scss */
+.height9 .col-inner, .height9 .cell {
+  height: 900px;
+}
+
+/* line 275, ../sass/components/_schedule.scss */
+.height10 .col-inner, .height10 .cell {
+  height: 1000px;
+}
+
+/*
+.maintable .col-inner{
+  height: 900px;
+}
+.stands-table .cell{
+  height: 900px;
+}
+.maintable .halls{
+  height: 920px;
+}
+.stands-container{
+  height: 920px;
+}
+*/
+/* line 2, ../sass/components/_popups.scss */
+.popup-container {
+  position: absolute;
+  z-index: 10;
+}
+
+/* line 6, ../sass/components/_popups.scss */
+.fixed-mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* line 15, ../sass/components/_popups.scss */
+.popup .fa-times {
+  position: absolute;
+  right: -34px;
+  top: -5px;
+  font-size: 30px;
+  color: #bcd46a;
+  cursor: pointer;
+}
+
+/* line 23, ../sass/components/_popups.scss */
+.description-popup .popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 772px;
+  background: #fff;
+  z-index: 11;
+  box-sizing: border-box;
+  border: solid 2px #bcd46a;
+  transform: translate(-50%, -50%);
+}
+
+/* line 35, ../sass/components/_popups.scss */
+.description-popup .popup-content {
+  padding: 19px;
+  color: #313131;
+}
+
+/* line 39, ../sass/components/_popups.scss */
+.description-popup .popup-content p {
+  color: #313131;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 0 0 15px;
+}
+
+/* line 45, ../sass/components/_popups.scss */
+.description-popup .maininfo {
+  overflow: hidden;
+  margin: 0 0 34px;
+  font-size: 14px;
+}
+
+/* line 50, ../sass/components/_popups.scss */
+.description-popup .info {
+  position: relative;
+}
+
+/* line 53, ../sass/components/_popups.scss */
+.description-popup .img {
+  float: left;
+  margin-right: -100%;
+}
+
+/* line 57, ../sass/components/_popups.scss */
+.description-popup .txt {
+  padding-left: 124px;
+}
+
+/* line 60, ../sass/components/_popups.scss */
+.description-popup .txt .title {
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+  padding: 3px 200px 0 0;
+  margin: 0 0 13px;
+}
+
+/* line 68, ../sass/components/_popups.scss */
+.description-popup .info .item .fa {
+  font-size: 18px;
+  width: 18px;
+  text-align: center;
+  display: inline-block;
+  color: #bcd46a;
+}
+
+/* line 75, ../sass/components/_popups.scss */
+.description-popup .info .button .fa-star {
+  font-size: 18px;
+}
+
+/* line 78, ../sass/components/_popups.scss */
+.description-popup .info .button {
+  position: absolute;
+  right: 0;
+  top: -5px;
+}
+
+/* line 83, ../sass/components/_popups.scss */
+.description-popup .info .button button {
+  background: #bcd46a;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 4px;
+  padding: 7px 10px 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+/* line 96, ../sass/components/_popups.scss */
+.description-popup .info .time {
+  margin: 0 0 5px;
+}
+
+/* line 101, ../sass/components/_popups.scss */
+.description-popup .title2 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+/* line 106, ../sass/components/_popups.scss */
+.description-popup .text {
+  margin: 0 0 30px;
+}
+
+/* line 109, ../sass/components/_popups.scss */
+.description-popup .authors {
+  margin: 0 0 18px;
+}
+
+/* line 112, ../sass/components/_popups.scss */
+.description-popup .authors .item {
+  overflow: hidden;
+}
+
+/* line 115, ../sass/components/_popups.scss */
+.description-popup .authors .author {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* line 119, ../sass/components/_popups.scss */
+.description-popup .authors p {
+  font-size: 14px;
+}
+
+/* line 122, ../sass/components/_popups.scss */
+.description-popup .author-img {
+  float: left;
+  margin-right: -100%;
+}
+
+/* line 126, ../sass/components/_popups.scss */
+.description-popup .author-txt {
+  padding-left: 85px;
+}
+
+/* line 129, ../sass/components/_popups.scss */
+.description-popup .themes .items {
+  overflow: hidden;
+}
+
+/* line 132, ../sass/components/_popups.scss */
+.description-popup .themes .item {
+  float: left;
+  padding: 3px 15px;
+  background: #ffd9d9;
+  margin-right: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* line 142, ../sass/components/_popups.scss */
+.fade-animate {
+  transition: opacity 0.4s ease;
+  -webkit-transition: opacity 0.4s ease;
+}
+
+/* line 146, ../sass/components/_popups.scss */
+.fade-out {
+  opacity: 0;
+}
+
+/* line 149, ../sass/components/_popups.scss */
+.fade-in {
+  opacity: 1;
+}

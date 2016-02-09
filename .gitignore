@@ -12,8 +12,8 @@
 .cache
 
 #ignore build
-/resources/public/css
-/resources/public/images
+#/resources/public/css
+#/resources/public/images
 /resources/public/js/templlist.js
 
 # Ignore .DS_store file
