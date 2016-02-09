@@ -873,24 +873,25 @@ input:-moz-placeholder {
   bottom: 4px;
   color: #89bbff;
   font-size: 16px;
+  z-index: 1;
 }
 
-/* line 181, ../sass/components/_schedule.scss */
+/* line 182, ../sass/components/_schedule.scss */
 .maintable .data-block .fa-star {
-  right: 8px;
-  top: 5px;
+  right: 5px;
+  top: 4px;
   color: #89bbff;
 }
 
-/* line 187, ../sass/components/_schedule.scss */
+/* line 188, ../sass/components/_schedule.scss */
 .maintable .data-block .time-interval {
   font-weight: 700;
   padding: 4px 5px;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
 }
 
-/* line 193, ../sass/components/_schedule.scss */
+/* line 194, ../sass/components/_schedule.scss */
 .maintable .data-block .text {
   overflow: hidden;
   position: absolute;
@@ -901,17 +902,17 @@ input:-moz-placeholder {
   padding: 5px;
 }
 
-/* line 202, ../sass/components/_schedule.scss */
+/* line 203, ../sass/components/_schedule.scss */
 .maintable .data-block .text p {
   margin: 0 0 10px;
 }
 
-/* line 205, ../sass/components/_schedule.scss */
+/* line 206, ../sass/components/_schedule.scss */
 .maintable .data-block .text .description {
   color: #999;
 }
 
-/* line 208, ../sass/components/_schedule.scss */
+/* line 209, ../sass/components/_schedule.scss */
 .maintable .data-block .themes {
   position: absolute;
   width: 82%;
@@ -922,35 +923,36 @@ input:-moz-placeholder {
   line-height: 14px;
 }
 
-/* line 219, ../sass/components/_schedule.scss */
+/* line 220, ../sass/components/_schedule.scss */
 .stands-container {
   position: absolute;
   width: 98%;
   overflow: auto;
 }
 
-/* line 224, ../sass/components/_schedule.scss */
+/* line 225, ../sass/components/_schedule.scss */
 .stands-table {
   table-layout: fixed;
 }
 
-/* line 227, ../sass/components/_schedule.scss */
+/* line 228, ../sass/components/_schedule.scss */
 .stands-table .cell {
   vertical-align: top;
 }
 
-/* line 231, ../sass/components/_schedule.scss */
+/* line 232, ../sass/components/_schedule.scss */
 .top-gradient {
   height: 30px;
   width: 98%;
   position: absolute;
+  z-index: 1;
   background: -moz-linear-gradient(top, #d9e9ff 0%, #d9e9ff 60%, rgba(217, 233, 255, 0) 100%);
   background: -webkit-linear-gradient(top, #d9e9ff 0%, #d9e9ff 60%, rgba(217, 233, 255, 0) 100%);
   background: linear-gradient(to bottom, #d9e9ff 0%, #d9e9ff 60%, rgba(217, 233, 255, 0) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9e9ff', endColorstr='#00d9e9ff',GradientType=0 );
 }
 
-/* line 241, ../sass/components/_schedule.scss */
+/* line 242, ../sass/components/_schedule.scss */
 .bottom-gradient {
   height: 20px;
   width: 98%;
@@ -962,102 +964,102 @@ input:-moz-placeholder {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00d9e9ff', endColorstr='#d9e9ff',GradientType=0 );
 }
 
-/* line 254, ../sass/components/_schedule.scss */
+/* line 255, ../sass/components/_schedule.scss */
 .height1 {
   height: 120px;
 }
 
-/* line 255, ../sass/components/_schedule.scss */
+/* line 256, ../sass/components/_schedule.scss */
 .height2 {
   height: 220px;
 }
 
-/* line 256, ../sass/components/_schedule.scss */
+/* line 257, ../sass/components/_schedule.scss */
 .height3 {
   height: 320px;
 }
 
-/* line 257, ../sass/components/_schedule.scss */
+/* line 258, ../sass/components/_schedule.scss */
 .height4 {
   height: 420px;
 }
 
-/* line 258, ../sass/components/_schedule.scss */
+/* line 259, ../sass/components/_schedule.scss */
 .height5 {
   height: 520px;
 }
 
-/* line 259, ../sass/components/_schedule.scss */
+/* line 260, ../sass/components/_schedule.scss */
 .height6 {
   height: 620px;
 }
 
-/* line 260, ../sass/components/_schedule.scss */
+/* line 261, ../sass/components/_schedule.scss */
 .height7 {
   height: 720px;
 }
 
-/* line 261, ../sass/components/_schedule.scss */
+/* line 262, ../sass/components/_schedule.scss */
 .height8 {
   height: 820px;
 }
 
-/* line 262, ../sass/components/_schedule.scss */
+/* line 263, ../sass/components/_schedule.scss */
 .height9 {
   height: 920px;
 }
 
-/* line 263, ../sass/components/_schedule.scss */
+/* line 264, ../sass/components/_schedule.scss */
 .height10 {
   height: 1020px;
 }
 
-/* line 265, ../sass/components/_schedule.scss */
+/* line 266, ../sass/components/_schedule.scss */
 .height1 .col-inner, .height1 .cell {
   height: 100px;
 }
 
-/* line 266, ../sass/components/_schedule.scss */
+/* line 267, ../sass/components/_schedule.scss */
 .height2 .col-inner, .height2 .cell {
   height: 200px;
 }
 
-/* line 267, ../sass/components/_schedule.scss */
+/* line 268, ../sass/components/_schedule.scss */
 .height3 .col-inner, .height3 .cell {
   height: 300px;
 }
 
-/* line 268, ../sass/components/_schedule.scss */
+/* line 269, ../sass/components/_schedule.scss */
 .height4 .col-inner, .height4 .cell {
   height: 400px;
 }
 
-/* line 269, ../sass/components/_schedule.scss */
+/* line 270, ../sass/components/_schedule.scss */
 .height5 .col-inner, .height5 .cell {
   height: 500px;
 }
 
-/* line 270, ../sass/components/_schedule.scss */
+/* line 271, ../sass/components/_schedule.scss */
 .height6 .col-inner, .height6 .cell {
   height: 600px;
 }
 
-/* line 271, ../sass/components/_schedule.scss */
+/* line 272, ../sass/components/_schedule.scss */
 .height7 .col-inner, .height7 .cell {
   height: 700px;
 }
 
-/* line 272, ../sass/components/_schedule.scss */
+/* line 273, ../sass/components/_schedule.scss */
 .height8 .col-inner, .height8 .cell {
   height: 800px;
 }
 
-/* line 273, ../sass/components/_schedule.scss */
+/* line 274, ../sass/components/_schedule.scss */
 .height9 .col-inner, .height9 .cell {
   height: 900px;
 }
 
-/* line 274, ../sass/components/_schedule.scss */
+/* line 275, ../sass/components/_schedule.scss */
 .height10 .col-inner, .height10 .cell {
   height: 1000px;
 }
@@ -1076,3 +1078,204 @@ input:-moz-placeholder {
   height: 920px;
 }
 */
+/* line 2, ../sass/components/_popups.scss */
+.popup-container {
+  position: absolute;
+  z-index: 10;
+}
+
+/* line 6, ../sass/components/_popups.scss */
+.fixed-mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* line 15, ../sass/components/_popups.scss */
+.popup .fa-times {
+  position: absolute;
+  right: -34px;
+  top: -5px;
+  font-size: 30px;
+  color: #bcd46a;
+  cursor: pointer;
+}
+
+/* line 23, ../sass/components/_popups.scss */
+.description-popup .popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 772px;
+  background: #fff;
+  z-index: 11;
+  box-sizing: border-box;
+  border: solid 2px #bcd46a;
+  transform: translate(-50%, -50%);
+}
+
+/* line 35, ../sass/components/_popups.scss */
+.description-popup .popup-content {
+  padding: 19px;
+  color: #313131;
+}
+
+/* line 39, ../sass/components/_popups.scss */
+.description-popup .popup-content p {
+  color: #313131;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 0 0 15px;
+}
+
+/* line 45, ../sass/components/_popups.scss */
+.description-popup .maininfo {
+  overflow: hidden;
+  margin: 0 0 34px;
+  font-size: 14px;
+}
+
+/* line 50, ../sass/components/_popups.scss */
+.description-popup .info {
+  position: relative;
+}
+
+/* line 53, ../sass/components/_popups.scss */
+.description-popup .img {
+  float: left;
+  margin-right: -100%;
+}
+
+/* line 57, ../sass/components/_popups.scss */
+.description-popup .txt {
+  padding-left: 124px;
+}
+
+/* line 60, ../sass/components/_popups.scss */
+.description-popup .txt .title {
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+  padding: 3px 200px 0 0;
+  margin: 0 0 13px;
+}
+
+/* line 68, ../sass/components/_popups.scss */
+.description-popup .info .item .fa {
+  font-size: 18px;
+  width: 18px;
+  text-align: center;
+  display: inline-block;
+  color: #bcd46a;
+}
+
+/* line 75, ../sass/components/_popups.scss */
+.description-popup .info .button .fa-star {
+  font-size: 18px;
+}
+
+/* line 78, ../sass/components/_popups.scss */
+.description-popup .info .button {
+  position: absolute;
+  right: 0;
+  top: -5px;
+}
+
+/* line 83, ../sass/components/_popups.scss */
+.description-popup .info .button button {
+  background: #bcd46a;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 4px;
+  padding: 7px 10px 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+/* line 96, ../sass/components/_popups.scss */
+.description-popup .info .time {
+  margin: 0 0 5px;
+}
+
+/* line 101, ../sass/components/_popups.scss */
+.description-popup .title2 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+/* line 106, ../sass/components/_popups.scss */
+.description-popup .text {
+  margin: 0 0 30px;
+}
+
+/* line 109, ../sass/components/_popups.scss */
+.description-popup .authors {
+  margin: 0 0 18px;
+}
+
+/* line 112, ../sass/components/_popups.scss */
+.description-popup .authors .item {
+  overflow: hidden;
+}
+
+/* line 115, ../sass/components/_popups.scss */
+.description-popup .authors .author {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* line 119, ../sass/components/_popups.scss */
+.description-popup .authors p {
+  font-size: 14px;
+}
+
+/* line 122, ../sass/components/_popups.scss */
+.description-popup .author-img {
+  float: left;
+  margin-right: -100%;
+}
+
+/* line 126, ../sass/components/_popups.scss */
+.description-popup .author-txt {
+  padding-left: 85px;
+}
+
+/* line 129, ../sass/components/_popups.scss */
+.description-popup .themes .items {
+  overflow: hidden;
+}
+
+/* line 132, ../sass/components/_popups.scss */
+.description-popup .themes .item {
+  float: left;
+  padding: 3px 15px;
+  background: #ffd9d9;
+  margin-right: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* line 142, ../sass/components/_popups.scss */
+.fade-animate {
+  transition: opacity 0.4s ease;
+  -webkit-transition: opacity 0.4s ease;
+}
+
+/* line 146, ../sass/components/_popups.scss */
+.fade-out {
+  opacity: 0;
+}
+
+/* line 149, ../sass/components/_popups.scss */
+.fade-in {
+  opacity: 1;
+}

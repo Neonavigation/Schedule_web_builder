@@ -1,0 +1,153 @@
+
+.popup-container{
+  position: absolute;
+  z-index: 10;
+}
+.fixed-mask{
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+}
+.popup .fa-times{
+  position: absolute;
+  right: -34px;
+  top: -5px;
+  font-size: 30px;
+  color: #bcd46a;
+  cursor: pointer;
+}
+.description-popup .popup{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 772px;
+  background: #fff;
+  z-index: 11;
+  box-sizing: border-box;
+  border: solid 2px #bcd46a;
+  transform: translate(-50%,-50%);
+}
+
+.description-popup .popup-content{
+  padding: 19px;
+  color: #313131;
+}
+.description-popup .popup-content p{
+  color: #313131;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 0 0 15px;
+}
+.description-popup .maininfo{
+  overflow: hidden;
+  margin: 0 0 34px;
+  font-size: 14px;
+}
+.description-popup .info{
+  position: relative;
+}
+.description-popup .img{
+  float: left;
+  margin-right: -100%;
+}
+.description-popup .txt{
+  padding-left: 124px;
+}
+.description-popup .txt .title{
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+  padding: 3px 200px 0 0;
+  margin: 0 0 13px;
+}
+
+.description-popup .info .item .fa{
+  font-size: 18px;
+  width: 18px;
+  text-align: center;
+  display: inline-block;
+  color: #bcd46a;
+}
+.description-popup .info .button .fa-star{
+  font-size: 18px;
+}
+.description-popup .info .button{
+  position: absolute;
+  right: 0;
+  top: -5px;
+}
+.description-popup .info .button button{
+  background: #bcd46a;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 4px;
+  padding: 7px 10px 5px;
+  cursor: pointer;
+  outline: none;
+}
+.description-popup .info .time{
+  margin: 0 0 5px;
+}
+
+
+.description-popup .title2{
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+.description-popup .text{
+  margin: 0 0 30px;
+}
+.description-popup .authors{
+  margin: 0 0 18px;
+}
+.description-popup .authors .item{
+  overflow: hidden;
+}
+.description-popup .authors .author{
+  font-size: 15px;
+  font-weight: 700;
+}
+.description-popup .authors p{
+  font-size: 14px;
+}
+.description-popup .author-img{
+  float: left;
+  margin-right: -100%;
+}
+.description-popup .author-txt{
+  padding-left: 85px;
+}
+.description-popup .themes .items{
+  overflow: hidden;
+}
+.description-popup .themes .item{
+  float: left;
+  padding: 3px 15px;
+  background: #ffd9d9;
+  margin-right: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.fade-animate{
+  transition: opacity 0.4s ease;
+  -webkit-transition: opacity 0.4s ease;
+}
+.fade-out{
+  opacity: 0;
+}
+.fade-in{
+  opacity: 1;
+}
+
+

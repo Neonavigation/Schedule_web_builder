@@ -9,11 +9,14 @@ window.ModuleLoader([],[], function() {
             th.getHtml('/location/1XPNP1WZVQ/rest/schedulehtmlpub/ru', {'init': true}, 'schedulewrap', function(html) {
                 $('body').html(html);
                 var tabs = new moduleTabs();
+                //выделяем первую вкладку
                 tabs.init(0);
+
+                var popups = new modulePopups();
+                popups.init();
             });
 
             function moduleTabs(){
-
                 var self = this;
 
                 self.config = {
@@ -130,6 +133,30 @@ window.ModuleLoader([],[], function() {
                             self.getTable();
                         }
                         return false;
+                    });
+                };
+
+            }
+
+            function modulePopups(){
+                var self = this;
+
+                self.init = function(){
+                    self.events();
+                };
+
+                self.events = function(){
+                    $('body').on('click', '.js-data-block', function(){
+                        $('.description-popup').css('display','block');
+                        setTimeout(function(){
+                            $('.description-popup').addClass('fade-in');
+                        },10);
+                    });
+                    $('body').on('click', '.js-close-popup', function(){
+                        $('.description-popup').removeClass('fade-in');
+                        setTimeout(function(){
+                            $('.description-popup').css('display','none');
+                        },400);
                     });
                 };
 
