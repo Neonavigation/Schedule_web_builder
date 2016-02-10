@@ -7,13 +7,18 @@ window.ModuleLoader([],[], function() {
 
             var th = new TemplatesHelper($);
             th.getHtml('/location/1XPNP1WZVQ/rest/schedulehtmlpub/ru', {'init': true}, 'schedulewrap', function(html) {
+
                 $('body').html(html);
+
                 var tabs = new moduleTabs();
                 //выделяем первую вкладку
                 tabs.init(0);
 
                 var popups = new modulePopups();
                 popups.init();
+
+                var scroll = new moduleScroll();
+
             });
 
             function moduleTabs(){
@@ -159,10 +164,59 @@ window.ModuleLoader([],[], function() {
                         },400);
                     });
                 };
-
             }
 
+            function moduleScroll(){
 
+                var self = this;
+                //var window = $(window);
+                var $dragging = null;
+                var body = $('body');
+
+                $( '.scrollable' )
+                    .on( 'mousewheel DOMMouseScroll', function (event) {
+                        var e = event.originalEvent,
+                            delta = e.wheelDelta || -e.detail;
+                        this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+                        event.preventDefault();
+                    })
+                    .on('scroll', function(){
+                        var scroll = $('.scroll');
+                        var k = $('.scrollable').scrollTop()/($('.scrollable .scrollable-wrapper').height()-$('.scrollable').height());
+                        scroll.css({
+                            'top': 100*k+'%',
+                            'margin-top': -300*k+'px'
+                        });
+                    });
+
+                /*
+                self.scrollable = function(Y){
+                    var k = (Y-300)/($('.scrollable').height()-200);
+                    var scroll_height = $('.scrollable')[0].scrollHeight-$('.scrollable').height();
+                    console.log(scroll_height);
+                    $('.scrollable').scrollTop(scroll_height*k);
+                };
+
+                $('.scroll, .bar')
+                    .on('mousedown', function(event){
+
+                        $dragging = $(event.target);
+
+                        self.scrollable(event.pageY);
+                        body
+                            .on('mousemove', function(event){
+                                if($dragging){
+                                    self.scrollable(event.pageY);
+                                }
+                            })
+                            .on('mouseup mouseleave', function(event){
+                                $dragging = null;
+                            });
+
+                    });
+                */
+
+            }
 
         }
 

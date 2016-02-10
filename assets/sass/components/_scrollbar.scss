@@ -1,0 +1,29 @@
+.scrollbar{
+  position: absolute;
+  z-index: 6;
+  right: 3px;
+  top: 2%;
+  height: 96%;
+  width: 10px;
+  cursor: default;
+}
+.bar{
+  position: absolute;
+  width: 4px;
+  left: 50%;
+  margin-left: -2px;
+  height: 100%;
+  background: #ebebeb;
+}
+.scroll{
+  position: absolute;
+  width: 4px;
+  left: 50%;
+  margin-left: -2px;
+  height: 300px;
+  background: #bcd46a;
+  cursor: pointer;
+}
+.scroll:hover{
+  opacity: 0.5;
+}

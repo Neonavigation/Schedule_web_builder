@@ -67,6 +67,16 @@ p {
   white-space: nowrap;
 }
 
+/* line 51, ../sass/components/_reset.scss */
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 /* line 1, ../sass/components/_icons.scss */
 .icon-sprite {
   display: block;
@@ -1120,7 +1130,7 @@ input:-moz-placeholder {
 
 /* line 35, ../sass/components/_popups.scss */
 .description-popup .popup-content {
-  padding: 19px;
+  padding: 19px 23px 19px 19px;
   color: #313131;
 }
 
@@ -1278,4 +1288,41 @@ input:-moz-placeholder {
 /* line 149, ../sass/components/_popups.scss */
 .fade-in {
   opacity: 1;
+}
+
+/* line 1, ../sass/components/_scrollbar.scss */
+.scrollbar {
+  position: absolute;
+  z-index: 6;
+  right: 3px;
+  top: 2%;
+  height: 96%;
+  width: 10px;
+  cursor: default;
+}
+
+/* line 10, ../sass/components/_scrollbar.scss */
+.bar {
+  position: absolute;
+  width: 4px;
+  left: 50%;
+  margin-left: -2px;
+  height: 100%;
+  background: #ebebeb;
+}
+
+/* line 18, ../sass/components/_scrollbar.scss */
+.scroll {
+  position: absolute;
+  width: 4px;
+  left: 50%;
+  margin-left: -2px;
+  height: 300px;
+  background: #bcd46a;
+  cursor: pointer;
+}
+
+/* line 27, ../sass/components/_scrollbar.scss */
+.scroll:hover {
+  opacity: 0.5;
 }
