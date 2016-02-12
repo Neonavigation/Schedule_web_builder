@@ -2,6 +2,76 @@
 $max-width: 1440px;
 $min-width: 1100px;
 
-$font-main: 'Roboto','Arial',sans-serif;
+$main-font: 'Roboto','Arial',sans-serif;
+$main-font-color: #191919;
+$main-font-link-color: #555;
 
-$color-main: #191919;
+$header-bg-main: #fbfcfd;
+$header-bg: #55585f;
+$header-border-color: #c8c8c8;
+
+$header-title-fs: 18px;
+$header-title-name-fs: 30px;
+
+$search-placeholder-color: #c9c9c9;
+$search-border-color: #e0e0df;
+$search-fs: 14px;
+$search-height: 33px;
+$search-border-radius: 4px;
+$search-button-bg: #55585f;
+$search-button-fs-color: white;
+
+$tool-bg-color: #f0f2f4;
+$tool-border-color: #bebebe;
+$tool-border-radius: 4px;
+$tool-help-color: #6ac4d4;
+
+$event-list-color: #55585f;
+$event-list-color-current: #859a3c;
+$event-list-width-underline: 3px;
+
+
+$themes-title-fs: 24px;
+$themes-title-fav-fs: 14px;
+$themes-label-fs: 14px;
+$themes-label-padding: 4px 12px;
+$themes-label-color: #d9e9ff;
+$themes-label-fav-color: #d9e9ff;
+$themes-label-border-radius: 3px;
+
+$scheme-button-bg: #bcd46a;
+$scheme-button-bg-hover: #b5ce60;
+$scheme-button-fs: 18px;
+$scheme-button-color: white;
+$scheme-button-border-radius: 4px;
+$scheme-view-border-radius: 4px;
+$scheme-view-bg: #63666d;
+
+
+$tabs-line-width: 4px;
+$tabs-line-color: #55585f;
+$tabs-font-color: #646464;
+$tabs-bg: #fbfcfd;
+$tabs-bg-selected: #55585f;
+$tabs-color-selected: white;
+
+$table-tabs-bg: #f5f5f5;
+$table-tabs-font-color: #646464;
+$table-tabs-bg-selected: #bcd46a;
+$table-tabs-font-color-selected: white;
+$table-tabs-fs: 17px;
+
+$table-title-fs: 16px;
+$table-title-color: #646464;
+$table-border-color: #e1e1e1;
+$table-times-fs: 14px;
+$table-times-color: #646464;
+
+
+$table-data-bg: #d9e9ff;
+$table-data-border-color: #d9e9ff;
+$table-data-border-color-hover: #89bbff;
+$table-data-icon-color: #89bbff;
+$table-data-fs: 12px;
+$table-data-font-color: #646464;
+$table-data-description-color: #999;

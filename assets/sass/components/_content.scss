@@ -10,8 +10,8 @@
 }
 .content .head{
   margin: 0 0 15px;
-  background: #fbfcfd;
-  border-bottom: solid 4px #55585f;
+  background: $tabs-bg;
+  border-bottom: solid $tabs-line-width $tabs-line-color;
 }
 .content .head .view{
   position: absolute;
@@ -28,7 +28,7 @@
   padding: 14px 20px 9px;
   font-size: 18px;
   font-weight: 700;
-  color: #646464;
+  color: $tabs-font-color;
   cursor: pointer;
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
@@ -40,8 +40,8 @@
   opacity: 0.7;
 }
 .content .tabs .item.selected{
-  background: #55585f;
-  color: white;
+  background: $tabs-bg-selected;
+  color: $tabs-color-selected;
   opacity: 1;
   cursor: default;
   transition: background-color 0.3s ease;
@@ -50,19 +50,19 @@
 .scheme-button{
   display: inline-block;
   vertical-align: middle;
-  background: #bcd46a;
-  font-size: 18px;
+  background: $scheme-button-bg;
+  font-size: $scheme-button-fs;
   font-weight: 700;
-  color: white;
+  color: $scheme-button-color;
   text-shadow: 0 -1px rgba(0,0,0,0.3);
   cursor: pointer;
   padding: 0 15px 0 12px;
   line-height: 40px;
-  border-radius: 4px;
+  border-radius: $scheme-button-border-radius;
   margin-right: 7px;
 }
 .scheme-button:hover{
-  background: #b5ce60;
+  background: $scheme-button-bg-hover;
 }
 
 .scheme-button .fa{
@@ -77,9 +77,9 @@
   vertical-align: middle;
   height: 40px;
   box-sizing: border-box;
-  border: solid 2px #63666d;
-  border-radius: 4px;
-  background: #63666d;
+  border: solid 2px $scheme-view-bg;
+  border-radius: $scheme-view-border-radius;
+  background: $scheme-view-bg;
 }
 
 .scheme-view .item{
@@ -92,24 +92,23 @@
 }
 
 .scheme-view .item.current{
-  background: #63666d;
+  background: $scheme-view-bg;
   cursor: default;
 
-}
-.scheme-view .item:hover{
-  background: #63666d;
 }
 .scheme-view .item .fa{
   display: inline-block;
   margin-top: 11px;
   font-size: 16px;
-  color: #63666d;
+  color: $scheme-view-bg;
+}
+.scheme-view .item:hover{
+  background: $scheme-view-bg;
 }
 .scheme-view .item:hover .fa{
   color: white;
 }
 .scheme-view .item.current .fa{
-
   color: white;
 }
 
