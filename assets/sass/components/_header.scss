@@ -39,7 +39,7 @@
 }
 
 .toolbar{
-  padding: 17px 3%;
+  padding: 18px 3% 16px;
   max-width: $max-width;
   margin: 0 auto 20px;
   box-sizing: padding-box;
@@ -77,6 +77,9 @@
 .toolbar .event-list .item.current a{
   color: #859a3c;
   border-bottom: solid 3px #859a3c;
+}
+.event-list .fa{
+  margin-right: 6px;
 }
 .toolbar .search{
   width: 100%;
@@ -146,12 +149,20 @@
 .toolbar .print:hover{
   opacity: 0.8;
 }
+.toolbar .print .fa{
+  font-size: 24px;
+  opacity: 0.5;
+}
 .toolbar .tool .help:hover{
   opacity: 0.8;
 }
 .toolbar .tool .help{
   position: absolute;
   left: -41px;
+}
+.toolbar .tool .help .fa{
+  font-size: 36px;
+  color: #6ac4d4;
 }
 .toolbar .tool .lang{
   float: left;

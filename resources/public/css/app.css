@@ -83,81 +83,18 @@ p {
   background: url("../images/sprite.png") no-repeat;
 }
 
-/* line 5, ../sass/components/_icons.scss */
-.icon-help {
-  width: 32px;
-  height: 32px;
-  background-position: -4px -4px;
-}
-
-/* line 10, ../sass/components/_icons.scss */
-.icon-print {
-  width: 25px;
-  height: 25px;
-  background-position: -46px -8px;
-}
-
-/* line 15, ../sass/components/_icons.scss */
+/* line 6, ../sass/components/_icons.scss */
 .icon-lang-en {
   width: 24px;
   height: 16px;
-  background-position: -80px -12px;
+  background-position: -4px -4px;
 }
 
-/* line 20, ../sass/components/_icons.scss */
+/* line 11, ../sass/components/_icons.scss */
 .icon-lang-ru {
   width: 24px;
   height: 16px;
-  background-position: -112px -12px;
-}
-
-/* line 25, ../sass/components/_icons.scss */
-.icon-scheme {
-  width: 26px;
-  height: 26px;
-  background-position: -144px -7px;
-}
-
-/* line 30, ../sass/components/_icons.scss */
-.icon-view-table {
-  display: inline-block;
-  width: 17px;
-  height: 15px;
-  background-position: -35px -47px;
-}
-
-/* line 36, ../sass/components/_icons.scss */
-.icon-view-list {
-  display: inline-block;
-  width: 18px;
-  height: 15px;
-  background-position: -82px -47px;
-}
-
-/* line 43, ../sass/components/_icons.scss */
-.icon-schedule,
-.icon-reader {
-  display: inline-block;
-  vertical-align: middle;
-  width: 16px;
-  height: 16px;
-  position: relative;
-  top: -2px;
-  margin-right: 4px;
-}
-
-/* line 53, ../sass/components/_icons.scss */
-.icon-schedule {
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAPCAYAAAA/I0V3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjgzNzIyQjhGQzE1NzExRTU5QTMyOEM0RjE5Mjk0NTY3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjgzNzIyQjkwQzE1NzExRTU5QTMyOEM0RjE5Mjk0NTY3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6ODM3MjJCOERDMTU3MTFFNTlBMzI4QzRGMTkyOTQ1NjciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6ODM3MjJCOEVDMTU3MTFFNTlBMzI4QzRGMTkyOTQ1NjciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6OPhmmAAAAd0lEQVR42mL8//8/A6mApW22LYy9HogDgHgDEAciqcEQZ0GSBEkwAjG61RjiTEB8HovC/0gYXfw8SJMBkqADDm8gixswoUnux6EJRRymiRGKG4hgMzAxkAFgoVePxe242HBNjUhihNgNw9V5F9CSSwMB9gWAAAMAvaUhSwlH9kYAAAAASUVORK5CYII=");
-  background-repeat: no-repeat;
-  background-position: 0 1px;
-}
-
-/* line 58, ../sass/components/_icons.scss */
-.icon-reader {
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAQCAYAAADESFVDAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjFEOEI5OUMxQzE1ODExRTVBQ0U2RjQwMjEyQUUyQUQ2IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjFEOEI5OUMyQzE1ODExRTVBQ0U2RjQwMjEyQUUyQUQ2Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MUQ4Qjk5QkZDMTU4MTFFNUFDRTZGNDAyMTJBRTJBRDYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MUQ4Qjk5QzBDMTU4MTFFNUFDRTZGNDAyMTJBRTJBRDYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4n+0S8AAAAq0lEQVR42mL8//8/AyHACGO0zrIxAFL9QOwAxAeAuLA67cgFkBwTkgaYAgYo3Q+TQFbkgGaLAzZFOAFxioAOvo9PAUgeZJICAYMUQIoeAFUrQL2NDA5AxR+AFC2EercQSeEBKB8kvhCkaALUynogTgQGICiAE6F8BSC/gQlIfAByHIH4IhDvB1oBiqf9UL4jLt/8xxp3QIkEIDUfix6Q9QsYiUkFRIU4QIABAI51NCUNPBxsAAAAAElFTkSuQmCC");
-  background-repeat: no-repeat;
-  background-position: 5px 1px;
+  background-position: -36px -4px;
 }
 
 /* line 2, ../sass/components/_header.scss */
@@ -216,7 +153,7 @@ p {
 
 /* line 41, ../sass/components/_header.scss */
 .toolbar {
-  padding: 17px 3%;
+  padding: 18px 3% 16px;
   max-width: 1440px;
   margin: 0 auto 20px;
   box-sizing: padding-box;
@@ -269,6 +206,11 @@ p {
 }
 
 /* line 81, ../sass/components/_header.scss */
+.event-list .fa {
+  margin-right: 6px;
+}
+
+/* line 84, ../sass/components/_header.scss */
 .toolbar .search {
   width: 100%;
   box-sizing: padding-box;
@@ -279,13 +221,13 @@ p {
   border-right: solid 170px transparent;
 }
 
-/* line 90, ../sass/components/_header.scss */
+/* line 93, ../sass/components/_header.scss */
 .toolbar .search .wrapper {
   position: relative;
   padding-right: 85px;
 }
 
-/* line 95, ../sass/components/_header.scss */
+/* line 98, ../sass/components/_header.scss */
 .toolbar .search .input {
   width: 100%;
   overflow: hidden;
@@ -302,7 +244,7 @@ p {
   border-bottom-left-radius: 4px;
 }
 
-/* line 111, ../sass/components/_header.scss */
+/* line 114, ../sass/components/_header.scss */
 .toolbar .search .submit {
   position: absolute;
   right: 0;
@@ -321,12 +263,12 @@ p {
   border-bottom-right-radius: 4px;
 }
 
-/* line 128, ../sass/components/_header.scss */
+/* line 131, ../sass/components/_header.scss */
 .toolbar .search .submit:hover {
   opacity: 0.95;
 }
 
-/* line 132, ../sass/components/_header.scss */
+/* line 135, ../sass/components/_header.scss */
 .toolbar .tool {
   position: absolute;
   top: 0;
@@ -336,48 +278,60 @@ p {
   border-radius: 4px;
 }
 
-/* line 141, ../sass/components/_header.scss */
+/* line 144, ../sass/components/_header.scss */
 .toolbar .print {
   float: left;
   border-right: solid 1px #c2c2c2;
   padding: 6px 10px 3px;
 }
 
-/* line 146, ../sass/components/_header.scss */
+/* line 149, ../sass/components/_header.scss */
 .toolbar .print:hover {
   opacity: 0.8;
 }
 
-/* line 149, ../sass/components/_header.scss */
+/* line 152, ../sass/components/_header.scss */
+.toolbar .print .fa {
+  font-size: 24px;
+  opacity: 0.5;
+}
+
+/* line 156, ../sass/components/_header.scss */
 .toolbar .tool .help:hover {
   opacity: 0.8;
 }
 
-/* line 152, ../sass/components/_header.scss */
+/* line 159, ../sass/components/_header.scss */
 .toolbar .tool .help {
   position: absolute;
   left: -41px;
 }
 
-/* line 156, ../sass/components/_header.scss */
+/* line 163, ../sass/components/_header.scss */
+.toolbar .tool .help .fa {
+  font-size: 36px;
+  color: #6ac4d4;
+}
+
+/* line 167, ../sass/components/_header.scss */
 .toolbar .tool .lang {
   float: left;
   padding: 9px 0 9px 9px;
 }
 
-/* line 161, ../sass/components/_header.scss */
+/* line 172, ../sass/components/_header.scss */
 .toolbar .tool .lang .item {
   float: left;
   margin-right: 9px;
   opacity: 0.2;
 }
 
-/* line 166, ../sass/components/_header.scss */
+/* line 177, ../sass/components/_header.scss */
 .toolbar .tool .lang .item:hover {
   opacity: 1;
 }
 
-/* line 169, ../sass/components/_header.scss */
+/* line 180, ../sass/components/_header.scss */
 .toolbar .tool .lang .item.current {
   opacity: 1;
   cursor: default;
@@ -393,28 +347,28 @@ p {
     }
 }
 */
-/* line 189, ../sass/components/_header.scss */
+/* line 200, ../sass/components/_header.scss */
 ::-webkit-input-placeholder {
   color: #c9c9c9;
 }
 
-/* line 190, ../sass/components/_header.scss */
+/* line 201, ../sass/components/_header.scss */
 ::-moz-placeholder {
   color: #c9c9c9;
   opacity: 1;
 }
 
-/* line 191, ../sass/components/_header.scss */
+/* line 202, ../sass/components/_header.scss */
 :-ms-input-placeholder {
   color: #c9c9c9;
 }
 
-/* line 192, ../sass/components/_header.scss */
+/* line 203, ../sass/components/_header.scss */
 input:-moz-placeholder {
   color: #c9c9c9;
 }
 
-/* line 197, ../sass/components/_header.scss */
+/* line 208, ../sass/components/_header.scss */
 .filter .wrap {
   padding: 0 3%;
   box-sizing: padding-box;
@@ -422,19 +376,19 @@ input:-moz-placeholder {
   margin: 0 auto;
 }
 
-/* line 203, ../sass/components/_header.scss */
+/* line 214, ../sass/components/_header.scss */
 .filter .title2 {
   font-size: 24px;
   margin: 0 0 5px;
 }
 
-/* line 207, ../sass/components/_header.scss */
+/* line 218, ../sass/components/_header.scss */
 .categories {
   /*max-width: 52%;*/
   margin: 0 0 12px;
 }
 
-/* line 211, ../sass/components/_header.scss */
+/* line 222, ../sass/components/_header.scss */
 .categories,
 .categories .items {
   display: inline-block;
@@ -443,13 +397,13 @@ input:-moz-placeholder {
   background-position: bottom left;
 }
 
-/* line 218, ../sass/components/_header.scss */
+/* line 229, ../sass/components/_header.scss */
 .categories .items {
   background-position: top left;
   padding: 13px 0 7px 0;
 }
 
-/* line 222, ../sass/components/_header.scss */
+/* line 233, ../sass/components/_header.scss */
 .categories .item {
   display: inline-block;
   font-size: 16px;
@@ -460,7 +414,7 @@ input:-moz-placeholder {
   border-radius: 3px;
 }
 
-/* line 231, ../sass/components/_header.scss */
+/* line 242, ../sass/components/_header.scss */
 .categories .item {
   display: inline-block;
   font-size: 16px;
@@ -471,17 +425,17 @@ input:-moz-placeholder {
   border-radius: 3px;
 }
 
-/* line 240, ../sass/components/_header.scss */
+/* line 251, ../sass/components/_header.scss */
 .categories .item:hover {
   opacity: 0.8;
 }
 
-/* line 244, ../sass/components/_header.scss */
+/* line 255, ../sass/components/_header.scss */
 .categories-faves {
   overflow: hidden;
 }
 
-/* line 247, ../sass/components/_header.scss */
+/* line 258, ../sass/components/_header.scss */
 .categories-faves .title3 {
   float: left;
   font-size: 14px;
@@ -492,13 +446,13 @@ input:-moz-placeholder {
   padding-top: 6px;
 }
 
-/* line 256, ../sass/components/_header.scss */
+/* line 267, ../sass/components/_header.scss */
 .categories-faves .items {
   padding-bottom: 7px;
   padding-left: 190px;
 }
 
-/* line 260, ../sass/components/_header.scss */
+/* line 271, ../sass/components/_header.scss */
 .categories-faves .item {
   display: inline-block;
   font-size: 16px;
@@ -509,7 +463,7 @@ input:-moz-placeholder {
   border-radius: 3px;
 }
 
-/* line 269, ../sass/components/_header.scss */
+/* line 280, ../sass/components/_header.scss */
 .categories-faves .item:hover {
   opacity: 0.8;
 }
@@ -598,14 +552,15 @@ input:-moz-placeholder {
   background: #b5ce60;
 }
 
-/* line 67, ../sass/components/_content.scss */
-.scheme-button .icon-scheme {
+/* line 68, ../sass/components/_content.scss */
+.scheme-button .fa {
   display: inline-block;
   vertical-align: middle;
   margin: -2px 5px 0 0;
+  font-size: 24px;
 }
 
-/* line 72, ../sass/components/_content.scss */
+/* line 74, ../sass/components/_content.scss */
 .scheme-view {
   display: inline-block;
   overflow: hidden;
@@ -617,7 +572,7 @@ input:-moz-placeholder {
   background: #63666d;
 }
 
-/* line 83, ../sass/components/_content.scss */
+/* line 85, ../sass/components/_content.scss */
 .scheme-view .item {
   float: left;
   width: 43px;
@@ -627,11 +582,6 @@ input:-moz-placeholder {
   text-align: center;
 }
 
-/* line 91, ../sass/components/_content.scss */
-.scheme-view .item:hover {
-  background: #63666d;
-}
-
 /* line 94, ../sass/components/_content.scss */
 .scheme-view .item.current {
   background: #63666d;
@@ -639,20 +589,26 @@ input:-moz-placeholder {
 }
 
 /* line 99, ../sass/components/_content.scss */
-.scheme-view .icon-sprite {
-  margin-top: 10px;
+.scheme-view .item:hover {
+  background: #63666d;
 }
 
-/* line 103, ../sass/components/_content.scss */
-.scheme-view .item.current .icon-view-table,
-.scheme-view .item:hover .icon-view-table {
-  background-position: -11px -47px;
+/* line 102, ../sass/components/_content.scss */
+.scheme-view .item .fa {
+  display: inline-block;
+  margin-top: 11px;
+  font-size: 16px;
+  color: #63666d;
 }
 
 /* line 108, ../sass/components/_content.scss */
-.scheme-view .item.current .icon-view-list,
-.scheme-view .item:hover .icon-view-list {
-  background-position: -57px -47px;
+.scheme-view .item:hover .fa {
+  color: white;
+}
+
+/* line 111, ../sass/components/_content.scss */
+.scheme-view .item.current .fa {
+  color: white;
 }
 
 /* line 2, ../sass/components/_schedule.scss */

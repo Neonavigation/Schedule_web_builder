@@ -64,10 +64,12 @@
 .scheme-button:hover{
   background: #b5ce60;
 }
-.scheme-button .icon-scheme{
+
+.scheme-button .fa{
   display: inline-block;
   vertical-align: middle;
   margin: -2px 5px 0 0;
+  font-size: 24px;
 }
 .scheme-view{
   display: inline-block;
@@ -88,24 +90,27 @@
   background: white;
   text-align: center;
 }
-.scheme-view .item:hover{
-  background: #63666d;
-}
+
 .scheme-view .item.current{
   background: #63666d;
   cursor: default;
 
 }
-.scheme-view .icon-sprite{
-  margin-top: 10px;
+.scheme-view .item:hover{
+  background: #63666d;
+}
+.scheme-view .item .fa{
+  display: inline-block;
+  margin-top: 11px;
+  font-size: 16px;
+  color: #63666d;
+}
+.scheme-view .item:hover .fa{
+  color: white;
+}
+.scheme-view .item.current .fa{
+
+  color: white;
 }
 
-.scheme-view .item.current .icon-view-table,
-.scheme-view .item:hover .icon-view-table{
-  background-position: -11px -47px;
-}
 
-.scheme-view .item.current .icon-view-list,
-.scheme-view .item:hover .icon-view-list{
-  background-position: -57px -47px;
-}
