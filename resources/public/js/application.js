@@ -6,7 +6,7 @@ window.ModuleLoader([],[], function() {
         function Application() {
 
             var th = new TemplatesHelper($);
-            th.getHtml('/location/1XPNP1WZVQ/rest/schedulehtmlpub/ru', {'init': true}, 'schedulewrap', function(html) {
+            th.getHtml('/location/XTJA2EXBED/rest/schedulehtmlpub/ru', {'init': true}, 'schedulewrap', function(html) {
 
                 $('body').html(html);
 
@@ -17,7 +17,7 @@ window.ModuleLoader([],[], function() {
                 var popups = new modulePopups();
                 popups.init();
 
-                var scroll = new moduleScroll();
+                //var scroll = new moduleScroll();
 
             });
 
@@ -40,6 +40,9 @@ window.ModuleLoader([],[], function() {
                     },
                     fr_names: function(){
                         return $(".schedule-tabs .selected").data('hall_fr_names');
+                    },
+                    all_halls: function(){
+                        return $(".schedule-tabs").data('all_halls');
                     }
                 };
 
@@ -85,12 +88,16 @@ window.ModuleLoader([],[], function() {
 
                 self.getTable = function(){
                     var hall_fr_names = self.config.fr_names();
+                    var all_halls = self.config.all_halls();
                     var halls = [];
                     for(var i in hall_fr_names){
-                        halls.push({hall_name: hall_fr_names[i], pav_id: ""});
+                        for (var j in all_halls){
+                            if (all_halls[j].fr_name === hall_fr_names[i]) {
+                                halls.push({hall_name: all_halls[j].hall_name, pav_id: all_halls[j].pav_id});
+                            }
+                        }
                     }
-                    console.log(hall_fr_names.length);
-                    th.getHtml('/location/1XPNP1WZVQ/rest/schedulehtmlpub/ru', {'pph': 100, 'day': self.config.day(), halls: JSON.stringify(halls)}, 'table', function(html) {
+                    th.getHtml('/location/XTJA2EXBED/rest/schedulehtmlpub/ru', {'pph': 100, 'day': self.config.day(), halls: JSON.stringify(halls)}, 'table', function(html) {
                         $('.schedule-table').replaceWith(html);
                     });
                 };
@@ -153,9 +160,17 @@ window.ModuleLoader([],[], function() {
                 self.events = function(){
                     $('body').on('click', '.js-data-block', function(){
                         $('.description-popup').css('display','block');
-                        setTimeout(function(){
+                        th.getHtml('/location/XTJA2EXBED/rest/eventhtmlpub/ru', {'evid': $(this).data('id')}, 'popup', function(html) {
+                            $('.description-popup .popup').html(html);
                             $('.description-popup').addClass('fade-in');
-                        },10);
+
+
+                            /*
+                            $('.description-popup .popup-content').mCustomScrollbar({
+                                axis:"y" // horizontal scrollbar
+                            });
+*/
+                        });
                     });
                     $('body').on('click', '.js-close-popup', function(){
                         $('.description-popup').removeClass('fade-in');
@@ -166,6 +181,7 @@ window.ModuleLoader([],[], function() {
                 };
             }
 
+/*
             function moduleScroll(){
 
                 var self = this;
@@ -189,34 +205,8 @@ window.ModuleLoader([],[], function() {
                         });
                     });
 
-                /*
-                self.scrollable = function(Y){
-                    var k = (Y-300)/($('.scrollable').height()-200);
-                    var scroll_height = $('.scrollable')[0].scrollHeight-$('.scrollable').height();
-                    console.log(scroll_height);
-                    $('.scrollable').scrollTop(scroll_height*k);
-                };
-
-                $('.scroll, .bar')
-                    .on('mousedown', function(event){
-
-                        $dragging = $(event.target);
-
-                        self.scrollable(event.pageY);
-                        body
-                            .on('mousemove', function(event){
-                                if($dragging){
-                                    self.scrollable(event.pageY);
-                                }
-                            })
-                            .on('mouseup mouseleave', function(event){
-                                $dragging = null;
-                            });
-
-                    });
-                */
-
             }
+            */
 
         }
 

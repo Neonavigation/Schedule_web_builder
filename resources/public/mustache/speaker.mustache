@@ -1,0 +1,18 @@
+<li class="item">
+    {{#photo}}
+    {{#f}}
+    {{#thumb}}
+    <div class="author-img">
+        <img src="{{the_host}}{{src}}" alt="{{synonim}}">
+    </div>
+    {{/thumb}}
+    {{/f}}
+    {{/photo}}
+    <div class="author-txt">
+        <h3 class="author">{{#name}}{{#ru}}{{str}}{{/ru}}{{/name}}</h3>
+        {{#regaliums}}{{#ru}}
+        <p>{{str}}</з>
+        {{/ru}}{{/regaliums}}
+        </p>
+    </div>
+</li>

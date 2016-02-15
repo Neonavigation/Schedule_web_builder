@@ -73,7 +73,9 @@ function TemplatesHelper($) {
             }
           }
           $.get(nexpo.apiURL + addUrlParameters(url, params), function(data){
+            console.log(data)
             var json = eval('('+data+')')
+            json['the_host'] = nexpo.apiURL;
             var html = Mustache.render(template, json, partials);
             callBack(html)
           });
@@ -90,7 +92,7 @@ function TemplatesHelper($) {
         }
       }
       var toFunc = function() {
-        console.log(loading_templ)
+        //console.log(loading_templ)
         if (loading_templ == 0) func(url, params, templ_name);
         else {
           window.setTimeout(function() {

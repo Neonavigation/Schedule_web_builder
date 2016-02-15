@@ -1,0 +1,125 @@
+<i class="fa fa-times js-close-popup"></i>
+<div class="popup-content scrollable" style="position: relative; overflow-y: scroll; max-height: 456px;">
+    <div class="scrollable-wrapper">
+        <div class="maininfo">
+            {{#logo}}
+              {{#f}}
+              {{#thumb}}
+            <div class="img">
+                <img src="{{the_host}}{{src}}" alt="{{synonim}}">
+            </div>
+              {{/thumb}}
+              {{/f}}
+            {{/logo}}
+            <div class="txt">
+                <h3 class="title">
+                    {{#name}}{{#ru}}{{str}}{{/ru}}{{/name}}
+                </h3>
+                <div class="info">
+                <!--
+                    <div class="button">
+                        <button class="favorite">
+                            <i class="fa fa-star"></i><br>
+                            В избранное
+                        </button>
+                    </div>
+                    -->
+
+                    {{#time.length}}
+                  {{#time}}
+                  <div class="item time">
+                        <i class="fa fa-clock-o"></i>
+                        {{#day}}{{#dval}}{{daym}} {{daym_pretty}},{{/dval}}{{/day}} {{#time_string}}{{#lc}}{{str}}{{/lc}}{{^lc}}{{start_time_str}}{{#end_time_str}} - {{.}}{{/end_time_str}}{{/lc}}{{/time_string}}
+                  </div>
+                  {{/time}}
+                  {{/time.length}}
+
+                  {{#pav_identifier.length}}
+                  {{#pav_identifier}}
+                  <{{#pavilion}}a href="#gotodest_id_{{dest_id}}_lev_{{level}}"{{/pavilion}}{{^pavilion}}div{{/pavilion}} class="place">
+                    <div class="item hall">
+                        <i class="fa fa-map-marker"></i>
+                        {{#hall_name}}{{#lc}}{{str}}{{/lc}}{{/hall_name}} <strong>{{pav_name_id}}</strong>
+                    </div>
+                  </{{#pavilion}}a{{/pavilion}}{{^pavilion}}div{{/pavilion}}>
+                  {{/pav_identifier}}
+                  {{/pav_identifier.length}}
+                </div>
+            </div>
+        </div>
+        <div class="text">
+            {{#description}}{{#ru}}{{{str}}}{{/ru}}{{/description}}
+
+            {{#comments}}{{#lc}}
+            <br><br><i>{{{str}}}</i>
+            {{/lc}}{{/comments}}
+        </div>
+
+
+        {{#speakers}}
+        <div class="authors">
+            <div class="text">
+
+            {{#chairman.length}}
+            <h4 class="title2">Председатель:</h4>
+            <ul class="items">
+            {{#chairman}}
+            {{> speaker}}
+            {{/chairman}}
+            </ul>
+            {{/chairman.length}}
+
+            {{#co_chairs.length}}
+            <h4 class="title2">Сопредседатели:</h4>
+            <ul class="items">
+              {{#co_chairs}}
+              {{> speaker}}
+              {{/co_chairs}}
+            </ul>
+            {{/co_chairs.length}}
+
+            {{#moderators.length}}
+            <h4 class="title2">Модераторы:</h4>
+            <ul class="items">
+              {{#moderators}}
+              {{> speaker}}
+              {{/moderators}}
+            </ul>
+            {{/moderators.length}}
+
+            {{#presenters.length}}
+            <h4 class="title2">Ведущие:</h4>
+            <ul class="items">
+              {{#presenters}}
+              {{> speaker}}
+              {{/presenters}}
+            </ul>
+            {{/presenters.length}}
+
+            {{#speakers.length}}
+            <h4 class="title2">Докладчики:</h4>
+            <ul class="items">
+              {{#speakers}}
+              {{> speaker}}
+              {{/speakers}}
+            </ul>
+            {{/speakers.length}}
+        </div>
+        {{/speakers}}
+        <!--
+        <div class="themes">
+            <h4 class="title2">Тематики:</h4>
+            <ul class="items">
+                <li class="item">Тематика 1</li>
+                <li class="item">Тематика 2</li>
+            </ul>
+        </div>
+        -->
+    </div>
+</div>
+<!--
+<div class="scrollbar noselect">
+    <div class="bar"></div>
+    <div class="scroll"></div>
+</div>
+-->
