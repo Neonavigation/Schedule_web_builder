@@ -172,14 +172,20 @@
   z-index: 2;
   font-size: 14px;
 }
-.maintable .data-block .fa-thumbs-o-up{
+.maintable .data-block .fa-thumbs-o-up,
+.maintable .data-block .fa-star{
+  display: none;
+}
+.maintable .data-block .liked .fa-thumbs-o-up{
+  display: block;
   left: 6px;
   bottom: 4px;
   color: $table-data-icon-color;
   font-size: 16px;
   z-index: 1;
 }
-.maintable .data-block .fa-star{
+.maintable .data-block .faved .fa-star{
+  display: block;
   right: 5px;
   top: 4px;
   color: $table-data-icon-color;
