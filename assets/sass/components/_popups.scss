@@ -49,12 +49,17 @@
 }
 .description-popup .info{
   position: relative;
+  min-height: 48px;
 }
 .description-popup .img{
+  display: none;
+}
+.description-popup .with-image .img{
+  display: block;
   float: left;
   margin-right: -100%;
 }
-.description-popup .txt{
+.description-popup .with-image .txt{
   padding-left: 124px;
 }
 .description-popup .txt .title{

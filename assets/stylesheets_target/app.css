@@ -1095,20 +1095,27 @@ input:-moz-placeholder {
 /* line 50, ../sass/components/_popups.scss */
 .description-popup .info {
   position: relative;
+  min-height: 48px;
 }
 
-/* line 53, ../sass/components/_popups.scss */
+/* line 54, ../sass/components/_popups.scss */
 .description-popup .img {
+  display: none;
+}
+
+/* line 57, ../sass/components/_popups.scss */
+.description-popup .with-image .img {
+  display: block;
   float: left;
   margin-right: -100%;
 }
 
-/* line 57, ../sass/components/_popups.scss */
-.description-popup .txt {
+/* line 62, ../sass/components/_popups.scss */
+.description-popup .with-image .txt {
   padding-left: 124px;
 }
 
-/* line 60, ../sass/components/_popups.scss */
+/* line 65, ../sass/components/_popups.scss */
 .description-popup .txt .title {
   font-size: 15px;
   line-height: 18px;
@@ -1117,7 +1124,7 @@ input:-moz-placeholder {
   margin: 0 0 13px;
 }
 
-/* line 68, ../sass/components/_popups.scss */
+/* line 73, ../sass/components/_popups.scss */
 .description-popup .info .item .fa {
   font-size: 18px;
   width: 18px;
@@ -1126,19 +1133,19 @@ input:-moz-placeholder {
   color: #bcd46a;
 }
 
-/* line 75, ../sass/components/_popups.scss */
+/* line 80, ../sass/components/_popups.scss */
 .description-popup .info .button .fa-star {
   font-size: 18px;
 }
 
-/* line 78, ../sass/components/_popups.scss */
+/* line 83, ../sass/components/_popups.scss */
 .description-popup .info .button {
   position: absolute;
   right: 0;
   top: -5px;
 }
 
-/* line 83, ../sass/components/_popups.scss */
+/* line 88, ../sass/components/_popups.scss */
 .description-popup .info .button button {
   background: #bcd46a;
   border: none;
@@ -1153,61 +1160,61 @@ input:-moz-placeholder {
   outline: none;
 }
 
-/* line 96, ../sass/components/_popups.scss */
+/* line 101, ../sass/components/_popups.scss */
 .description-popup .info .time {
   margin: 0 0 5px;
 }
 
-/* line 101, ../sass/components/_popups.scss */
+/* line 106, ../sass/components/_popups.scss */
 .description-popup .title2 {
   font-size: 15px;
   font-weight: 700;
   margin: 0 0 8px;
 }
 
-/* line 106, ../sass/components/_popups.scss */
+/* line 111, ../sass/components/_popups.scss */
 .description-popup .text {
   margin: 0 0 30px;
 }
 
-/* line 109, ../sass/components/_popups.scss */
+/* line 114, ../sass/components/_popups.scss */
 .description-popup .authors {
   margin: 0 0 18px;
 }
 
-/* line 112, ../sass/components/_popups.scss */
+/* line 117, ../sass/components/_popups.scss */
 .description-popup .authors .item {
   overflow: hidden;
 }
 
-/* line 115, ../sass/components/_popups.scss */
+/* line 120, ../sass/components/_popups.scss */
 .description-popup .authors .author {
   font-size: 15px;
   font-weight: 700;
 }
 
-/* line 119, ../sass/components/_popups.scss */
+/* line 124, ../sass/components/_popups.scss */
 .description-popup .authors p {
   font-size: 14px;
 }
 
-/* line 122, ../sass/components/_popups.scss */
+/* line 127, ../sass/components/_popups.scss */
 .description-popup .author-img {
   float: left;
   margin-right: -100%;
 }
 
-/* line 126, ../sass/components/_popups.scss */
+/* line 131, ../sass/components/_popups.scss */
 .description-popup .author-txt {
   padding-left: 85px;
 }
 
-/* line 129, ../sass/components/_popups.scss */
+/* line 134, ../sass/components/_popups.scss */
 .description-popup .themes .items {
   overflow: hidden;
 }
 
-/* line 132, ../sass/components/_popups.scss */
+/* line 137, ../sass/components/_popups.scss */
 .description-popup .themes .item {
   float: left;
   padding: 3px 15px;
@@ -1217,18 +1224,18 @@ input:-moz-placeholder {
   cursor: pointer;
 }
 
-/* line 142, ../sass/components/_popups.scss */
+/* line 147, ../sass/components/_popups.scss */
 .fade-animate {
   transition: opacity 0.4s ease;
   -webkit-transition: opacity 0.4s ease;
 }
 
-/* line 146, ../sass/components/_popups.scss */
+/* line 151, ../sass/components/_popups.scss */
 .fade-out {
   opacity: 0;
 }
 
-/* line 149, ../sass/components/_popups.scss */
+/* line 154, ../sass/components/_popups.scss */
 .fade-in {
   opacity: 1;
 }
