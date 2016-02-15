@@ -64,6 +64,7 @@
   white-space: nowrap;
 }
 .description-popup .with-image .img img{
+  max-width: 100px;
   vertical-align: middle;
 }
 .description-popup .with-image .img:after{
@@ -130,6 +131,7 @@
 }
 .description-popup .authors .item{
   overflow: hidden;
+  margin-bottom: 5px;
 }
 .description-popup .authors .author{
   font-size: 15px;
@@ -141,6 +143,11 @@
 .description-popup .author-img{
   float: left;
   margin-right: -100%;
+  width: 70px;
+}
+
+.description-popup .author-img img{
+  max-width: 70px;
 }
 .description-popup .author-txt{
   padding-left: 85px;
