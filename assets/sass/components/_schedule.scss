@@ -102,8 +102,8 @@
   font-size: $table-times-fs;
   font-weight: 700;
   color: $table-times-color;
-  height: 90px;
-  padding-top: 10px;
+  height: 103px;
+  margin-top: -3px;
 }
 
 .maintable .title{
@@ -167,27 +167,28 @@
 .maintable .data-block:hover .data-wrap{
   border: solid 1px $table-data-border-color-hover;
 }
-.maintable .data-block .fa{
+.maintable .data-block .icons{
   position: absolute;
   z-index: 2;
   font-size: 14px;
+  right: 5px;
+  top: 4px;
+}
+.maintable .data-block .fa{
+  margin-left: 1px;
 }
 .maintable .data-block .fa-thumbs-o-up,
 .maintable .data-block .fa-star{
   display: none;
 }
 .maintable .data-block .liked .fa-thumbs-o-up{
-  display: block;
-  left: 6px;
-  bottom: 4px;
+  display: inline-block;
   color: $table-data-icon-color;
   font-size: 16px;
   z-index: 1;
 }
 .maintable .data-block .faved .fa-star{
-  display: block;
-  right: 5px;
-  top: 4px;
+  display: inline-block;
   color: $table-data-icon-color;
 }
 
@@ -201,10 +202,15 @@
   overflow: hidden;
   position: absolute;
   box-sizing: border-box;
-  border-bottom: solid 34px rgba(0,0,0,0);
   border-top: solid 18px rgba(0,0,0,0);
   height: 100%;
   padding: 5px;
+}
+.maintable .data-block.with-themes .text{
+  border-bottom: solid 34px rgba(0,0,0,0);
+}
+.maintable .data-block.with-themes .bottom-gradient{
+  bottom: 34px;
 }
 .maintable .data-block .text p{
   margin: 0 0 10px;
@@ -249,7 +255,7 @@
   height: 20px;
   width: 98%;
   position: absolute;
-  bottom: 34px;
+  bottom: 0;
 
   background: -moz-linear-gradient(top,  rgba(217,233,255,0) 0%, rgba(217,233,255,0.92) 58%, rgba(217,233,255,1) 98%, rgba(217,233,255,1) 100%);
   background: -webkit-linear-gradient(top,  rgba(217,233,255,0) 0%,rgba(217,233,255,0.92) 58%,rgba(217,233,255,1) 98%,rgba(217,233,255,1) 100%);
