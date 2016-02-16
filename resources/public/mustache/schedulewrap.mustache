@@ -10,13 +10,11 @@
         <div class="wrap">
             <h1 class="title">
                 <span class="text">Деловая программа на выставку</span>
-                <span class="name">Интермаркет 2016</span>
+                <span class="name">ДенталЭкспо 2016</span>
             </h1>
-            <!--
             <div class="logo">
                 <a href="#"><img src="images/temp/logo.png" alt=""></a>
             </div>
-            -->
         </div>
     </div>
     <div class="toolbar">
@@ -51,7 +49,7 @@
             </div>
         </div>
     </div>
-<!--
+
     <div class="filter">
         <div class="wrap">
             <div class="categories">
@@ -72,7 +70,6 @@
             </div>
         </div>
     </div>
-    -->
 
 </div>
 
@@ -108,14 +105,14 @@
 
     <div class="schedule-container">
 
-        <div class="schedule-tabs" data-all_halls='{{halls}}'>
+        <div class="schedule-tabs">
             <div class="schedule-tabs-wrap">
                 <ul class="items">
                     {{#halls_splits}}
                         <li class="item" data-available-days="{{days}}" data-hall_fr_names='{{hall_fr_names}}'>
                             <a href="#" title="{{#hall_fr_names}}{{.}}&#013;{{/hall_fr_names}}">
                                 {{#hall_fr_names}}
-                                    <span class="name nobr">Конференц-зал {{.}}</span>
+                                    <span class="name nobr">{{.}}</span>
                                 {{/hall_fr_names}}
                             </a>
                         </li>

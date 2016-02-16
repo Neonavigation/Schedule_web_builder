@@ -1116,10 +1116,11 @@ input:-moz-placeholder {
 
 /* line 66, ../sass/components/_popups.scss */
 .description-popup .with-image .img img {
+  max-width: 100px;
   vertical-align: middle;
 }
 
-/* line 69, ../sass/components/_popups.scss */
+/* line 70, ../sass/components/_popups.scss */
 .description-popup .with-image .img:after {
   content: "";
   line-height: 100%;
@@ -1128,12 +1129,12 @@ input:-moz-placeholder {
   vertical-align: middle;
 }
 
-/* line 76, ../sass/components/_popups.scss */
+/* line 77, ../sass/components/_popups.scss */
 .description-popup .with-image .txt {
   padding-left: 124px;
 }
 
-/* line 79, ../sass/components/_popups.scss */
+/* line 80, ../sass/components/_popups.scss */
 .description-popup .txt .title {
   font-size: 15px;
   line-height: 18px;
@@ -1142,7 +1143,7 @@ input:-moz-placeholder {
   margin: 0 0 13px;
 }
 
-/* line 87, ../sass/components/_popups.scss */
+/* line 88, ../sass/components/_popups.scss */
 .description-popup .info .item .fa {
   font-size: 18px;
   width: 18px;
@@ -1151,19 +1152,19 @@ input:-moz-placeholder {
   color: #bcd46a;
 }
 
-/* line 94, ../sass/components/_popups.scss */
+/* line 95, ../sass/components/_popups.scss */
 .description-popup .info .button .fa-star {
   font-size: 18px;
 }
 
-/* line 97, ../sass/components/_popups.scss */
+/* line 98, ../sass/components/_popups.scss */
 .description-popup .info .button {
   position: absolute;
   right: 0;
   top: -5px;
 }
 
-/* line 102, ../sass/components/_popups.scss */
+/* line 103, ../sass/components/_popups.scss */
 .description-popup .info .button button {
   background: #bcd46a;
   border: none;
@@ -1178,61 +1179,68 @@ input:-moz-placeholder {
   outline: none;
 }
 
-/* line 115, ../sass/components/_popups.scss */
+/* line 116, ../sass/components/_popups.scss */
 .description-popup .info .time {
   margin: 0 0 5px;
 }
 
-/* line 120, ../sass/components/_popups.scss */
+/* line 121, ../sass/components/_popups.scss */
 .description-popup .title2 {
   font-size: 15px;
   font-weight: 700;
   margin: 0 0 8px;
 }
 
-/* line 125, ../sass/components/_popups.scss */
+/* line 126, ../sass/components/_popups.scss */
 .description-popup .text {
   margin: 0 0 30px;
 }
 
-/* line 128, ../sass/components/_popups.scss */
+/* line 129, ../sass/components/_popups.scss */
 .description-popup .authors {
   margin: 0 0 18px;
 }
 
-/* line 131, ../sass/components/_popups.scss */
+/* line 132, ../sass/components/_popups.scss */
 .description-popup .authors .item {
   overflow: hidden;
+  margin-bottom: 5px;
 }
 
-/* line 134, ../sass/components/_popups.scss */
+/* line 136, ../sass/components/_popups.scss */
 .description-popup .authors .author {
   font-size: 15px;
   font-weight: 700;
 }
 
-/* line 138, ../sass/components/_popups.scss */
+/* line 140, ../sass/components/_popups.scss */
 .description-popup .authors p {
   font-size: 14px;
 }
 
-/* line 141, ../sass/components/_popups.scss */
+/* line 143, ../sass/components/_popups.scss */
 .description-popup .author-img {
   float: left;
   margin-right: -100%;
+  width: 70px;
 }
 
-/* line 145, ../sass/components/_popups.scss */
+/* line 149, ../sass/components/_popups.scss */
+.description-popup .author-img img {
+  max-width: 70px;
+}
+
+/* line 152, ../sass/components/_popups.scss */
 .description-popup .author-txt {
   padding-left: 85px;
 }
 
-/* line 148, ../sass/components/_popups.scss */
+/* line 155, ../sass/components/_popups.scss */
 .description-popup .themes .items {
   overflow: hidden;
 }
 
-/* line 151, ../sass/components/_popups.scss */
+/* line 158, ../sass/components/_popups.scss */
 .description-popup .themes .item {
   float: left;
   padding: 3px 15px;
@@ -1242,18 +1250,18 @@ input:-moz-placeholder {
   cursor: pointer;
 }
 
-/* line 161, ../sass/components/_popups.scss */
+/* line 168, ../sass/components/_popups.scss */
 .fade-animate {
   transition: opacity 0.4s ease;
   -webkit-transition: opacity 0.4s ease;
 }
 
-/* line 165, ../sass/components/_popups.scss */
+/* line 172, ../sass/components/_popups.scss */
 .fade-out {
   opacity: 0;
 }
 
-/* line 168, ../sass/components/_popups.scss */
+/* line 175, ../sass/components/_popups.scss */
 .fade-in {
   opacity: 1;
 }
