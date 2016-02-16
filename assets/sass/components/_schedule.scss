@@ -163,6 +163,10 @@
   border: solid 1px $table-data-border-color;
   box-sizing: border-box;
   overflow: hidden;
+  box-shadow: 0 0 20px 10px rgba(255,255,255,1);
+}
+.maintable .data-block:hover{
+  z-index: 3;
 }
 .maintable .data-block:hover .data-wrap{
   border: solid 1px $table-data-border-color-hover;
