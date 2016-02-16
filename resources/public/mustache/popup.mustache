@@ -37,10 +37,12 @@
                   {{#pav_identifier.length}}
                   {{#pav_identifier}}
                   <{{#pavilion}}a href="#gotodest_id_{{dest_id}}_lev_{{level}}"{{/pavilion}}{{^pavilion}}div{{/pavilion}} class="place">
-                    <div class="item hall">
-                        <i class="fa fa-map-marker"></i>
-                        {{#hall_name}}{{#lc}}{{str}}{{/lc}}{{/hall_name}} <strong>{{pav_name_id}}</strong>
-                    </div>
+                    {{#pav_name_id}}
+                        <div class="item hall">
+                            <i class="fa fa-map-marker"></i>
+                            {{#hall_name}}{{#lc}}{{str}}{{/lc}}{{/hall_name}} <strong>{{pav_name_id}}</strong>
+                        </div>
+                    {{/pav_name_id}}
                   </{{#pavilion}}a{{/pavilion}}{{^pavilion}}div{{/pavilion}}>
                   {{/pav_identifier}}
                   {{/pav_identifier.length}}
