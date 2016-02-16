@@ -36,7 +36,7 @@
                         <div class="col-outer">
                             <div class="col-inner">
 
-                                <div class="data-block js-data-block" title="{{#name}}{{#ru}}{{str}}{{/ru}}{{/name}}" style="top: {{#time}}{{top}}{{/time}}px; height: {{#time}}{{height}}{{/time}}px;" data-id="{{_id}}">
+                                <div class="data-block js-data-block {{#themes.length}}with-themes{{/themes.length}}" title="{{#name}}{{#ru}}{{str}}{{/ru}}{{/name}}" style="top: {{#time}}{{top}}{{/time}}px; height: {{#time}}{{height}}{{/time}}px;" data-id="{{_id}}">
                                     <div class="data-wrap"> <!-- faved liked-->
                                         <div class="time-interval">
                                             {{#time}}
@@ -96,8 +96,8 @@
                                     <div class="col-outer">
                                         <div class="col-inner">
 
-                                            <div class="data-block js-data-block" title="{{#name}}{{#ru}}{{str}}{{/ru}}{{/name}}" style="top: {{#time}}{{top}}{{/time}}px; height: {{#time}}{{height}}{{/time}}px;" data-id="{{_id}}">
-                                                <div class="data-wrap">
+                                            <div class="data-block js-data-block {{#themes.length}}with-themes{{/themes.length}}" title="{{#name}}{{#ru}}{{str}}{{/ru}}{{/name}}" style="top: {{#time}}{{top}}{{/time}}px; height: {{#time}}{{height}}{{/time}}px;" data-id="{{_id}}">
+                                                <div class="data-wrap liked faved">
                                                     <div class="time-interval">
                                                         {{#time}}
                                                         {{start_time_str}} –
