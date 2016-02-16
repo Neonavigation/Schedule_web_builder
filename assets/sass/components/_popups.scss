@@ -49,12 +49,31 @@
 }
 .description-popup .info{
   position: relative;
+  min-height: 48px;
 }
 .description-popup .img{
+  display: none;
+}
+.description-popup .with-image .img{
+  display: block;
+  width: 100px;
+  height: 100px;
+  text-align: center;
   float: left;
   margin-right: -100%;
+  white-space: nowrap;
 }
-.description-popup .txt{
+.description-popup .with-image .img img{
+  vertical-align: middle;
+}
+.description-popup .with-image .img:after{
+  content: "";
+  line-height: 100%;
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.description-popup .with-image .txt{
   padding-left: 124px;
 }
 .description-popup .txt .title{
