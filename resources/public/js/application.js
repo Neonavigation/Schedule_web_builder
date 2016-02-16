@@ -89,6 +89,7 @@ window.ModuleLoader([],[], function() {
                 self.getTable = function(){
                     var hall_fr_names = self.config.fr_names();
                     var all_halls = self.config.all_halls();
+                    console.log(all_halls);
                     var halls = [];
                     for(var i in hall_fr_names){
                         for (var j in all_halls){
