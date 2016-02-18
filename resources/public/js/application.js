@@ -4,9 +4,10 @@ window.ModuleLoader([],[], function() {
     (function($) {
 
         function Application() {
+            var halls_on_page = 4
 
             var th = new TemplatesHelper($);
-            th.getHtml('/location/XTJA2EXBED/rest/schedulehtmlpub/ru', {'init': true}, 'schedulewrap', function(html) {
+            th.getHtml('/location/XTJA2EXBED/rest/schedulehtmlpub/ru', {'init': true, 'halls_on_page': halls_on_page}, 'schedulewrap', function(html) {
 
                 $('body').html(html);
 
@@ -104,7 +105,7 @@ window.ModuleLoader([],[], function() {
                         });
                     })
                     */
-                    if($('.schedule-tabs .item').length==1){
+                    if($('.schedule-tabs .item').length==2){
                         $('.schedule-tabs').each(function(){
                             $(this).hide();
                         });
@@ -134,10 +135,12 @@ window.ModuleLoader([],[], function() {
                             }
                         }
                     }
-                    th.getHtml('/location/XTJA2EXBED/rest/schedulehtmlpub/ru', {'pph': 100, 'day': self.config.day(), halls: JSON.stringify(halls)}, 'table', function(html) {
+                    th.getHtml('/location/XTJA2EXBED/rest/schedulehtmlpub/ru', {'pph': 100, 'day': self.config.day(), halls: JSON.stringify(halls),
+                            'halls_on_page': halls_on_page}, 'table', function(html) {
                         $('.schedule-container').html(html);
 
                         self.rememberDayHalls();
+                        self.viewTabs();
                     });
                 };
 
@@ -149,7 +152,6 @@ window.ModuleLoader([],[], function() {
                         selected.removeClass('selected');
                         $(this).addClass('selected');
                         //отображение групп залов disabled/enabled
-                        self.viewTabs();
 
                         /*
                         //проверка, если пользователь выбрал группу залов явно
@@ -205,7 +207,8 @@ window.ModuleLoader([],[], function() {
                 self.events = function(){
                     $('body').on('click', '.js-data-block', function(){
                         $('.description-popup').css('display','block');
-                        th.getHtml('/location/XTJA2EXBED/rest/eventhtmlpub/ru', {'evid': $(this).data('id')}, 'popup', function(html) {
+                        th.getHtml('/location/XTJA2EXBED/rest/eventhtmlpub/ru', {'evid': $(this).data('id'),
+                                'halls_on_page': halls_on_page}, 'popup', function(html) {
                             $('.description-popup .popup').html(html);
                             $('.description-popup').addClass('fade-in');
 
