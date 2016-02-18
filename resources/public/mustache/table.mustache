@@ -1,3 +1,18 @@
+<div class="schedule-tabs">
+    <div class="schedule-tabs-wrap">
+        <ul class="items">
+            {{#halls_splits}}
+                <li class="item enabled {{#selected}}selected{{/selected}}" data-hall_fr_names='{{hall_fr_names}}' test='{{selected}}'>
+                    <a href="#" title="{{#hall_fr_names}}{{.}}&#013;{{/hall_fr_names}}">
+                        {{#hall_fr_names}}
+                            <span class="name nobr">{{.}}</span>
+                        {{/hall_fr_names}}
+                    </a>
+                </li>
+            {{/halls_splits}}
+        </ul>
+    </div>
+</div>
 
     <div class="schedule-table">
         <table class="maintable">
@@ -97,7 +112,7 @@
                                         <div class="col-inner">
 
                                             <div class="data-block js-data-block {{#themes.length}}with-themes{{/themes.length}}" title="{{#name}}{{#ru}}{{str}}{{/ru}}{{/name}}" style="top: {{#time}}{{top}}{{/time}}px; height: {{#time}}{{height}}{{/time}}px;" data-id="{{_id}}">
-                                                <div class="data-wrap liked faved">
+                                                <div class="data-wrap"> <!--  liked faved -->
                                                     <div class="time-interval">
                                                         {{#time}}
                                                         {{start_time_str}} –
@@ -153,3 +168,19 @@
         </table>
 
     </div>
+
+<div class="schedule-tabs">
+    <div class="schedule-tabs-wrap">
+        <ul class="items">
+            {{#halls_splits}}
+                <li class="item enabled {{#selected}}selected{{/selected}}">
+                    <a href="#" title="{{#hall_fr_names}}{{.}}&#013;{{/hall_fr_names}}">
+                        {{#hall_fr_names}}
+                            <span class="name nobr">{{.}}</span>
+                        {{/hall_fr_names}}
+                    </a>
+                </li>
+            {{/halls_splits}}
+        </ul>
+    </div>
+</div>

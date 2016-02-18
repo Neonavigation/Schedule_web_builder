@@ -24,27 +24,47 @@ window.ModuleLoader([],[], function() {
             function moduleTabs(){
                 var self = this;
 
+                self.day_halls = {};
+
                 self.config = {
                     tabs: $('.tabs .item'),
-                    tabs_halls: $('.schedule-tabs .item'),
+                    tabs_halls_selected: function(){
+                        return $('.schedule-tabs .item.selected')
+                    },
 
                     day: function(){
                         return $('.tabs .selected').data('day').toString();
                     },
+                    /*
                     available_days: function(obj){
-                        var obj = obj || $(".schedule-tabs .important");
-                        return $(obj).data("available-days").toString().split(",");
+                        var obj = obj || $(".schedule-tabs");
+                        return $(obj).data("available-days");
                     },
                     hasImportant: function(){
                         return $('.schedule-tabs .important').length;
                     },
+                    */
                     fr_names: function(){
                         return $(".schedule-tabs .selected").data('hall_fr_names');
                     },
                     all_halls: function(){
-                        return $(".schedule-tabs").data('all_halls');
+                        return $(".schedule-container").data('all_halls');
                     }
                 };
+
+                self.rememberDayHalls = function() {
+                    var hall_fr_names = self.config.fr_names();
+                    var all_halls = self.config.all_halls();
+                    var halls = [];
+                    for(var i in hall_fr_names){
+                        for (var j in all_halls){
+                            if (all_halls[j].fr_name === hall_fr_names[i]) {
+                                halls.push({hall_name: all_halls[j].hall_name, pav_id: all_halls[j].pav_id});
+                            }
+                        }
+                    }
+                    self.day_halls[self.config.day()] = halls;
+                }
 
                 self.init = function(index){
                     //берется первый таб, если иной явно не передан
@@ -53,18 +73,26 @@ window.ModuleLoader([],[], function() {
                     //визуализация disabled/enabled для групп
                     self.viewTabs();
                     //Выделение первой доступной группы залов
+                    /*
                     $('.schedule-tabs').each(function(){
                         $(this).find('.enabled').first().addClass('selected');
                     });
+*/
                     //Обработчики событий
                     self.events();
+
+                    self.rememberDayHalls();
                 };
 
 
                 self.viewTabs = function(){
+                    /*
                     $('.schedule-tabs').each(function(){
-                        $(this).find('.item').removeClass("enabled disabled selected");
+                        $(this).find('.item').removeClass("selected");//.removeClass("enabled disabled selected");
                     });
+                    */
+
+                    /*
                     $('.schedule-tabs').each(function(){
                         var schedule_tabs = $(this);
                         schedule_tabs.find('.item').each(function(j){
@@ -75,7 +103,8 @@ window.ModuleLoader([],[], function() {
                             }
                         });
                     })
-                    if($('.schedule-tabs .enabled').length==1){
+                    */
+                    if($('.schedule-tabs .item').length==1){
                         $('.schedule-tabs').each(function(){
                             $(this).hide();
                         });
@@ -88,18 +117,27 @@ window.ModuleLoader([],[], function() {
 
                 self.getTable = function(){
                     var hall_fr_names = self.config.fr_names();
-                    var all_halls = self.config.all_halls();
-                    console.log(all_halls);
                     var halls = [];
-                    for(var i in hall_fr_names){
-                        for (var j in all_halls){
-                            if (all_halls[j].fr_name === hall_fr_names[i]) {
-                                halls.push({hall_name: all_halls[j].hall_name, pav_id: all_halls[j].pav_id});
+                    if (!hall_fr_names) {
+                        var currentDayHalls = self.day_halls[self.config.day()];
+                        if (currentDayHalls && currentDayHalls.length) {
+                            halls = currentDayHalls;
+                        }
+                    }
+                    if (halls.length == 0) {
+                        var all_halls = self.config.all_halls();
+                        for(var i in hall_fr_names){
+                            for (var j in all_halls){
+                                if (all_halls[j].fr_name === hall_fr_names[i]) {
+                                    halls.push({hall_name: all_halls[j].hall_name, pav_id: all_halls[j].pav_id});
+                                }
                             }
                         }
                     }
                     th.getHtml('/location/XTJA2EXBED/rest/schedulehtmlpub/ru', {'pph': 100, 'day': self.config.day(), halls: JSON.stringify(halls)}, 'table', function(html) {
-                        $('.schedule-table').replaceWith(html);
+                        $('.schedule-container').html(html);
+
+                        self.rememberDayHalls();
                     });
                 };
 
@@ -107,9 +145,13 @@ window.ModuleLoader([],[], function() {
                     $('body').on('click', '.tabs .item', function(){
                         //отображение выделения основного таба
                         self.config.tabs.removeClass('selected');
+                        var selected = self.config.tabs_halls_selected();
+                        selected.removeClass('selected');
                         $(this).addClass('selected');
                         //отображение групп залов disabled/enabled
                         self.viewTabs();
+
+                        /*
                         //проверка, если пользователь выбрал группу залов явно
                         if(self.config.hasImportant()){
                             //Проверка существования выставки в выбранный день в выбранной группе залов
@@ -130,8 +172,10 @@ window.ModuleLoader([],[], function() {
                                 $(this).find('.enabled').first().addClass('selected');
                             });
                         }
+                        */
                         //отображаем таблицу с новыми данными
                         self.getTable();
+                        selected.addClass('selected');
                     });
                     $('body').on('click', '.schedule-tabs .item', function(){
                         var schedule_tabs = $(this).closest('.schedule-tabs');
@@ -139,8 +183,8 @@ window.ModuleLoader([],[], function() {
                         //обрабатываем клики только на доступных группах
                         if($(this).hasClass('enabled')){
                             $('.schedule-tabs').each(function(){
-                                $(this).find('.item').removeClass('important selected');
-                                $(this).find('.item').eq(index).addClass('important selected');
+                                $(this).find('.item').removeClass('selected');
+                                $(this).find('.item').eq(index).addClass('selected');
                             });
 
                             self.getTable();

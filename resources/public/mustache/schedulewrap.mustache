@@ -10,46 +10,57 @@
         <div class="wrap">
             <h1 class="title">
                 <span class="text">Деловая программа на выставку</span>
-                <span class="name">ДенталЭкспо 2016</span>
+                <span class="name">Интурмаркет 2016</span>
             </h1>
+            <!--
             <div class="logo">
                 <a href="#"><img src="images/temp/logo.png" alt=""></a>
             </div>
+            -->
         </div>
     </div>
-    <div class="toolbar">
+    <div class="toolbar" style="margin:0px">
         <div class="wrap">
             <div class="event-list">
                 <ul class="items">
                     <li class="item current">
                         <a href="#"><i class="fa fa-calendar"></i>Расписание мероприятий</a>
                     </li>
+                    <!--
                     <li class="item">
                         <a href="#"><i class="fa fa-microphone"></i>Ведущие мероприятий</a>
                     </li>
+                    -->
                 </ul>
             </div>
+            <!--
             <div class="search">
                 <div class="wrapper">
                     <input class="input" type="text" placeholder="Введите ключевое слово в описании или названии мероприятия...">
                     <input class="submit" type="submit" value="Поиск">
                 </div>
             </div>
+            -->
             <div class="tool">
+                <!--
                 <div class="help">
                     <a href="#"><i class="fa fa-question-circle"></i></a>
                 </div>
-                <div class="print">
-                    <a href="#"><i class="fa fa-print"></i></a>
-                </div>
+                -->
+                <a href="http://nexpo.me/location/XTJA2EXBED/rest/eventsprint/ru" target="_blank" style="z-index:1000">
+                    <div class="print">
+                    <i class="fa fa-print"></i>
+                    </div>
+                </a>
                 <div class="lang">
-                    <a href="#" class="item icon-sprite icon-lang-ru"></a>
+                    <!--<a href="#" class="item icon-sprite icon-lang-ru"></a>-->
                     <a href="#" class="item icon-sprite icon-lang-en current"></a>
                 </div>
             </div>
         </div>
     </div>
 
+<!--
     <div class="filter">
         <div class="wrap">
             <div class="categories">
@@ -70,7 +81,7 @@
             </div>
         </div>
     </div>
-
+-->
 </div>
 
 <div class="content">
@@ -87,6 +98,7 @@
                 </ul>
             </div>
             <div class="view">
+            <!--
                 <div class="scheme-button">
                     <i class="fa fa-map-signs"></i>
                     Схема конференц-залов
@@ -99,46 +111,14 @@
                         <i class="fa fa-th-list"></i>
                     </div>
                 </div>
+                -->
             </div>
         </div>
     </div>
 
-    <div class="schedule-container">
-
-        <div class="schedule-tabs" data-all_halls='{{halls}}'>
-            <div class="schedule-tabs-wrap">
-                <ul class="items">
-                    {{#halls_splits}}
-                        <li class="item" data-available-days="{{days}}" data-hall_fr_names='{{hall_fr_names}}'>
-                            <a href="#" title="{{#hall_fr_names}}{{.}}&#013;{{/hall_fr_names}}">
-                                {{#hall_fr_names}}
-                                    <span class="name nobr">{{.}}</span>
-                                {{/hall_fr_names}}
-                            </a>
-                        </li>
-                    {{/halls_splits}}
-                </ul>
-            </div>
-        </div>
+    <div class="schedule-container" data-all_halls='{{halls}}'>
 
         {{> table}}
-
-        <div class="schedule-tabs">
-            <div class="schedule-tabs-wrap">
-                <ul class="items">
-                    {{#halls_splits}}
-                    <li class="item" data-available-days="{{days}}" data-hall_fr_names='{{hall_fr_names}}'>
-                        <a href="#" title="{{#hall_fr_names}}{{.}}&#013;{{/hall_fr_names}}">
-                            {{#hall_fr_names}}
-                            <span class="name nobr">{{.}}</span>
-                            {{/hall_fr_names}}
-                        </a>
-                    </li>
-                    {{/halls_splits}}
-                </ul>
-            </div>
-        </div>
-
 
     </div>
 
