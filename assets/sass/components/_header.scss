@@ -2,6 +2,8 @@
 .header{
   background: $header-bg-main;
   min-width: 1100px;
+  position: relative;
+  z-index: 2;
 }
 .header .head{
   background: $header-bg;

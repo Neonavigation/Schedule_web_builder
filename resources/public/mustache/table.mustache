@@ -14,6 +14,251 @@
     </div>
 </div>
 
+<style>
+    .table2{
+        table-layout: fixed;
+        width: 100%;
+    }
+    .table2 td{
+        vertical-align: top;
+    }
+    .table2 .halls_{
+        width: 300px;
+    }
+
+    .width-column{
+        transition: width 1s ease;
+        -webkit-transition: width 1s ease;
+    }
+    .width1{ width: 200px; }
+    .width2{ width: 400px; }
+    .width3{ width: 600px; }
+    .width4{ width: 800px; }
+    .width5{ width: 1000px; }
+    .width6{ width: 1200px; }
+    .width7{ width: 1400px; }
+    .width8{ width: 1600px; }
+    .width9{ width: 1800px; }
+    .width10{ width: 2000px; }
+
+    .bg-stands,
+    .bg-halls{
+        transition: background 0.8s ease-in-out;
+        -webkit-transition: background 0.8s ease-in-out;
+    }
+    .bg-gray{
+        background: #e5e5e5;
+
+    }
+    .stands-block.bg-gray,
+    .block-stands.bg-gray{
+        box-shadow: inset 1px 0 0 0 rgba(255,255,255,1);
+    }
+    .maintable td:first-child .line.bg-gray{
+        box-shadow: inset 1px 0 0 0 rgba(255,255,255,1);
+    }
+    .maintable td:last-child .line.bg-gray{
+        box-shadow: inset -1px 0 0 0 rgba(255,255,255,1);
+    }
+</style>
+<div class="schedule-table">
+    <table class="table2">
+        <colgroup>
+            <col class="width-column width{{events_halls.length}} js-width-control">
+            <col>
+        </colgroup>
+        <tr class="table-headers">
+            <td class="block-halls" style="overflow: hidden;">
+
+
+                <table class="maintable" style="table-layout: fixed; float: right;">
+                    <tr>
+                        {{#events_halls}}
+                        <td style="width: 200px; vertical-align: middle;">
+                            <div class="line js-bg-halls bg-halls"></div>
+                            <div class="title">
+                                {{hall_name}}
+                            </div>
+                        </td>
+                        {{/events_halls}}
+                    </tr>
+                </table>
+            </td>
+            <td class="block-stands bg-gray js-bg-stands bg-stands" style=" vertical-align: middle;">
+                <table class="maintable">
+                    <tr>
+                        <td style="vertical-align: middle;">
+                            <div class="title">
+                                Презентации на стендах
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <tr class="table-times">
+            <td colspan="2">
+                <ul class="times">
+                    {{#timeline}}
+                    <li class="item">{{.}}:00</li>
+                    {{/timeline}}
+                </ul>
+            </td>
+        </tr>
+
+        <tr class="table-contents">
+            <td class="height{{timeline.length}}" style="overflow: hidden; position: relative;">
+
+                <div style="position: absolute; z-index: 9; top: 50%; right: 10px; margin-top: -36px;">
+                    <i class="fa fa-arrow-circle-o-right js-halls-control" style=" display: none; font-size: 72px; color: white; text-shadow: 3px 3px 6px rgba(0,0,0,0.3);  cursor: pointer;"></i>
+                </div>
+
+                <table class="maintable" style="table-layout: fixed; float: right;">
+                    <tr>
+                        {{#events_halls}}
+                        <td class="halls height{{timeline.length}}" style="width: 200px;">
+
+                            <div class="line js-bg-halls bg-halls"></div>
+
+                            {{#events}}
+
+                            <div class="col-outer">
+                                <div class="col-inner">
+
+                                    <div class="data-block js-data-block {{#themes.length}}with-themes{{/themes.length}}" title="{{#name}}{{#ru}}{{str}}{{/ru}}{{/name}}" style="top: {{#time}}{{top}}{{/time}}px; height: {{#time}}{{height}}{{/time}}px;" data-id="{{_id}}">
+                                        <div class="data-wrap">
+                                            <div class="time-interval">
+                                                {{#time}}
+                                                {{start_time_str}} –
+                                                {{end_time_str}}
+                                                {{/time}}
+                                            </div>
+                                            <div class="text">
+                                                <p>
+                                                    {{#name}}
+                                                    {{#ru}}
+                                                    {{str}}
+                                                    {{/ru}}
+                                                    {{/name}}
+                                                </p>
+                                                <p class="description">
+                                                    {{#description}}
+                                                    {{#ru}}
+                                                    {{{str}}}
+                                                    {{/ru}}
+                                                    {{/description}}
+                                                </p>
+                                            </div>
+                                            <div class="themes">
+                                                {{#themes}}
+                                                {{#strings}}
+                                                {{#ru}}
+                                                {{str}}
+                                                {{/ru}}
+                                                {{/strings}}
+                                                {{/themes}}
+                                            </div>
+                                            <div class="icons">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-thumbs-o-up"></i>
+                                            </div>
+                                            <div class="top-gradient"></div>
+                                            <div class="bottom-gradient"></div>
+                                        </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            {{/events}}
+                        </td>
+                        {{/events_halls}}
+                    </tr>
+                </table>
+
+            </td>
+            <td class="stands-block bg-gray js-bg-stands bg-stands height{{timeline.length}}" style="position: relative;">
+
+
+
+                <div style="position: absolute; z-index: 9; top: 50%; left: 30px; margin-top: -24px;">
+                    <i class="fa fa-arrow-circle-left js-stands-control" style="font-size: 48px; color: white; text-shadow: 3px 3px 6px rgba(0,0,0,0.3);  cursor: pointer;"></i>
+                </div>
+
+                <table class="maintable height{{timeline.length}}">
+                    <tr>
+                        <td class="stands">
+                            <div class="stands-container">
+                                <table class="stands-table">
+                                    <tr>
+                                        {{#events_booths}}
+                                        <td class="cell height{{timeline.length}}">
+                                            {{#.}}
+
+                                            <div class="col-outer">
+                                                <div class="col-inner">
+
+                                                    <div class="data-block js-data-block {{#themes.length}}with-themes{{/themes.length}}" title="{{#name}}{{#ru}}{{str}}{{/ru}}{{/name}}" style="top: {{#time}}{{top}}{{/time}}px; height: {{#time}}{{height}}{{/time}}px;" data-id="{{_id}}">
+                                                        <div class="data-wrap">
+                                                            <div class="time-interval">
+                                                                {{#time}}
+                                                                {{start_time_str}} –
+                                                                {{end_time_str}}
+                                                                {{/time}}
+                                                            </div>
+                                                            <div class="text">
+                                                                <p>
+                                                                    {{#name}}
+                                                                    {{#ru}}
+                                                                    {{str}}
+                                                                    {{/ru}}
+                                                                    {{/name}}
+                                                                </p>
+                                                                <p class="description">
+                                                                    {{#description}}
+                                                                    {{#ru}}
+                                                                    {{{str}}}
+                                                                    {{/ru}}
+                                                                    {{/description}}
+                                                                </p>
+                                                            </div>
+                                                            <div class="themes">
+                                                                {{#themes}}
+                                                                {{#strings}}
+                                                                {{#ru}}
+                                                                {{str}}
+                                                                {{/ru}}
+                                                                {{/strings}}
+                                                                {{/themes}}
+                                                            </div>
+                                                            <div class="icons">
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-thumbs-o-up"></i>
+                                                            </div>
+                                                            <div class="top-gradient"></div>
+                                                            <div class="bottom-gradient"></div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            {{/.}}
+                                        </td>
+                                        {{/events_booths}}
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+</div>
+
+<!--
     <div class="schedule-table">
         <table class="maintable">
             <tr>
@@ -52,7 +297,7 @@
                             <div class="col-inner">
 
                                 <div class="data-block js-data-block {{#themes.length}}with-themes{{/themes.length}}" title="{{#name}}{{#ru}}{{str}}{{/ru}}{{/name}}" style="top: {{#time}}{{top}}{{/time}}px; height: {{#time}}{{height}}{{/time}}px;" data-id="{{_id}}">
-                                    <div class="data-wrap"> <!-- faved liked-->
+                                    <div class="data-wrap">
                                         <div class="time-interval">
                                             {{#time}}
                                                 {{start_time_str}} –
@@ -112,7 +357,7 @@
                                         <div class="col-inner">
 
                                             <div class="data-block js-data-block {{#themes.length}}with-themes{{/themes.length}}" title="{{#name}}{{#ru}}{{str}}{{/ru}}{{/name}}" style="top: {{#time}}{{top}}{{/time}}px; height: {{#time}}{{height}}{{/time}}px;" data-id="{{_id}}">
-                                                <div class="data-wrap"> <!--  liked faved -->
+                                                <div class="data-wrap">
                                                     <div class="time-interval">
                                                         {{#time}}
                                                         {{start_time_str}} –
@@ -168,7 +413,7 @@
         </table>
 
     </div>
-
+-->
 <div class="schedule-tabs">
     <div class="schedule-tabs-wrap">
         <ul class="items">

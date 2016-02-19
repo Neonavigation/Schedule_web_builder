@@ -100,16 +100,18 @@ p {
 .header {
   background: #fbfcfd;
   min-width: 1100px;
+  position: relative;
+  z-index: 2;
 }
 
-/* line 6, ../sass/components/_header.scss */
+/* line 8, ../sass/components/_header.scss */
 .header .head {
   background: #55585f;
   border-bottom: solid 1px #c8c8c8;
   color: white;
 }
 
-/* line 11, ../sass/components/_header.scss */
+/* line 13, ../sass/components/_header.scss */
 .header .head .wrap {
   max-width: 1440px;
   margin: 0 auto;
@@ -118,31 +120,31 @@ p {
   box-sizing: padding-box;
 }
 
-/* line 18, ../sass/components/_header.scss */
+/* line 20, ../sass/components/_header.scss */
 .header .title {
   float: left;
   padding: 18px 0 23px 0;
 }
 
-/* line 22, ../sass/components/_header.scss */
+/* line 24, ../sass/components/_header.scss */
 .header .logo {
   float: right;
 }
 
-/* line 25, ../sass/components/_header.scss */
+/* line 27, ../sass/components/_header.scss */
 .header .logo img {
   display: block;
   border-radius: 3px;
 }
 
-/* line 29, ../sass/components/_header.scss */
+/* line 31, ../sass/components/_header.scss */
 .header .title .text {
   display: block;
   font-size: 18px;
   line-height: 18px;
 }
 
-/* line 34, ../sass/components/_header.scss */
+/* line 36, ../sass/components/_header.scss */
 .header .title .name {
   font-size: 30px;
   line-height: 32px;
@@ -150,7 +152,7 @@ p {
   display: block;
 }
 
-/* line 41, ../sass/components/_header.scss */
+/* line 43, ../sass/components/_header.scss */
 .toolbar {
   padding: 18px 3% 16px;
   max-width: 1440px;
@@ -158,13 +160,13 @@ p {
   box-sizing: padding-box;
 }
 
-/* line 47, ../sass/components/_header.scss */
+/* line 49, ../sass/components/_header.scss */
 .toolbar .wrap {
   position: relative;
   width: 100%;
 }
 
-/* line 51, ../sass/components/_header.scss */
+/* line 53, ../sass/components/_header.scss */
 .toolbar .event-list {
   width: 50%;
   box-sizing: padding-box;
@@ -176,13 +178,13 @@ p {
   font-weight: 700;
 }
 
-/* line 61, ../sass/components/_header.scss */
+/* line 63, ../sass/components/_header.scss */
 .toolbar .event-list .items {
   position: absolute;
   width: 100%;
 }
 
-/* line 65, ../sass/components/_header.scss */
+/* line 67, ../sass/components/_header.scss */
 .toolbar .event-list .item {
   float: left;
   padding-right: 5%;
@@ -190,26 +192,26 @@ p {
   margin-bottom: 25px;
 }
 
-/* line 71, ../sass/components/_header.scss */
+/* line 73, ../sass/components/_header.scss */
 .toolbar .event-list .item a {
   display: block;
   padding-bottom: 8px;
   color: #55585f;
 }
 
-/* line 76, ../sass/components/_header.scss */
+/* line 78, ../sass/components/_header.scss */
 .toolbar .event-list .item a:hover,
 .toolbar .event-list .item.current a {
   color: #859a3c;
   border-bottom: solid 3px #859a3c;
 }
 
-/* line 81, ../sass/components/_header.scss */
+/* line 83, ../sass/components/_header.scss */
 .event-list .fa {
   margin-right: 6px;
 }
 
-/* line 84, ../sass/components/_header.scss */
+/* line 86, ../sass/components/_header.scss */
 .toolbar .search {
   width: 100%;
   box-sizing: padding-box;
@@ -220,13 +222,13 @@ p {
   border-right: solid 170px transparent;
 }
 
-/* line 93, ../sass/components/_header.scss */
+/* line 95, ../sass/components/_header.scss */
 .toolbar .search .wrapper {
   position: relative;
   padding-right: 85px;
 }
 
-/* line 98, ../sass/components/_header.scss */
+/* line 100, ../sass/components/_header.scss */
 .toolbar .search .input {
   width: 100%;
   overflow: hidden;
@@ -243,7 +245,7 @@ p {
   border-bottom-left-radius: 4px;
 }
 
-/* line 114, ../sass/components/_header.scss */
+/* line 116, ../sass/components/_header.scss */
 .toolbar .search .submit {
   position: absolute;
   right: 0;
@@ -262,12 +264,12 @@ p {
   border-bottom-right-radius: 4px;
 }
 
-/* line 131, ../sass/components/_header.scss */
+/* line 133, ../sass/components/_header.scss */
 .toolbar .search .submit:hover {
   opacity: 0.95;
 }
 
-/* line 135, ../sass/components/_header.scss */
+/* line 137, ../sass/components/_header.scss */
 .toolbar .tool {
   position: absolute;
   top: 0;
@@ -277,87 +279,87 @@ p {
   border-radius: 4px;
 }
 
-/* line 144, ../sass/components/_header.scss */
+/* line 146, ../sass/components/_header.scss */
 .toolbar .print {
   float: left;
   border-right: solid 1px #bebebe;
   padding: 6px 10px 4px;
 }
 
-/* line 149, ../sass/components/_header.scss */
+/* line 151, ../sass/components/_header.scss */
 .toolbar .print:hover {
   opacity: 0.8;
 }
 
-/* line 152, ../sass/components/_header.scss */
+/* line 154, ../sass/components/_header.scss */
 .toolbar .print .fa {
   font-size: 24px;
   opacity: 0.5;
 }
 
-/* line 156, ../sass/components/_header.scss */
+/* line 158, ../sass/components/_header.scss */
 .toolbar .tool .help:hover {
   opacity: 0.8;
 }
 
-/* line 159, ../sass/components/_header.scss */
+/* line 161, ../sass/components/_header.scss */
 .toolbar .tool .help {
   position: absolute;
   left: -41px;
 }
 
-/* line 163, ../sass/components/_header.scss */
+/* line 165, ../sass/components/_header.scss */
 .toolbar .tool .help .fa {
   font-size: 36px;
   color: #6ac4d4;
 }
 
-/* line 167, ../sass/components/_header.scss */
+/* line 169, ../sass/components/_header.scss */
 .toolbar .tool .lang {
   float: left;
   padding: 9px 0 9px 9px;
 }
 
-/* line 172, ../sass/components/_header.scss */
+/* line 174, ../sass/components/_header.scss */
 .toolbar .tool .lang .item {
   float: left;
   margin-right: 9px;
   opacity: 0.2;
 }
 
-/* line 177, ../sass/components/_header.scss */
+/* line 179, ../sass/components/_header.scss */
 .toolbar .tool .lang .item:hover {
   opacity: 1;
 }
 
-/* line 180, ../sass/components/_header.scss */
+/* line 182, ../sass/components/_header.scss */
 .toolbar .tool .lang .item.current {
   opacity: 1;
   cursor: default;
 }
 
-/* line 185, ../sass/components/_header.scss */
+/* line 187, ../sass/components/_header.scss */
 ::-webkit-input-placeholder {
   color: #c9c9c9;
 }
 
-/* line 186, ../sass/components/_header.scss */
+/* line 188, ../sass/components/_header.scss */
 ::-moz-placeholder {
   color: #c9c9c9;
   opacity: 1;
 }
 
-/* line 187, ../sass/components/_header.scss */
+/* line 189, ../sass/components/_header.scss */
 :-ms-input-placeholder {
   color: #c9c9c9;
 }
 
-/* line 188, ../sass/components/_header.scss */
+/* line 190, ../sass/components/_header.scss */
 input:-moz-placeholder {
   color: #c9c9c9;
 }
 
-/* line 193, ../sass/components/_header.scss */
+/* line 195, ../sass/components/_header.scss */
 .filter .wrap {
   padding: 0 3%;
   box-sizing: padding-box;
@@ -365,19 +367,19 @@ input:-moz-placeholder {
   margin: 0 auto;
 }
 
-/* line 199, ../sass/components/_header.scss */
+/* line 201, ../sass/components/_header.scss */
 .filter .title2 {
   font-size: 24px;
   margin: 0 0 5px;
 }
 
-/* line 203, ../sass/components/_header.scss */
+/* line 205, ../sass/components/_header.scss */
 .categories {
   /*max-width: 52%;*/
   margin: 0 0 12px;
 }
 
-/* line 207, ../sass/components/_header.scss */
+/* line 209, ../sass/components/_header.scss */
 .categories,
 .categories .items {
   display: inline-block;
@@ -386,13 +388,13 @@ input:-moz-placeholder {
   background-position: bottom left;
 }
 
-/* line 214, ../sass/components/_header.scss */
+/* line 216, ../sass/components/_header.scss */
 .categories .items {
   background-position: top left;
   padding: 13px 0 7px 0;
 }
 
-/* line 218, ../sass/components/_header.scss */
+/* line 220, ../sass/components/_header.scss */
 .categories .item {
   display: inline-block;
   font-size: 14px;
@@ -404,17 +406,17 @@ input:-moz-placeholder {
   box-sizing: border-box;
 }
 
-/* line 228, ../sass/components/_header.scss */
+/* line 230, ../sass/components/_header.scss */
 .categories .item:hover {
   opacity: 0.8;
 }
 
-/* line 232, ../sass/components/_header.scss */
+/* line 234, ../sass/components/_header.scss */
 .categories-faves {
   overflow: hidden;
 }
 
-/* line 235, ../sass/components/_header.scss */
+/* line 237, ../sass/components/_header.scss */
 .categories-faves .title3 {
   float: left;
   font-size: 14px;
@@ -425,13 +427,13 @@ input:-moz-placeholder {
   padding-top: 6px;
 }
 
-/* line 244, ../sass/components/_header.scss */
+/* line 246, ../sass/components/_header.scss */
 .categories-faves .items {
   padding-bottom: 7px;
   padding-left: 190px;
 }
 
-/* line 248, ../sass/components/_header.scss */
+/* line 250, ../sass/components/_header.scss */
 .categories-faves .item {
   display: inline-block;
   font-size: 14px;
@@ -442,7 +444,7 @@ input:-moz-placeholder {
   border-radius: 3px;
 }
 
-/* line 257, ../sass/components/_header.scss */
+/* line 259, ../sass/components/_header.scss */
 .categories-faves .item:hover {
   opacity: 0.8;
 }
@@ -709,16 +711,15 @@ input:-moz-placeholder {
 }
 
 /* line 94, ../sass/components/_schedule.scss */
-.maintable .times {
+.schedule-table .times {
   position: absolute;
   left: 0;
-  border-right: solid 1px #e1e1e1;
-  width: 76px;
+  width: 75px;
   text-align: center;
 }
 
-/* line 101, ../sass/components/_schedule.scss */
-.maintable .times .item {
+/* line 100, ../sass/components/_schedule.scss */
+.schedule-table .times .item {
   font-size: 14px;
   font-weight: 700;
   color: #646464;
@@ -726,38 +727,45 @@ input:-moz-placeholder {
   margin-top: -3px;
 }
 
-/* line 109, ../sass/components/_schedule.scss */
+/* line 108, ../sass/components/_schedule.scss */
 .maintable .title {
   font-size: 16px;
   font-weight: 700;
   text-align: center;
   color: #646464;
-}
-
-/* line 116, ../sass/components/_schedule.scss */
-.maintable .col1 {
-  max-width: 250px;
   padding: 15px;
-  margin-right: -1px;
-  border-left: solid 1px #e1e1e1;
-  border-right: solid 1px #e1e1e1;
-  padding-bottom: 10015px;
-  margin-bottom: -10000px;
+  position: relative;
 }
 
-/* line 125, ../sass/components/_schedule.scss */
+/* line 118, ../sass/components/_schedule.scss */
+.maintable .line {
+  position: relative;
+  top: -5000px;
+  padding-bottom: 10000px;
+  margin-bottom: -10000px;
+  margin-right: -1px;
+  border-left: solid 1px #cacaca;
+  border-right: solid 1px #cacaca;
+}
+
+/* line 128, ../sass/components/_schedule.scss */
+.maintable td:last-child .line {
+  margin-right: 0;
+}
+
+/* line 133, ../sass/components/_schedule.scss */
 .maintable .col2 {
   padding: 15px;
   text-align: center;
 }
 
-/* line 129, ../sass/components/_schedule.scss */
+/* line 137, ../sass/components/_schedule.scss */
 .maintable .halls {
   vertical-align: top;
   min-width: 200px;
 }
 
-/* line 133, ../sass/components/_schedule.scss */
+/* line 141, ../sass/components/_schedule.scss */
 .maintable .stands {
   position: relative;
   width: 100%;
@@ -765,17 +773,17 @@ input:-moz-placeholder {
   vertical-align: top;
 }
 
-/* line 139, ../sass/components/_schedule.scss */
+/* line 147, ../sass/components/_schedule.scss */
 .maintable .stands .data-block {
   margin: 0 5px;
 }
 
-/* line 142, ../sass/components/_schedule.scss */
+/* line 150, ../sass/components/_schedule.scss */
 .maintable .stands .col-outer {
   width: 180px;
 }
 
-/* line 146, ../sass/components/_schedule.scss */
+/* line 154, ../sass/components/_schedule.scss */
 .maintable .data-block {
   margin: 0 15px;
   position: relative;
@@ -789,29 +797,29 @@ input:-moz-placeholder {
   cursor: pointer;
 }
 
-/* line 158, ../sass/components/_schedule.scss */
+/* line 166, ../sass/components/_schedule.scss */
 .maintable .data-wrap {
   position: relative;
   width: 100%;
   height: 100%;
-  background: #d9e9ff;
-  border: solid 1px #d9e9ff;
+  background: #c3d1e5;
+  border: solid 1px #c3d1e5;
   box-sizing: border-box;
   overflow: hidden;
-  box-shadow: 0 0 10px 5px white;
+  /*box-shadow: 0 0 10px 5px rgba(255,255,255,1);*/
 }
 
-/* line 168, ../sass/components/_schedule.scss */
+/* line 176, ../sass/components/_schedule.scss */
 .maintable .data-block:hover {
   z-index: 3;
 }
 
-/* line 171, ../sass/components/_schedule.scss */
+/* line 179, ../sass/components/_schedule.scss */
 .maintable .data-block:hover .data-wrap {
   border: solid 1px #89bbff;
 }
 
-/* line 174, ../sass/components/_schedule.scss */
+/* line 182, ../sass/components/_schedule.scss */
 .maintable .data-block .icons {
   position: absolute;
   z-index: 2;
@@ -820,18 +828,18 @@ input:-moz-placeholder {
   top: 4px;
 }
 
-/* line 181, ../sass/components/_schedule.scss */
+/* line 189, ../sass/components/_schedule.scss */
 .maintable .data-block .fa {
   margin-left: 1px;
 }
 
-/* line 184, ../sass/components/_schedule.scss */
+/* line 192, ../sass/components/_schedule.scss */
 .maintable .data-block .fa-thumbs-o-up,
 .maintable .data-block .fa-star {
   display: none;
 }
 
-/* line 188, ../sass/components/_schedule.scss */
+/* line 196, ../sass/components/_schedule.scss */
 .maintable .data-block .liked .fa-thumbs-o-up {
   display: inline-block;
   color: #89bbff;
@@ -839,13 +847,13 @@ input:-moz-placeholder {
   z-index: 1;
 }
 
-/* line 194, ../sass/components/_schedule.scss */
+/* line 202, ../sass/components/_schedule.scss */
 .maintable .data-block .faved .fa-star {
   display: inline-block;
   color: #89bbff;
 }
 
-/* line 199, ../sass/components/_schedule.scss */
+/* line 207, ../sass/components/_schedule.scss */
 .maintable .data-block .time-interval {
   font-weight: 700;
   padding: 4px 5px;
@@ -853,7 +861,7 @@ input:-moz-placeholder {
   z-index: 2;
 }
 
-/* line 205, ../sass/components/_schedule.scss */
+/* line 213, ../sass/components/_schedule.scss */
 .maintable .data-block .text {
   overflow: hidden;
   position: absolute;
@@ -863,27 +871,27 @@ input:-moz-placeholder {
   padding: 5px;
 }
 
-/* line 213, ../sass/components/_schedule.scss */
+/* line 221, ../sass/components/_schedule.scss */
 .maintable .data-block.with-themes .text {
   border-bottom: solid 34px transparent;
 }
 
-/* line 216, ../sass/components/_schedule.scss */
+/* line 224, ../sass/components/_schedule.scss */
 .maintable .data-block.with-themes .bottom-gradient {
   bottom: 34px;
 }
 
-/* line 219, ../sass/components/_schedule.scss */
+/* line 227, ../sass/components/_schedule.scss */
 .maintable .data-block .text p {
   margin: 0 0 10px;
 }
 
-/* line 222, ../sass/components/_schedule.scss */
+/* line 230, ../sass/components/_schedule.scss */
 .maintable .data-block .text .description {
   color: #999;
 }
 
-/* line 225, ../sass/components/_schedule.scss */
+/* line 233, ../sass/components/_schedule.scss */
 .maintable .data-block .themes {
   position: absolute;
   width: 82%;
@@ -894,203 +902,203 @@ input:-moz-placeholder {
   line-height: 14px;
 }
 
-/* line 236, ../sass/components/_schedule.scss */
+/* line 244, ../sass/components/_schedule.scss */
 .stands-container {
   position: absolute;
-  width: 98%;
+  width: 95%;
   overflow: auto;
 }
 
-/* line 241, ../sass/components/_schedule.scss */
+/* line 249, ../sass/components/_schedule.scss */
 .stands-table {
   table-layout: fixed;
 }
 
-/* line 244, ../sass/components/_schedule.scss */
+/* line 252, ../sass/components/_schedule.scss */
 .stands-table .cell {
   vertical-align: top;
 }
 
-/* line 248, ../sass/components/_schedule.scss */
+/* line 256, ../sass/components/_schedule.scss */
 .top-gradient {
   height: 30px;
   width: 98%;
   position: absolute;
   z-index: 1;
-  background: -moz-linear-gradient(top, #d9e9ff 0%, #d9e9ff 60%, rgba(217, 233, 255, 0) 100%);
-  background: -webkit-linear-gradient(top, #d9e9ff 0%, #d9e9ff 60%, rgba(217, 233, 255, 0) 100%);
-  background: linear-gradient(to bottom, #d9e9ff 0%, #d9e9ff 60%, rgba(217, 233, 255, 0) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9e9ff', endColorstr='#00d9e9ff',GradientType=0 );
+  background: -moz-linear-gradient(top, #c3d1e5 0%, #c3d1e5 60%, rgba(195, 209, 229, 0) 100%);
+  background: -webkit-linear-gradient(top, #c3d1e5 0%, #c3d1e5 60%, rgba(195, 209, 229, 0) 100%);
+  background: linear-gradient(to bottom, #c3d1e5 0%, #c3d1e5 60%, rgba(195, 209, 229, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c3d1e5', endColorstr='#00c3d1e5',GradientType=0 );
 }
 
-/* line 258, ../sass/components/_schedule.scss */
+/* line 268, ../sass/components/_schedule.scss */
 .bottom-gradient {
   height: 20px;
   width: 98%;
   position: absolute;
   bottom: 0;
-  background: -moz-linear-gradient(top, rgba(217, 233, 255, 0) 0%, rgba(217, 233, 255, 0.92) 58%, #d9e9ff 98%, #d9e9ff 100%);
-  background: -webkit-linear-gradient(top, rgba(217, 233, 255, 0) 0%, rgba(217, 233, 255, 0.92) 58%, #d9e9ff 98%, #d9e9ff 100%);
-  background: linear-gradient(to bottom, rgba(217, 233, 255, 0) 0%, rgba(217, 233, 255, 0.92) 58%, #d9e9ff 98%, #d9e9ff 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00d9e9ff', endColorstr='#d9e9ff',GradientType=0 );
+  background: -moz-linear-gradient(top, rgba(195, 209, 229, 0) 0%, rgba(195, 209, 229, 0.92) 58%, #c3d1e5 98%, #c3d1e5 100%);
+  background: -webkit-linear-gradient(top, rgba(195, 209, 229, 0) 0%, rgba(195, 209, 229, 0.92) 58%, #c3d1e5 98%, #c3d1e5 100%);
+  background: linear-gradient(to bottom, rgba(195, 209, 229, 0) 0%, rgba(195, 209, 229, 0.92) 58%, #c3d1e5 98%, #c3d1e5 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00c3d1e5', endColorstr='#c3d1e5',GradientType=0 );
 }
 
-/* line 271, ../sass/components/_schedule.scss */
+/* line 281, ../sass/components/_schedule.scss */
 .height1 {
   height: 120px;
 }
 
-/* line 272, ../sass/components/_schedule.scss */
+/* line 282, ../sass/components/_schedule.scss */
 .height2 {
   height: 220px;
 }
 
-/* line 273, ../sass/components/_schedule.scss */
+/* line 283, ../sass/components/_schedule.scss */
 .height3 {
   height: 320px;
 }
 
-/* line 274, ../sass/components/_schedule.scss */
+/* line 284, ../sass/components/_schedule.scss */
 .height4 {
   height: 420px;
 }
 
-/* line 275, ../sass/components/_schedule.scss */
+/* line 285, ../sass/components/_schedule.scss */
 .height5 {
   height: 520px;
 }
 
-/* line 276, ../sass/components/_schedule.scss */
+/* line 286, ../sass/components/_schedule.scss */
 .height6 {
   height: 620px;
 }
 
-/* line 277, ../sass/components/_schedule.scss */
+/* line 287, ../sass/components/_schedule.scss */
 .height7 {
   height: 720px;
 }
 
-/* line 278, ../sass/components/_schedule.scss */
+/* line 288, ../sass/components/_schedule.scss */
 .height8 {
   height: 820px;
 }
 
-/* line 279, ../sass/components/_schedule.scss */
+/* line 289, ../sass/components/_schedule.scss */
 .height9 {
   height: 920px;
 }
 
-/* line 280, ../sass/components/_schedule.scss */
+/* line 290, ../sass/components/_schedule.scss */
 .height10 {
   height: 1020px;
 }
 
-/* line 281, ../sass/components/_schedule.scss */
+/* line 291, ../sass/components/_schedule.scss */
 .height11 {
   height: 1120px;
 }
 
-/* line 282, ../sass/components/_schedule.scss */
+/* line 292, ../sass/components/_schedule.scss */
 .height12 {
   height: 1220px;
 }
 
-/* line 283, ../sass/components/_schedule.scss */
+/* line 293, ../sass/components/_schedule.scss */
 .height13 {
   height: 1320px;
 }
 
-/* line 284, ../sass/components/_schedule.scss */
+/* line 294, ../sass/components/_schedule.scss */
 .height14 {
   height: 1420px;
 }
 
-/* line 285, ../sass/components/_schedule.scss */
+/* line 295, ../sass/components/_schedule.scss */
 .height15 {
   height: 1520px;
 }
 
-/* line 286, ../sass/components/_schedule.scss */
+/* line 296, ../sass/components/_schedule.scss */
 .height16 {
   height: 1620px;
 }
 
-/* line 288, ../sass/components/_schedule.scss */
+/* line 298, ../sass/components/_schedule.scss */
 .height1 .col-inner, .height1 .cell {
   height: 100px;
 }
 
-/* line 289, ../sass/components/_schedule.scss */
+/* line 299, ../sass/components/_schedule.scss */
 .height2 .col-inner, .height2 .cell {
   height: 200px;
 }
 
-/* line 290, ../sass/components/_schedule.scss */
+/* line 300, ../sass/components/_schedule.scss */
 .height3 .col-inner, .height3 .cell {
   height: 300px;
 }
 
-/* line 291, ../sass/components/_schedule.scss */
+/* line 301, ../sass/components/_schedule.scss */
 .height4 .col-inner, .height4 .cell {
   height: 400px;
 }
 
-/* line 292, ../sass/components/_schedule.scss */
+/* line 302, ../sass/components/_schedule.scss */
 .height5 .col-inner, .height5 .cell {
   height: 500px;
 }
 
-/* line 293, ../sass/components/_schedule.scss */
+/* line 303, ../sass/components/_schedule.scss */
 .height6 .col-inner, .height6 .cell {
   height: 600px;
 }
 
-/* line 294, ../sass/components/_schedule.scss */
+/* line 304, ../sass/components/_schedule.scss */
 .height7 .col-inner, .height7 .cell {
   height: 700px;
 }
 
-/* line 295, ../sass/components/_schedule.scss */
+/* line 305, ../sass/components/_schedule.scss */
 .height8 .col-inner, .height8 .cell {
   height: 800px;
 }
 
-/* line 296, ../sass/components/_schedule.scss */
+/* line 306, ../sass/components/_schedule.scss */
 .height9 .col-inner, .height9 .cell {
   height: 900px;
 }
 
-/* line 297, ../sass/components/_schedule.scss */
+/* line 307, ../sass/components/_schedule.scss */
 .height10 .col-inner, .height10 .cell {
   height: 1000px;
 }
 
-/* line 298, ../sass/components/_schedule.scss */
+/* line 308, ../sass/components/_schedule.scss */
 .height11 .col-inner, .height11 .cell {
   height: 1100px;
 }
 
-/* line 299, ../sass/components/_schedule.scss */
+/* line 309, ../sass/components/_schedule.scss */
 .height12 .col-inner, .height12 .cell {
   height: 1200px;
 }
 
-/* line 300, ../sass/components/_schedule.scss */
+/* line 310, ../sass/components/_schedule.scss */
 .height13 .col-inner, .height13 .cell {
   height: 1300px;
 }
 
-/* line 301, ../sass/components/_schedule.scss */
+/* line 311, ../sass/components/_schedule.scss */
 .height14 .col-inner, .height14 .cell {
   height: 1400px;
 }
 
-/* line 302, ../sass/components/_schedule.scss */
+/* line 312, ../sass/components/_schedule.scss */
 .height15 .col-inner, .height15 .cell {
   height: 1500px;
 }
 
-/* line 303, ../sass/components/_schedule.scss */
+/* line 313, ../sass/components/_schedule.scss */
 .height16 .col-inner, .height16 .cell {
   height: 1600px;
 }
