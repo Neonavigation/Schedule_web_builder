@@ -78,14 +78,14 @@
   margin: 0 0 10px;
 }
 
-.maintable{
+.datatable{
   width: 100%;
 }
 
-.maintable .col-outer{
+.datatable .col-outer{
   position: relative;
 }
-.maintable .col-inner{
+.datatable .col-inner{
   position: absolute;
   width: 100%;
 }
@@ -105,7 +105,7 @@
   margin-top: -3px;
 }
 
-.maintable .title{
+.datatable .title{
   font-size: $table-title-fs;
   font-weight: 700;
   text-align: center;
@@ -115,7 +115,7 @@
 }
 
 
-.maintable .line{
+.datatable .line{
   position: relative;
   top: -5000px;
   padding-bottom: 10000px;
@@ -125,33 +125,33 @@
   border-right: solid 1px $table-border-color;
 
 }
-.maintable td:last-child .line{
+.datatable td:last-child .line{
   margin-right: 0;
 }
 
 
-.maintable .col2{
+.datatable .col2{
   padding: 15px;
   text-align: center;
 }
-.maintable .halls{
+.datatable .halls{
   vertical-align: top;
   min-width: 200px;
 }
-.maintable .stands{
+.datatable .stands{
   position: relative;
   width: 100%;
   padding-left: 10px;
   vertical-align: top;
 }
-.maintable .stands .data-block{
+.datatable .stands .data-block{
   margin: 0 5px;
 }
-.maintable .stands .col-outer{
+.datatable .stands .col-outer{
   width: 180px;
 }
 
-.maintable .data-block{
+.datatable .data-block{
   margin: 0 15px;
   position: relative;
   z-index: 2;
@@ -163,7 +163,7 @@
   color: $table-data-font-color;
   cursor: pointer;
 }
-.maintable .data-wrap{
+.datatable .data-wrap{
   position: relative;
   width: 100%;
   height: 100%;
@@ -173,44 +173,44 @@
   overflow: hidden;
   /*box-shadow: 0 0 10px 5px rgba(255,255,255,1);*/
 }
-.maintable .data-block:hover{
+.datatable .data-block:hover{
   z-index: 3;
 }
-.maintable .data-block:hover .data-wrap{
+.datatable .data-block:hover .data-wrap{
   border: solid 1px $table-data-border-color-hover;
 }
-.maintable .data-block .icons{
+.datatable .data-block .icons{
   position: absolute;
   z-index: 2;
   font-size: 14px;
   right: 5px;
   top: 4px;
 }
-.maintable .data-block .fa{
+.datatable .data-block .fa{
   margin-left: 1px;
 }
-.maintable .data-block .fa-thumbs-o-up,
-.maintable .data-block .fa-star{
+.datatable .data-block .fa-thumbs-o-up,
+.datatable .data-block .fa-star{
   display: none;
 }
-.maintable .data-block .liked .fa-thumbs-o-up{
+.datatable .data-block .liked .fa-thumbs-o-up{
   display: inline-block;
   color: $table-data-icon-color;
   font-size: 16px;
   z-index: 1;
 }
-.maintable .data-block .faved .fa-star{
+.datatable .data-block .faved .fa-star{
   display: inline-block;
   color: $table-data-icon-color;
 }
 
-.maintable .data-block .time-interval{
+.datatable .data-block .time-interval{
   font-weight: 700;
   padding: 4px 5px;
   position: absolute;
   z-index: 2;
 }
-.maintable .data-block .text{
+.datatable .data-block .text{
   overflow: hidden;
   position: absolute;
   box-sizing: border-box;
@@ -218,19 +218,19 @@
   height: 100%;
   padding: 5px;
 }
-.maintable .data-block.with-themes .text{
+.datatable .data-block.with-themes .text{
   border-bottom: solid 34px rgba(0,0,0,0);
 }
-.maintable .data-block.with-themes .bottom-gradient{
+.datatable .data-block.with-themes .bottom-gradient{
   bottom: 34px;
 }
-.maintable .data-block .text p{
+.datatable .data-block .text p{
   margin: 0 0 10px;
 }
-.maintable .data-block .text .description{
+.datatable .data-block .text .description{
   color: $table-data-description-color;
 }
-.maintable .data-block .themes{
+.datatable .data-block .themes{
   position: absolute;
   width: 82%;
   bottom: 5px;
@@ -311,17 +311,113 @@
 .height14 .col-inner, .height14 .cell{ height: 1400px; }
 .height15 .col-inner, .height15 .cell{ height: 1500px; }
 .height16 .col-inner, .height16 .cell{ height: 1600px; }
-/*
-.maintable .col-inner{
-  height: 900px;
+
+.maintable{
+  table-layout: fixed;
+  width: 100%;
 }
-.stands-table .cell{
-  height: 900px;
+.maintable td{
+  vertical-align: top;
 }
-.maintable .halls{
-  height: 920px;
+
+
+.width-column{
+  transition: width 1s ease;
+  -webkit-transition: width 1s ease;
 }
-.stands-container{
-  height: 920px;
+.width1{ width: 200px; }
+.width2{ width: 400px; }
+.width3{ width: 600px; }
+.width4{ width: 800px; }
+.width5{ width: 1000px; }
+.width6{ width: 1200px; }
+.width7{ width: 1400px; }
+.width8{ width: 1600px; }
+.width9{ width: 1800px; }
+.width10{ width: 2000px; }
+
+.bg-stands,
+.bg-halls{
+  transition: background 0.8s ease-in-out;
+  -webkit-transition: background 0.8s ease-in-out;
 }
-*/
+.bg-gray{
+  background: #e5e5e5;
+
+}
+.stands-block.bg-gray,
+.block-stands.bg-gray{
+  box-shadow: inset 1px 0 0 0 rgba(255,255,255,1);
+}
+.datatable td:first-child .line.bg-gray{
+  box-shadow: inset 1px 0 0 0 rgba(255,255,255,1);
+}
+.datatable td:last-child .line.bg-gray{
+  box-shadow: inset -1px 0 0 0 rgba(255,255,255,1);
+}
+
+.block-halls{
+  overflow: hidden;
+}
+
+
+.table-headers .block-halls .datatable{
+  table-layout: fixed;
+  float: right;
+}
+.table-headers .block-halls .datatable .cell{
+  width: 200px;
+  vertical-align: middle;
+}
+.table-headers .block-stands{
+  vertical-align: middle;
+}
+.table-headers .block-stands .datatable .cell{
+  vertical-align: middle;
+}
+
+.table-contents-halls{
+  overflow: hidden;
+  position: relative;
+}
+.table-contents-stands{
+  position: relative;
+}
+
+.table-contents-halls .datatable{
+  table-layout: fixed;
+  float: right;
+}
+.table-contents-halls .datatable .halls{
+  width: 200px;
+}
+
+
+.table-contents-halls .control{
+  position: absolute;
+  z-index: 9;
+  top: 50%;
+  right: 10px;
+  margin-top: -36px;
+}
+.table-contents-halls .control .halls-control{
+  display: none;
+  font-size: 72px;
+  color: white;
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+
+.table-contents-stands .control{
+  position: absolute;
+  z-index: 9;
+  top: 50%;
+  left: 30px;
+  margin-top: -24px;
+}
+.table-contents-stands .control .stands-control{
+  font-size: 48px;
+  color: white;
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+  cursor: pointer;
+}
