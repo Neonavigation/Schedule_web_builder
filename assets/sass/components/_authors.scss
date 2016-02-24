@@ -7,14 +7,17 @@
   background: $dotted;
   height: 1px;
   background-repeat: repeat-x;
-  margin: 0 18px 20px;
-  display: none;
+  margin: 0 18px;
+  position: relative;
+  z-index: 1;
 }
 .author-item{
   display: block;
-  padding: 9px;
-  margin: 0 0 0;
-  border: solid 1px white;
+  padding: 15px;
+  margin: -1px 0;
+  border: solid 1px transparent;
+  position: relative;
+  z-index: 2;
 }
 .author-item:hover{
   border: solid 1px #bcd46a;
@@ -39,7 +42,7 @@
   margin: auto;
 }
 .author-item .text{
-  padding-left: 85px;
+  padding-left: 86px;
 }
 .author-item .text p{
   font-size: 14px;
@@ -56,7 +59,7 @@
   color: #313131;
 }
 .author-item .items{
-  padding-left: 85px;
+  padding-left: 86px;
 }
 .author-item .item{
   display: inline-block;
