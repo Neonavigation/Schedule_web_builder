@@ -1,0 +1,67 @@
+.authors{
+  width: 760px;
+  margin: 0 auto;
+}
+.authors .line{
+  border: none;
+  background: $dotted;
+  height: 1px;
+  background-repeat: repeat-x;
+  margin: 0 18px 20px;
+}
+.author-item{
+  display: block;
+  padding: 9px;
+  margin: 0 0 20px;
+  border: solid 1px white;
+}
+.author-item:hover{
+  border: solid 1px #bcd46a;
+}
+.author-item .title{
+  font-size: 15px;
+  font-weight: 700;
+  color: #313131;
+}
+.author-item .cont{
+  overflow: hidden;
+}
+.author-item .image{
+  float: left;
+  margin-right: -100%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+}
+.author-item .image img{
+  max-width: 70px;
+  margin: auto;
+}
+.author-item .text{
+  padding-left: 85px;
+}
+.author-item .text p{
+  font-size: 14px;
+  line-height: 17px;
+  margin: 0 0 10px;
+}
+.author-item .foot{
+  overflow: hidden;
+}
+.author-item .label{
+  float: left;
+  font-weight: 700;
+  line-height: 24px;
+  color: #313131;
+}
+.author-item .items{
+  padding-left: 85px;
+}
+.author-item .item{
+  display: inline-block;
+  background: #ffd9d9;
+  padding: 0 10px;
+  border-radius: 4px;
+  margin-right: 5px;
+  line-height: 24px;
+}

@@ -1554,3 +1554,98 @@ input:-moz-placeholder {
 .scroll:hover {
   opacity: 0.5;
 }
+
+/* line 1, ../sass/components/_authors.scss */
+.authors {
+  width: 760px;
+  margin: 0 auto;
+}
+
+/* line 5, ../sass/components/_authors.scss */
+.authors .line {
+  border: none;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAABCAIAAAB2XpiaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjlFQThGOEZDQzM2QzExRTU5NzhDRUMyMjM4RTE5RUEwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjlFQThGOEZEQzM2QzExRTU5NzhDRUMyMjM4RTE5RUEwIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OUVBOEY4RkFDMzZDMTFFNTk3OENFQzIyMzhFMTlFQTAiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OUVBOEY4RkJDMzZDMTFFNTk3OENFQzIyMzhFMTlFQTAiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4kZJsoAAAAEUlEQVR42mLYtGnTfxgACDAAQ9ILDo5d4cMAAAAASUVORK5CYII=");
+  height: 1px;
+  background-repeat: repeat-x;
+  margin: 0 18px 20px;
+}
+
+/* line 12, ../sass/components/_authors.scss */
+.author-item {
+  display: block;
+  padding: 9px;
+  margin: 0 0 20px;
+  border: solid 1px white;
+}
+
+/* line 18, ../sass/components/_authors.scss */
+.author-item:hover {
+  border: solid 1px #bcd46a;
+}
+
+/* line 21, ../sass/components/_authors.scss */
+.author-item .title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #313131;
+}
+
+/* line 26, ../sass/components/_authors.scss */
+.author-item .cont {
+  overflow: hidden;
+}
+
+/* line 29, ../sass/components/_authors.scss */
+.author-item .image {
+  float: left;
+  margin-right: -100%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+}
+
+/* line 36, ../sass/components/_authors.scss */
+.author-item .image img {
+  max-width: 70px;
+  margin: auto;
+}
+
+/* line 40, ../sass/components/_authors.scss */
+.author-item .text {
+  padding-left: 85px;
+}
+
+/* line 43, ../sass/components/_authors.scss */
+.author-item .text p {
+  font-size: 14px;
+  line-height: 17px;
+  margin: 0 0 10px;
+}
+
+/* line 48, ../sass/components/_authors.scss */
+.author-item .foot {
+  overflow: hidden;
+}
+
+/* line 51, ../sass/components/_authors.scss */
+.author-item .label {
+  float: left;
+  font-weight: 700;
+  line-height: 24px;
+  color: #313131;
+}
+
+/* line 57, ../sass/components/_authors.scss */
+.author-item .items {
+  padding-left: 85px;
+}
+
+/* line 60, ../sass/components/_authors.scss */
+.author-item .item {
+  display: inline-block;
+  background: #ffd9d9;
+  padding: 0 10px;
+  border-radius: 4px;
+  margin-right: 5px;
+  line-height: 24px;
+}
