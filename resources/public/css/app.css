@@ -1568,34 +1568,35 @@ input:-moz-placeholder {
   height: 1px;
   background-repeat: repeat-x;
   margin: 0 18px 20px;
+  display: none;
 }
 
-/* line 12, ../sass/components/_authors.scss */
+/* line 13, ../sass/components/_authors.scss */
 .author-item {
   display: block;
   padding: 9px;
-  margin: 0 0 20px;
+  margin: 0 0 0;
   border: solid 1px white;
 }
 
-/* line 18, ../sass/components/_authors.scss */
+/* line 19, ../sass/components/_authors.scss */
 .author-item:hover {
   border: solid 1px #bcd46a;
 }
 
-/* line 21, ../sass/components/_authors.scss */
+/* line 22, ../sass/components/_authors.scss */
 .author-item .title {
   font-size: 15px;
   font-weight: 700;
   color: #313131;
 }
 
-/* line 26, ../sass/components/_authors.scss */
+/* line 27, ../sass/components/_authors.scss */
 .author-item .cont {
   overflow: hidden;
 }
 
-/* line 29, ../sass/components/_authors.scss */
+/* line 30, ../sass/components/_authors.scss */
 .author-item .image {
   float: left;
   margin-right: -100%;
@@ -1604,30 +1605,30 @@ input:-moz-placeholder {
   display: flex;
 }
 
-/* line 36, ../sass/components/_authors.scss */
+/* line 37, ../sass/components/_authors.scss */
 .author-item .image img {
   max-width: 70px;
   margin: auto;
 }
 
-/* line 40, ../sass/components/_authors.scss */
+/* line 41, ../sass/components/_authors.scss */
 .author-item .text {
   padding-left: 85px;
 }
 
-/* line 43, ../sass/components/_authors.scss */
+/* line 44, ../sass/components/_authors.scss */
 .author-item .text p {
   font-size: 14px;
   line-height: 17px;
   margin: 0 0 10px;
 }
 
-/* line 48, ../sass/components/_authors.scss */
+/* line 49, ../sass/components/_authors.scss */
 .author-item .foot {
   overflow: hidden;
 }
 
-/* line 51, ../sass/components/_authors.scss */
+/* line 52, ../sass/components/_authors.scss */
 .author-item .label {
   float: left;
   font-weight: 700;
@@ -1635,12 +1636,12 @@ input:-moz-placeholder {
   color: #313131;
 }
 
-/* line 57, ../sass/components/_authors.scss */
+/* line 58, ../sass/components/_authors.scss */
 .author-item .items {
   padding-left: 85px;
 }
 
-/* line 60, ../sass/components/_authors.scss */
+/* line 61, ../sass/components/_authors.scss */
 .author-item .item {
   display: inline-block;
   background: #ffd9d9;
