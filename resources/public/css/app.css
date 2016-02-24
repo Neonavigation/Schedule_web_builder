@@ -1585,21 +1585,23 @@ input:-moz-placeholder {
 /* line 22, ../sass/components/_authors.scss */
 .author-item:hover {
   border: solid 1px #bcd46a;
+  background: #fcfcfc;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.05);
 }
 
-/* line 25, ../sass/components/_authors.scss */
+/* line 27, ../sass/components/_authors.scss */
 .author-item .title {
   font-size: 15px;
   font-weight: 700;
   color: #313131;
 }
 
-/* line 30, ../sass/components/_authors.scss */
+/* line 32, ../sass/components/_authors.scss */
 .author-item .cont {
   overflow: hidden;
 }
 
-/* line 33, ../sass/components/_authors.scss */
+/* line 35, ../sass/components/_authors.scss */
 .author-item .image {
   float: left;
   margin-right: -100%;
@@ -1608,30 +1610,30 @@ input:-moz-placeholder {
   display: flex;
 }
 
-/* line 40, ../sass/components/_authors.scss */
+/* line 42, ../sass/components/_authors.scss */
 .author-item .image img {
   max-width: 70px;
   margin: auto;
 }
 
-/* line 44, ../sass/components/_authors.scss */
+/* line 46, ../sass/components/_authors.scss */
 .author-item .text {
   padding-left: 86px;
 }
 
-/* line 47, ../sass/components/_authors.scss */
+/* line 49, ../sass/components/_authors.scss */
 .author-item .text p {
   font-size: 14px;
   line-height: 17px;
   margin: 0 0 10px;
 }
 
-/* line 52, ../sass/components/_authors.scss */
+/* line 54, ../sass/components/_authors.scss */
 .author-item .foot {
   overflow: hidden;
 }
 
-/* line 55, ../sass/components/_authors.scss */
+/* line 57, ../sass/components/_authors.scss */
 .author-item .label {
   float: left;
   font-weight: 700;
@@ -1639,12 +1641,12 @@ input:-moz-placeholder {
   color: #313131;
 }
 
-/* line 61, ../sass/components/_authors.scss */
+/* line 63, ../sass/components/_authors.scss */
 .author-item .items {
   padding-left: 86px;
 }
 
-/* line 64, ../sass/components/_authors.scss */
+/* line 66, ../sass/components/_authors.scss */
 .author-item .item {
   display: inline-block;
   background: #ffd9d9;
