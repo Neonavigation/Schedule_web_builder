@@ -1,0 +1,83 @@
+.search{
+  width: 760px;
+  margin: 0 auto;
+}
+.search .line{
+  border: none;
+  background: $dotted;
+  height: 1px;
+  background-repeat: repeat-x;
+  margin: 0 18px;
+  position: relative;
+  z-index: 1;
+}
+.search-item{
+  display: block;
+  padding: 15px;
+  margin: -1px 0;
+  border: solid 1px transparent;
+  position: relative;
+  z-index: 2;
+}
+.search-item:hover{
+  border: solid 1px #bcd46a;
+  background: #fbfcfd;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+.search-item .title{
+  font-size: 15px;
+  font-weight: 700;
+  color: #313131;
+  margin: 0 0 4px;
+}
+.search-item .cont{
+  overflow: hidden;
+}
+.search-item .image{
+  float: left;
+  margin-right: -100%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+}
+.search-item .image img{
+  max-width: 100px;
+  margin: auto;
+}
+.search-item .text{
+  padding-left: 115px;
+}
+.search-item .text p strong{
+  font-size: 15px;
+}
+.search-item .text p{
+  font-size: 14px;
+  line-height: 17px;
+  color: #313131;
+}
+.search-item .text .date{
+  padding-top: 7px;
+}
+
+.search-item .text .with-image{
+  overflow: hidden;
+}
+
+.search-item .text .with-image .img{
+  float: left;
+  margin-right: -100%;
+  padding-top: 4px;
+  white-space: nowrap;
+  width: 50px;
+  height: 50px;
+  display: flex;
+}
+.search-item .text .with-image .img img{
+  max-width: 50px;
+  margin: auto;
+}
+
+.search-item .text .with-image .txt{
+  display: block;
+  padding-left: 55px;
+}
