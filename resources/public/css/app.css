@@ -1676,7 +1676,26 @@ input:-moz-placeholder {
   z-index: 1;
 }
 
-/* line 14, ../sass/components/_search.scss */
+/* line 15, ../sass/components/_search.scss */
+.search-main {
+  padding-top: 8px;
+  margin: 0 15px 20px;
+  color: #55585f;
+}
+
+/* line 20, ../sass/components/_search.scss */
+.search-main .query,
+.search-main .title {
+  margin: 0 0 4px;
+}
+
+/* line 24, ../sass/components/_search.scss */
+.search-main .query {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* line 29, ../sass/components/_search.scss */
 .search-item {
   display: block;
   padding: 15px;
@@ -1686,14 +1705,14 @@ input:-moz-placeholder {
   z-index: 2;
 }
 
-/* line 22, ../sass/components/_search.scss */
+/* line 37, ../sass/components/_search.scss */
 .search-item:hover {
   border: solid 1px #bcd46a;
   background: #fbfcfd;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-/* line 27, ../sass/components/_search.scss */
+/* line 42, ../sass/components/_search.scss */
 .search-item .title {
   font-size: 15px;
   font-weight: 700;
@@ -1701,12 +1720,12 @@ input:-moz-placeholder {
   margin: 0 0 4px;
 }
 
-/* line 33, ../sass/components/_search.scss */
+/* line 48, ../sass/components/_search.scss */
 .search-item .cont {
   overflow: hidden;
 }
 
-/* line 36, ../sass/components/_search.scss */
+/* line 51, ../sass/components/_search.scss */
 .search-item .image {
   float: left;
   margin-right: -100%;
@@ -1715,40 +1734,40 @@ input:-moz-placeholder {
   display: flex;
 }
 
-/* line 43, ../sass/components/_search.scss */
+/* line 58, ../sass/components/_search.scss */
 .search-item .image img {
   max-width: 100px;
   margin: auto;
 }
 
-/* line 47, ../sass/components/_search.scss */
+/* line 62, ../sass/components/_search.scss */
 .search-item .text {
   padding-left: 115px;
 }
 
-/* line 50, ../sass/components/_search.scss */
+/* line 65, ../sass/components/_search.scss */
 .search-item .text p strong {
   font-size: 15px;
 }
 
-/* line 53, ../sass/components/_search.scss */
+/* line 68, ../sass/components/_search.scss */
 .search-item .text p {
   font-size: 14px;
   line-height: 17px;
   color: #313131;
 }
 
-/* line 58, ../sass/components/_search.scss */
+/* line 73, ../sass/components/_search.scss */
 .search-item .text .date {
   padding-top: 7px;
 }
 
-/* line 62, ../sass/components/_search.scss */
+/* line 77, ../sass/components/_search.scss */
 .search-item .text .with-image {
   overflow: hidden;
 }
 
-/* line 66, ../sass/components/_search.scss */
+/* line 81, ../sass/components/_search.scss */
 .search-item .text .with-image .img {
   float: left;
   margin-right: -100%;
@@ -1759,14 +1778,14 @@ input:-moz-placeholder {
   display: flex;
 }
 
-/* line 75, ../sass/components/_search.scss */
+/* line 90, ../sass/components/_search.scss */
 .search-item .text .with-image .img img {
   max-width: 50px;
   margin: auto;
 }
 
-/* line 80, ../sass/components/_search.scss */
+/* line 95, ../sass/components/_search.scss */
 .search-item .text .with-image .txt {
   display: block;
-  padding-left: 55px;
+  padding-left: 56px;
 }

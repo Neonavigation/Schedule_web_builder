@@ -11,6 +11,21 @@
   position: relative;
   z-index: 1;
 }
+
+.search-main{
+  padding-top: 8px;
+  margin: 0 15px 20px;
+  color: #55585f;
+}
+.search-main .query,
+.search-main .title{
+  margin: 0 0 4px;
+}
+.search-main .query{
+  font-size: 18px;
+  font-weight: 700;
+}
+
 .search-item{
   display: block;
   padding: 15px;
@@ -79,5 +94,5 @@
 
 .search-item .text .with-image .txt{
   display: block;
-  padding-left: 55px;
+  padding-left: 56px;
 }
